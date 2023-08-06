@@ -1,0 +1,23 @@
+.container {
+  max-width: 1164px;
+  margin: auto;
+  padding: 0 15px;
+}
+.Navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.leftSide img {
+  width: 190px;
+}
+.rightSide a {
+  text-decoration: none;
+  padding: 12px;
+  color: black;
+}
+.header-searchBar {
+  width: 20%;
+  padding: 5px;
+  border: 0;
+}
