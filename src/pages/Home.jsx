@@ -2,11 +2,13 @@ import React from "react";
 import MainSection from "../assests/main-hero-sec-home.jpg";
 import "../styles/Home.css";
 import Services from "./Services";
+import AboutSatteliteTv from "./AboutSatteliteTv";
+import ServiceProvider from "./ServiceProviders";
+import HeroSection from "./HeroSection";
 
 function Home() {
   return (
     <div className="container">
-      {/* Main Section */}
       <div
         className="mainSection"
         style={{
@@ -36,6 +38,9 @@ function Home() {
         </div>
       </div>
       <Services />
+      <AboutSatteliteTv />
+      <ServiceProvider />
+      <HeroSection />
     </div>
   );
 }
