@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import ServiceBG from "../assests/service-sec-bg.png";
-import Card1 from "../assests/cable-int.png";
-import Card2 from "../assests/cable-tv.png";
-import Card3 from "../assests/satellite-int.png";
-import Card4 from "../assests/satellite-tv.png";
+import CableTv from "../assests/cable-tv.png";
+import Cable from "../assests/cable-int.png";
+import Satellite from "../assests/satellite-int.png";
+import SatelliteTv from "../assests/satellite-tv.png";
 import "../styles/Services.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -24,7 +24,7 @@ const Slide = ({ image, title, description }) => {
   );
 };
 
-const Services = () => {
+const ServiceSlider = () => {
   const sliderRef = useRef(null);
 
   useEffect(() => {
@@ -72,24 +72,24 @@ const Services = () => {
           <div className="slider-container">
             <Slider {...sliderSettings} ref={sliderRef}>
               <Slide
-                image={Card1}
-                title="Cable Tv"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                image={CableTv}
+                title="Card 1"
+                description="Content of Card 1"
               />
               <Slide
-                image={Card2}
-                title="Cable Internet"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                image={Cable}
+                title="Card 2"
+                description="Content of Card 2"
               />
               <Slide
-                image={Card3}
-                title="Satellite Tv"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                image={Satellite}
+                title="Card 3"
+                description="Content of Card 3"
               />
               <Slide
-                image={Card4}
-                title="Satellite Internet"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                image={SatelliteTv}
+                title="Card 4"
+                description="Content of Card 4"
               />
             </Slider>
           </div>
@@ -99,4 +99,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServiceSlider;
