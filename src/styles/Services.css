@@ -45,15 +45,17 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: left;
 }
 
-.slide-content .paragraph {
+.slide-content p {
   font-size: 16px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: "Roboto", Sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
   line-height: 20px;
+  text-align: left;
 }
 .heroContent .heading {
   color: #df0303;
@@ -75,7 +77,7 @@
 }
 .heroContent p {
   font-family: "Roboto", sans-serif;
-  width: 90%;
+  width: 100%;
   color: #222121;
   word-spacing: 1px;
   font-size: 16px;
