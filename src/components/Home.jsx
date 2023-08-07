@@ -1,11 +1,11 @@
 import React from "react";
 import MainSection from "../assests/main-hero-sec-home.jpg";
 import "../styles/Home.css";
-import Services from "./Services";
-import AboutSatteliteTv from "./AboutSatteliteTv";
-import ServiceProvider from "./ServiceProviders";
-import HeroSection from "./HeroSection";
-import BlogArticles from "./BlogArticles";
+import Services from "../pages/Services";
+import AboutSatteliteTv from "../pages/AboutSatteliteTv";
+import ServiceProvider from "../pages/ServiceProviders";
+import HeroSection from "../pages/HeroSection";
+import BlogArticles from "../pages/BlogArticles";
 
 function Home() {
   return (
