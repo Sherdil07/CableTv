@@ -17,14 +17,13 @@ const AboutSatteliteTv = () => {
         <div className="AboutContent">
           <h2 className="title">ABOUT SHOP SATELLITE TV</h2>
           <h2 className="heading">
-            Satellite TV is a form of broadcasting television signals via
-            satellites to receive signals at the subscriber's home.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </h2>
           <p>
-            It offers a wide range of channels and programming, including news,
-            sports, movies, TV shows, and more. The main components of a
-            satellite TV system include a satellite dish, a receiver, and a
-            remote control.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+            consequat tortor lorem, quis tempor felis commodo vel. Mauris eu
+            vulputate augue. Fusce nisi risus, ornare vitae egestas sit amet,
+            luctus at tortor.
           </p>
           <div className="figures">
             <div className="figures-1">
