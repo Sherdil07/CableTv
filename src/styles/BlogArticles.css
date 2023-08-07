@@ -1,0 +1,32 @@
+/* Card.css */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content {
+  margin-bottom: 15px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-content p {
+  font-size: 14px;
+}
+
+.card-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.img-1 img{
+  height: 300px;
+}

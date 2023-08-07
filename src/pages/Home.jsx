@@ -5,6 +5,7 @@ import Services from "./Services";
 import AboutSatteliteTv from "./AboutSatteliteTv";
 import ServiceProvider from "./ServiceProviders";
 import HeroSection from "./HeroSection";
+import BlogArticles from "./BlogArticles";
 
 function Home() {
   return (
@@ -41,6 +42,7 @@ function Home() {
       <AboutSatteliteTv />
       <ServiceProvider />
       <HeroSection />
+      <BlogArticles />
     </div>
   );
 }
