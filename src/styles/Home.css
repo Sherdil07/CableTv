@@ -1,5 +1,6 @@
 .mainSection {
-  height: 600px;
+  /* height: 600px; */
+  padding-bottom: 100px;
 }
 .container {
   max-width: 100%;
@@ -12,28 +13,32 @@
   padding-left: 86px;
   width: 45%;
 }
-.title {
+.mainContent .title {
   color: #df0303;
   font-family: "Montserrat", Sans-serif;
   font-size: 16px;
+  line-height: 16px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.subTitle {
-  color: black;
+.mainContent .subTitle {
+  color: #222121;
   font-family: "Montserrat", Sans-serif;
   font-size: 65px;
   font-weight: 700;
   line-height: 75px;
   letter-spacing: 1px;
 }
-p {
+.mainContent .heroparagrapgh {
+  font-family: "Roboto", sans-serif;
   width: 90%;
   color: #222121;
   word-spacing: 1px;
-  letter-spacing: 0.2px;
-  font-weight: 100;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
   text-transform: initial;
 }
 input.searchBar {

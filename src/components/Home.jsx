@@ -22,12 +22,13 @@ function Home() {
         <div className="mainContent">
           <h2 className="title">SHOP SATELLITE TV</h2>
           <h2 className="subTitle">Journey With Fast Internet</h2>
-          <p>
+          <p className="heroparagrapgh">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
             consequat tortor lorem, quis tempor felis commodo vel. Mauris eu
             vulputate augue. Fusce nisi risus, ornare vitae egestas sit amet,
             luctus at tortor.
           </p>
+
           <div className="searchBar">
             <input
               className="searchBar"

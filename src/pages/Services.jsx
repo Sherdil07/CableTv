@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import ServiceBG from "../assests/service-sec-bg.png";
+import Card1 from "../assests/cable-int.png";
+import Card2 from "../assests/cable-tv.png";
+import Card3 from "../assests/satellite-int.png";
+import Card4 from "../assests/satellite-tv.png";
 import "../styles/Services.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -68,24 +72,24 @@ const Services = () => {
           <div className="slider-container">
             <Slider {...sliderSettings} ref={sliderRef}>
               <Slide
-                image="path/to/image1.jpg"
-                title="Card 1"
-                description="Content of Card 1"
+                image={Card1}
+                title="Cable Tv"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
               />
               <Slide
-                image="path/to/image2.jpg"
-                title="Card 2"
-                description="Content of Card 2"
+                image={Card2}
+                title="Cable Internet"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
               />
               <Slide
-                image="path/to/image3.jpg"
-                title="Card 3"
-                description="Content of Card 3"
+                image={Card3}
+                title="Satellite Tv"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
               />
               <Slide
-                image="path/to/image4.jpg"
-                title="Card 4"
-                description="Content of Card 4"
+                image={Card4}
+                title="Satellite Internet"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
               />
             </Slider>
           </div>
