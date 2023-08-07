@@ -21,6 +21,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: left;
 }
 .mainContent .subTitle {
   color: #222121;
@@ -29,6 +30,7 @@
   font-weight: 700;
   line-height: 75px;
   letter-spacing: 1px;
+  text-align: left;
 }
 .mainContent .heroparagrapgh {
   font-family: "Roboto", sans-serif;
@@ -40,6 +42,7 @@
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: initial;
+  text-align: left;
 }
 input.searchBar {
   background-color: #ffffffbf;
@@ -47,6 +50,7 @@ input.searchBar {
   padding: 12px;
   margin-right: 10px;
   width: 35%;
+  text-align: left;
 }
 .btn-findnow {
   background-color: #df0303;
@@ -59,4 +63,5 @@ input.searchBar {
 }
 .searchBar {
   margin-top: 20px;
+  text-align: left;
 }
