@@ -15,39 +15,38 @@ const AboutSatteliteTv = () => {
         }}
       >
         <div className="AboutContent">
-          <div className="LeftSide">
-
-          </div>
+          <div className="LeftSide"></div>
           <div className="RightSide">
-          <h2 className="title">ABOUT SHOP SATELLITE TV</h2>
-          <h2 className="heading">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            consequat tortor lorem, quis tempor felis commodo vel. Mauris eu
-            vulputate augue. Fusce nisi risus, ornare vitae egestas sit amet,
-            luctus at tortor.
-          </p>
-          <div className="figures">
-            <div className="figures-1">
-              <p>4 K</p>
-              <p>Ultra HD Quality</p>
+            <h2 className="title">ABOUT SHOP SATELLITE TV</h2>
+            <h2 className="heading">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              dignissim, urna faucibus tincidunt viverra, ipsum nibh dignissim
+              nunc, eget tristique ex urna vel magna. Cras ullamcorper dui mi.
+              Nulla porta porta faucibus. Fusce id ligula velit. Vestibulum
+              lacinia nisi vel nulla blandit, quis euismod lorem posuere. Donec
+              at elit ex.
+            </p>
+            <div className="figures">
+              <div className="figures-1">
+                <p>4 K</p>
+                <p>Ultra HD Quality</p>
+              </div>
+              <div className="figures-1">
+                <p>90 +</p>
+                <p>Online Channels</p>
+              </div>
+              <div className="figures-1">
+                <p>350 +</p>
+                <p>Internet Speed</p>
+              </div>
             </div>
-            <div className="figures-1">
-              <p>90 +</p>
-              <p>Online Channels</p>
-            </div>
-            <div className="figures-1">
-              <p>350 +</p>
-              <p>Internet Speed</p>
+            <div className="btn">
+              <button className="CheckNow">Check Now</button>
             </div>
           </div>
-          <div className="btn">
-            <button className="CheckNow">Check Now</button>
-          </div>
-          </div>
-         
         </div>
       </div>
     </div>

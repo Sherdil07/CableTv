@@ -12,10 +12,12 @@ const ServiceProvider = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </h2>
           <p>
-            It offers a wide range of channels and programming, including news,
-            sports, movies, TV shows, and more. The main components of a
-            satellite TV system include a satellite dish, a receiver, and a
-            remote control.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+            dignissim, urna faucibus tincidunt viverra, ipsum nibh dignissim
+            nunc, eget tristique ex urna vel magna. Cras ullamcorper dui mi.
+            Nulla porta porta faucibus. Fusce id ligula velit. Vestibulum
+            lacinia nisi vel nulla blandit, quis euismod lorem posuere. Donec at
+            elit ex.
           </p>
           <div className="figures">
             <div className="figures-1">

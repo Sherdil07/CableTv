@@ -1,10 +1,13 @@
 import React from "react";
 import "../styles/BlogArticles.css";
+import Card1 from "..//assests/card-1.png";
+import Card2 from "..//assests/card-2.png";
+import Card3 from "..//assests/card-3.png";
 import cableImage from "../assests/cable-int.png"; // Import the image file
 
 const BlogArticles = () => {
   return (
-    <div className="container">
+    <div className="BlogContainer">
       <div className="blogContent">
         <h2 className="title">BLOGS & ARTICLES</h2>
         <h2 className="heading">Find Perfect Network Solutions</h2>
@@ -15,8 +18,10 @@ const BlogArticles = () => {
       </div>
       <div className="cards-container">
         <div className="card-1">
-          <div className="img-1">
-            <img src={cableImage} alt="" />
+          <div className="ImageBox">
+            <div className="img-1">
+              <img src={Card1} alt="" />
+            </div>
           </div>
           <div className="card-content">
             <h2 className="card-heading">
@@ -32,9 +37,11 @@ const BlogArticles = () => {
             </div>
           </div>
         </div>
-        <div className="card-1">
-          <div className="img-1">
-            <img src={cableImage} alt="" />
+        <div className="card-2">
+          <div className="ImageBox">
+            <div className="img-1">
+              <img src={Card2} alt="" />
+            </div>
           </div>
           <div className="card-content">
             <h2 className="card-heading">
@@ -50,9 +57,11 @@ const BlogArticles = () => {
             </div>
           </div>
         </div>
-        <div className="card-1">
-          <div className="img-1">
-            <img src={cableImage} alt="" />
+        <div className="card-3">
+          <div className="ImageBox">
+            <div className="img-1">
+              <img src={Card3} alt="" />
+            </div>
           </div>
           <div className="card-content">
             <h2 className="card-heading">

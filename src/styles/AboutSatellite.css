@@ -8,6 +8,7 @@
 }
 .figures {
   display: flex;
+  padding-top: 30px;
 }
 .figures-1 {
   margin-right: 40px;

@@ -44,6 +44,9 @@
   text-transform: initial;
   text-align: left;
 }
+.mainContent .searchBar {
+  text-align: left;
+}
 input.searchBar {
   background-color: #ffffffbf;
   border-width: 0;

@@ -8,7 +8,7 @@
 }
 
 .card-content {
-  margin-bottom: 15px;
+  padding: 30px;
 }
 
 .card-content h3 {
@@ -17,7 +17,17 @@
 }
 
 .card-content p {
+  width: 100%;
   font-size: 14px;
+  color: #222121;
+  font-family: "Roboto", Sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-align: left;
+  margin-top: -10px;
+  text-transform: capitalize;
+  margin-top: 15px;
 }
 
 .card-image {
@@ -27,6 +37,90 @@
   border-radius: 8px;
 }
 
-.img-1 img{
-  height: 300px;
+.img-1 img {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+.BlogContainer {
+  padding-bottom: 100px;
+  padding-top: 100px;
+  margin-left: 65px;
+  margin-right: 65px;
+}
+.blogContent .title {
+  text-align: center;
+  color: #df0303;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.blogContent .heading {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #222121;
+}
+.blogContent p {
+  width: 100%;
+  font-size: 16px;
+  color: #222121;
+  font-family: "Roboto", Sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: -10px;
+  text-transform: capitalize;
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.card-1 {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 0 6px 12px rgba(6, 6, 6, 0.12);
+  border-radius: 15px 5px 5px 5px;
+}
+.card-2 {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 0 6px 12px rgba(6, 6, 6, 0.12);
+  border-radius: 5px 5px 5px 5px;
+}
+.card-3 {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 0 6px 12px rgba(6, 6, 6, 0.12);
+  border-radius: 5px 5px 5px 5px;
+}
+.card-heading {
+  font-family: "Roboto", Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+.btn-blog {
+  background: none;
+  border: none;
+  color: #df0303;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
+}
+.btn-blog:hover {
+  color: #df0303;
+  transform: translateY(-5px);
 }
