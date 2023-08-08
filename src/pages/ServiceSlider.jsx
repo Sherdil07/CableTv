@@ -8,8 +8,9 @@ import "../styles/Services.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
-const Slide = ({ image, title, description, LearnMore }) => {
+const Slide = ({ image, title, description, linkTo }) => {
   return (
     <div className="slide">
       <div
@@ -19,7 +20,11 @@ const Slide = ({ image, title, description, LearnMore }) => {
       <div className="slide-content">
         <h3>{title}</h3>
         <p>{description}</p>
-        <button>{LearnMore}</button>
+        {
+          <Link to={linkTo}>
+            <button>Learn More</button>
+          </Link>
+        }
       </div>
     </div>
   );
@@ -76,25 +81,25 @@ const ServiceSlider = () => {
                 image={CableTv}
                 title="Cable Tv"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-                LearnMore="Learn More"
+                linkTo="services/cable-tv"
               />
               <Slide
                 image={Cable}
                 title="Cable Internet"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-                LearnMore="Learn More"
+                linkTo="services/cable-internet"
               />
               <Slide
                 image={Satellite}
                 title="Satellite Tv"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-                LearnMore="Learn More"
+                linkTo="services/satellite-tv"
               />
               <Slide
                 image={SatelliteTv}
                 title="Satellite Internet"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-                LearnMore="Learn More"
+                linkTo="services/satellite-internet"
               />
             </Slider>
           </div>
