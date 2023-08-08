@@ -1,5 +1,4 @@
 .mainSection {
-  /* height: 600px; */
   padding-bottom: 100px;
 }
 .container {
@@ -8,7 +7,6 @@
   padding: 0;
 }
 .mainContent {
-  /* max-width: 100%; */
   padding-top: 113px;
   padding-left: 86px;
   width: 45%;
