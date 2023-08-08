@@ -1,25 +1,15 @@
 import React from "react";
-import ServiceProviderBG from "../assests/why-choose-sect.jpg";
+import ServiceImage from "../assests/why-choose-sect.jpg";
 import "../styles/ServiceProvider.css";
 
 const ServiceProvider = () => {
   return (
     <div className="ServiceProviderSection">
-      <div
-        className="ServiceProviderBG"
-        style={{
-          background: `url(${ServiceProviderBG}) `,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "right",
-          marginTop: "100px",
-          //   backgroundSize: "cover",
-        }}
-      >
-        <div className="AboutContent">
+      <div className="AboutContent">
+        <div className="leftSide">
           <h2 className="title">CHECK SERVICES PROVIDERS</h2>
           <h2 className="heading">
-            Satellite TV is a form of broadcasting television signals via
-            satellites to receive signals at the subscriber's home.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </h2>
           <p>
             It offers a wide range of channels and programming, including news,
@@ -44,6 +34,14 @@ const ServiceProvider = () => {
           <div className="btn">
             <button className="CheckNow">Check Now</button>
           </div>
+        </div>
+        <div className="rightSide">
+          <div className="Counter">
+            <p>UP TO </p>
+            <h1>40 MB</h1>
+            <h2>PER Second</h2>
+          </div>
+          <img src={ServiceImage} alt="" />
         </div>
       </div>
     </div>

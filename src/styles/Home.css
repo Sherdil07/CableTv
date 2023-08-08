@@ -32,7 +32,7 @@
   letter-spacing: 1px;
   text-align: left;
 }
-.mainContent .heroparagrapgh {
+.mainContent p {
   font-family: "Roboto", sans-serif;
   width: 90%;
   color: #222121;
@@ -53,13 +53,19 @@ input.searchBar {
   text-align: left;
 }
 .btn-findnow {
-  background-color: #df0303;
+  background-color: black;
   color: #ffffff;
   border: 0;
   padding: 12px;
   border-radius: 2px;
   cursor: pointer;
   width: 20%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
+}
+.btn-findnow:hover {
+  transform: translateY(-5px);
+  background-color: #df0303;
+  box-shadow: 0 6px 12px rgba(223, 3, 3, 0.4);
 }
 .searchBar {
   margin-top: 20px;

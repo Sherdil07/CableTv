@@ -57,6 +57,16 @@
   line-height: 20px;
   text-align: left;
 }
+.slide-content button {
+  background: none;
+  border: none;
+  color: white;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
+}
+.slide-content button:hover {
+  color: white;
+  transform: translateY(-5px);
+}
 .heroContent .heading {
   color: #df0303;
   font-family: "Montserrat", Sans-serif;

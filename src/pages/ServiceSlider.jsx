@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const Slide = ({ image, title, description }) => {
+const Slide = ({ image, title, description, LearnMore }) => {
   return (
     <div className="slide">
       <div
@@ -19,6 +19,7 @@ const Slide = ({ image, title, description }) => {
       <div className="slide-content">
         <h3>{title}</h3>
         <p>{description}</p>
+        <button>{LearnMore}</button>
       </div>
     </div>
   );
@@ -73,23 +74,27 @@ const ServiceSlider = () => {
             <Slider {...sliderSettings} ref={sliderRef}>
               <Slide
                 image={CableTv}
-                title="Card 1"
-                description="Content of Card 1"
+                title="Cable Tv"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                LearnMore="Learn More"
               />
               <Slide
                 image={Cable}
-                title="Card 2"
-                description="Content of Card 2"
+                title="Cable Internet"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                LearnMore="Learn More"
               />
               <Slide
                 image={Satellite}
-                title="Card 3"
-                description="Content of Card 3"
+                title="Satellite Tv"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                LearnMore="Learn More"
               />
               <Slide
                 image={SatelliteTv}
-                title="Card 4"
-                description="Content of Card 4"
+                title="Satellite Internet"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                LearnMore="Learn More"
               />
             </Slider>
           </div>

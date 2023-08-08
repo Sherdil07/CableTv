@@ -15,6 +15,10 @@ const AboutSatteliteTv = () => {
         }}
       >
         <div className="AboutContent">
+          <div className="LeftSide">
+
+          </div>
+          <div className="RightSide">
           <h2 className="title">ABOUT SHOP SATELLITE TV</h2>
           <h2 className="heading">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -42,6 +46,8 @@ const AboutSatteliteTv = () => {
           <div className="btn">
             <button className="CheckNow">Check Now</button>
           </div>
+          </div>
+         
         </div>
       </div>
     </div>

@@ -12,8 +12,9 @@
   cursor: pointer;
   width: 20%;
 }
-.searchBar {
+.HeroContent .searchBar {
   margin-top: 20px;
+  text-align: center;
 }
 input.searchBar {
   background-color: #ffffffbf;
@@ -22,14 +23,14 @@ input.searchBar {
   margin-right: 10px;
   width: 35%;
 }
-p {
+/* p {
   width: 90%;
   color: #222121;
   word-spacing: 1px;
   letter-spacing: 0.2px;
   font-weight: 100;
   text-transform: initial;
-}
+} */
 .title {
   color: #df0303;
   font-family: "Montserrat", Sans-serif;
@@ -45,12 +46,16 @@ p {
   font-weight: 700;
   line-height: 75px;
   letter-spacing: 1px;
+  margin-top: -10px;
 }
 p {
   width: 100%;
-  color: black;
-  word-spacing: 1px;
-  letter-spacing: 1.5px;
-  font-weight: 100;
-  text-transform: initial;
+  font-size: 16px;
+  color: white;
+  font-family: "Roboto", Sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: -10px;
 }
