@@ -6,6 +6,12 @@ import "./App.css";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
+import ProvidersTab from "./components/ProvidersTab";
+import ContatctUs from "./components/ContatctUs";
+import CableInternet from "./pages/CableInternet";
+import SatelliteInternet from "./pages/SatelliteInternet";
+import SatelliteTv from "./pages/SatelliteTv";
+import CableTv from "./pages/CableTv";
 
 function App() {
   return (
@@ -15,6 +21,16 @@ function App() {
         <Route path="/" exact Component={Home} />
         <Route path="/about" exact Component={AboutUs} />
         <Route path="/services" exact Component={Services} />
+        <Route path="/serviceproviders" exact Component={ProvidersTab} />
+        <Route path="/contactus" exact Component={ContatctUs} />
+        <Route path="services/cable-internet" exact Component={CableInternet} />
+        <Route path="services/cable-tv" exact Component={CableTv} />
+        <Route
+          path="services/satellite-internet"
+          exact
+          Component={SatelliteInternet}
+        />
+        <Route path="services/satellite-tv" exact Component={SatelliteTv} />
       </Routes>
       <Footer />
     </div>

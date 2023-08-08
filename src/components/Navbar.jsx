@@ -3,6 +3,13 @@ import logo from "../assests/header-Logo.png";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
+const servicesOptions = [
+  "Cable Tv",
+  "Cable Internet",
+  "Satellite Tv",
+  "Satellite Internet",
+];
+
 function Navbar() {
   return (
     <div className="container">
@@ -13,7 +20,21 @@ function Navbar() {
         <div className="rightSide">
           <Link to="/"> Home </Link>
           <Link to="/about"> About Us</Link>
-          <Link to="/services"> Services</Link>
+          <div className="dropdown">
+            <button className="dropbtn">
+            <Link to="/services"> Services</Link>
+              </button>
+            <div className="dropdown-content">
+              {servicesOptions.map((service, index) => (
+                <Link
+                  key={index}
+                  to={`/services/${service.replace(" ", "-").toLowerCase()}`}
+                >
+                  {service}
+                </Link>
+              ))}
+            </div>
+          </div>
           <Link to="/serviceproviders"> Service Providers</Link>
           <Link to="/contactus"> Contact Us</Link>
           <>
