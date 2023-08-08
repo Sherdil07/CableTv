@@ -29,12 +29,16 @@ function Home() {
             luctus at tortor.
           </p>
           <div className="searchBar">
+            {/* <div className="inputSearch"> */}
             <input
               className="searchBar"
               type="text"
               placeholder="Enter Zip Code"
             />
+            {/* </div> */}
+            {/* <div className="btn"> */}
             <button className="btn-findnow"> Find Now</button>
+            {/* </div> */}
           </div>
         </div>
       </div>
