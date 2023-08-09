@@ -1,6 +1,5 @@
 import React from "react";
 import ServiceSlider from "../pages/ServiceSlider";
-import About from "../pages/About";
 import HeroSection from "../pages/HeroSection";
 import HeroCommon from "../pages/HeroCommon";
 const Services = () => {

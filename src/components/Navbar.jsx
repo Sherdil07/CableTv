@@ -20,7 +20,7 @@ function Navbar() {
     <div className="container">
       <div className="Navbar">
         <div className="leftSide">
-          <img src={logo} alt="logo" />
+          <img className="ImgLogo" src={logo} alt="logo" />
         </div>
         <div className="rightSide">
           <button className="menu-button" onClick={toggleSidebar}>

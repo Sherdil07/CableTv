@@ -1,6 +1,12 @@
 import React from "react";
 import ContactForm from "../pages/ContactForm";
 import HeroCommon from "../pages/HeroCommon";
+import FacebookIcon from "../assests/facebook-app-symbol.png";
+import TwitterIcon from "../assests/twitter.png";
+import YoutubeIcon from "../assests/youtube.png";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MailIcon from "@mui/icons-material/Mail";
+import CallIcon from "@mui/icons-material/Call";
 import "../styles/ContactUs.css";
 
 const ContatctUs = () => {
@@ -25,9 +31,22 @@ const ContatctUs = () => {
                 amet, luctus at tortor.
               </p>
               <div className="contact-info">
-                <p>(111) 222-3333</p>
-                <p>support@shopsatellitetv.com</p>
-                <p>UNITED STATES</p>
+                <ul className="list-items">
+                  <li className="list-item">
+                    <CallIcon /> (111) 222-3333
+                  </li>
+                  <li className="list-item">
+                    <MailIcon /> support@shopsatellitetv.com
+                  </li>
+                  <li className="list-item">
+                    <LocationOnIcon /> United State
+                  </li>
+                </ul>
+              </div>
+              <div className="Contact-SocialIcons">
+                <img src={FacebookIcon} alt="" />
+                <img src={TwitterIcon} alt="" />
+                <img src={YoutubeIcon} alt="" />
               </div>
             </div>
           </div>

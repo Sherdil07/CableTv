@@ -7,8 +7,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.leftSide img {
+/* .leftSide img {
+  width: 190px;
+  } */
+.ImgLogo {
   width: 190px;
 }
 .rightSide a {
@@ -31,7 +36,7 @@
 }
 
 .dropbtn {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   color: #333;
   padding: 10px;
   border: none;
@@ -48,7 +53,20 @@
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  position: absolute;
+  display: inline-grid;
+  margin-top: 36px;
+  margin-left: -105px;
+  width: max-content;
+  /* padding: 10px; */
+}
+.dropdown-content a {
+  padding: 20px;
+}
+.dropdown-content a:hover {
+  background: #df0303;
+  color: white;
+  padding: 20px;
 }
 /* for sidebar menu */
 /* Existing styles for Navbar */
