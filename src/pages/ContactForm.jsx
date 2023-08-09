@@ -14,7 +14,7 @@ function ContactForm() {
     phone: "",
     email: "",
     message: "",
-    selectedService: servicesOptions[0],
+    selectedService: "", // Initially, no service is selected
   });
 
   const handleChange = (event) => {
@@ -28,12 +28,10 @@ function ContactForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form data submitted:", formData);
-    // You can add your own logic here to handle form submission
   };
 
   return (
     <div>
-      {/* <h1>Contact Us</h1> */}
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name</label>
@@ -85,7 +83,11 @@ function ContactForm() {
             name="selectedService"
             value={formData.selectedService}
             onChange={handleChange}
+            required
           >
+            <option value="" disabled hidden>
+              Select your service
+            </option>
             {servicesOptions.map((service, index) => (
               <option key={index} value={service}>
                 {service}
