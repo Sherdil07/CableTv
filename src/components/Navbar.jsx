@@ -15,15 +15,15 @@ function Navbar() {
     <div className="container">
       <div className="Navbar">
         <div className="leftSide">
-          <img src={logo} alt="logo" />
+          <img className="ImgLogo" src={logo} alt="logo" />
         </div>
         <div className="rightSide">
           <Link to="/"> Home </Link>
           <Link to="/about"> About Us</Link>
           <div className="dropdown">
             <button className="dropbtn">
-            <Link to="/services"> Services</Link>
-              </button>
+              <Link to="/services"> Services</Link>
+            </button>
             <div className="dropdown-content">
               {servicesOptions.map((service, index) => (
                 <Link

@@ -1,5 +1,4 @@
 import React from "react";
-import About from "../pages/About";
 import HeroCommon from "../pages/HeroCommon";
 import "../styles/ProvidersTab.css";
 const ProvidersTab = () => {
