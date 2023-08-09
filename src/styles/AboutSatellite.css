@@ -2,6 +2,10 @@
   display: flex;
   justify-content: center;
 }
+.AboutContent .RightSide {
+  margin-left: 650px;
+  margin-right: 20px;
+}
 .LeftSide {
   margin-left: 668px;
   margin-right: 20px;
