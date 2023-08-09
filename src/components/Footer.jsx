@@ -1,5 +1,6 @@
 import React from "react";
 import FooterLogo from "../assests/footer-logo.png";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "../styles/Footer.css";
 const Footer = () => {
   return (
@@ -50,7 +51,9 @@ const Footer = () => {
               <ul className="list-items">
                 <li className="list-item">(111) 222-3333</li>
                 <li className="list-item">SUPPORT@SHOPSATELLITETV.COM</li>
-                <li className="list-item">UNITED STATE</li>
+                <li className="list-item">
+                  <LocationOnIcon /> UNITED STATESUNITED STATE
+                </li>
               </ul>
             </div>
           </div>
