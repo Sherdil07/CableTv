@@ -15,7 +15,7 @@ function ContactForm() {
     phone: "",
     email: "",
 
-    selectedService: servicesOptions[0],
+    selectedService: "",
     message: "",
   });
 
