@@ -1,5 +1,4 @@
 import React from "react";
-import About from "../pages/About";
 import ContactForm from "../pages/ContactForm";
 import HeroCommon from "../pages/HeroCommon";
 import "../styles/ContactUs.css";
