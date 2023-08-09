@@ -50,36 +50,3 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-/* Other styles... */
-/* Navbar.css */
-/* ... Your existing styles ... */
-
-.sidebar {
-  width: 250px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: -250px;
-  transition: left 0.3s ease;
-  background-color: #f5f5f5;
-}
-
-.sidebar.open {
-  left: 0;
-}
-
-@media screen and (max-width: 1024px) {
-  .Navbar {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .rightSide {
-    display: none;
-  }
-
-  .sidebar {
-    display: block;
-  }
-}
