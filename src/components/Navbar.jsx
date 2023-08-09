@@ -45,6 +45,13 @@ function Navbar() {
           </div>
           <Link to="/serviceproviders"> Service Providers</Link>
           <Link to="/contactus"> Contact Us</Link>
+          <>
+            <input
+              className="header-searchBar"
+              type="text"
+              placeholder="Enter Zip Code"
+            />
+          </>
         </div>
       </div>
       {isSidebarOpen && (
