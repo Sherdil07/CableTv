@@ -1,0 +1,42 @@
+.col-6 {
+  width: 50%;
+}
+.LeftSide {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.col-6 .LeftSide img {
+  width: 540px;
+  height: 588px;
+}
+.col-6 .RightSide .title {
+  text-align: left;
+  color: #df0303;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.col-6 .RightSide h2.heading {
+  color: #171616;
+  /* text-align: center; */
+  text-align: left;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 32px;
+  line-height: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.col-6 .RightSide .description {
+  font-size: 16px;
+  color: #171616;
+  font-family: "Roboto", Sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  text-align: left;
+  text-transform: capitalize;
+}
