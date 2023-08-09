@@ -1,6 +1,8 @@
 import React from "react";
 import FooterLogo from "../assests/footer-logo.png";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MailIcon from "@mui/icons-material/Mail";
+import CallIcon from "@mui/icons-material/Call";
 import "../styles/Footer.css";
 const Footer = () => {
   return (
@@ -49,8 +51,12 @@ const Footer = () => {
             <div className="FooterContent">
               <h2>Contact Us</h2>
               <ul className="list-items">
-                <li className="list-item">(111) 222-3333</li>
-                <li className="list-item">SUPPORT@SHOPSATELLITETV.COM</li>
+                <li className="list-item">
+                  <CallIcon /> (111) 222-3333
+                </li>
+                <li className="list-item">
+                  <MailIcon /> SUPPORT@SHOPSATELLITETV.COM
+                </li>
                 <li className="list-item">
                   <LocationOnIcon /> UNITED STATESUNITED STATE
                 </li>
