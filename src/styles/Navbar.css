@@ -10,9 +10,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* .leftSide img {
-  width: 190px;
-  } */
+
 .ImgLogo {
   width: 190px;
 }
@@ -25,10 +23,8 @@
   width: 20%;
   padding: 5px;
   border: 0;
+  margin-bottom: 0px;
 }
-/* Navbar.css */
-
-/* Other styles... */
 
 .dropdown {
   position: relative;
@@ -72,3 +68,23 @@
 /* Existing styles for Navbar */
 
 /* New styles for sidebar */
+/* Existing styles for Navbar */
+
+/* Media query for screens greater than 1024px */
+@media (min-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+
+  .rightSide {
+    display: flex;
+  }
+  .menu-button {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .rightSide {
+    display: none;
+  }
+}

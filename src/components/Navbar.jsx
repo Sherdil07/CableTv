@@ -16,6 +16,7 @@ function Navbar() {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
   return (
     <div className="container">
       <div className="Navbar">
@@ -23,9 +24,6 @@ function Navbar() {
           <img className="ImgLogo" src={logo} alt="logo" />
         </div>
         <div className="rightSide">
-          <button className="menu-button" onClick={toggleSidebar}>
-            ☰ Menu
-          </button>
           <Link to="/"> Home </Link>
           <Link to="/about"> About Us</Link>
           <div className="dropdown">
@@ -53,6 +51,9 @@ function Navbar() {
             />
           </>
         </div>
+        <button className="menu-button" onClick={toggleSidebar}>
+          ☰ Menu
+        </button>
       </div>
       {isSidebarOpen && (
         <div className="sidebar">
