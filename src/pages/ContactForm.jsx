@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/ContactForm.css";
 
 const servicesOptions = [
-  "Select Your Service",
   "Cable Tv",
   "Cable Internet",
   "Satellite Tv",
@@ -14,9 +13,8 @@ function ContactForm() {
     name: "",
     phone: "",
     email: "",
-
-    selectedService: "",
     message: "",
+    selectedService: "", // Initially, no service is selected
   });
 
   const handleChange = (event) => {
@@ -41,7 +39,6 @@ function ContactForm() {
             type="text"
             id="name"
             name="name"
-            placeholder="Type Your Full Name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -53,7 +50,6 @@ function ContactForm() {
             type="tel"
             id="phone"
             name="phone"
-            placeholder="Type Your Phone No"
             value={formData.phone}
             onChange={handleChange}
             required
@@ -65,19 +61,26 @@ function ContactForm() {
             type="email"
             id="email"
             name="email"
-            placeholder="Type Your Email Address"
             value={formData.email}
             onChange={handleChange}
             required
           />
         </div>
-
+        <div>
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </div>
         <div>
           <label htmlFor="services">Services</label>
           <select
             id="services"
             name="selectedService"
-            placeholder="Select Your Service"
             value={formData.selectedService}
             onChange={handleChange}
             required
@@ -91,18 +94,6 @@ function ContactForm() {
               </option>
             ))}
           </select>
-        </div>
-
-        <div>
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Type Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
         </div>
         <button type="submit">Send</button>
       </form>
