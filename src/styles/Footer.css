@@ -28,7 +28,7 @@
   text-align: left;
   margin-top: -10px;
   text-transform: capitalize;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 .col-3 h2 {
   width: 100%;
@@ -39,11 +39,21 @@
   letter-spacing: 1px;
   line-height: 18px;
   text-align: left;
-  margin-top: -10px;
+  margin-top: 0px;
   text-transform: uppercase;
+  margin-left: 35px;
 }
-.list-items {
-  color: white;
+.list-item {
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  font-family: "Montserrat", Sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-align: left;
+  text-transform: capitalize;
+  margin-top: 15px;
   list-style: none;
 }
 .postFooter {
@@ -59,4 +69,5 @@
 }
 .postFooter p {
   width: 20%;
+  text-align: right;
 }
