@@ -39,7 +39,6 @@ function ContactForm() {
             type="text"
             id="name"
             name="name"
-            placeholder="Type Your Full Name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -51,7 +50,6 @@ function ContactForm() {
             type="tel"
             id="phone"
             name="phone"
-            placeholder="Type Your Phone No"
             value={formData.phone}
             onChange={handleChange}
             required
@@ -63,12 +61,12 @@ function ContactForm() {
             type="email"
             id="email"
             name="email"
-            placeholder="Type Your Email Address"
             value={formData.email}
             onChange={handleChange}
             required
           />
         </div>
+
         <div>
           <label htmlFor="services">Services</label>
           <select
@@ -88,6 +86,7 @@ function ContactForm() {
             ))}
           </select>
         </div>
+
         <div>
           <label htmlFor="message">Message</label>
           <textarea
