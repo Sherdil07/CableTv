@@ -63,7 +63,7 @@ function Navbar() {
             </button>
           </div>
           <div className="sidebar-content">
-            {/* Links */}
+            {/* {/ Links /} */}
             <Link to="/"> Home </Link>
             <Link to="/about"> About Us</Link>
             <div className="dropdown">
