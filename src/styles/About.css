@@ -1,3 +1,22 @@
 h2.heading {
   color: white;
+  text-align: center;
+  text-align: left;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 42px;
+  line-height: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.description {
+  width: 50%;
+  font-size: 16px;
+  color: white;
+  font-family: "Roboto", Sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  text-align: left;
+  margin-top: -10px;
+  text-transform: capitalize;
 }

@@ -55,6 +55,7 @@
   text-transform: capitalize;
   margin-top: 15px;
   list-style: none;
+  cursor: pointer;
 }
 .postFooter {
   display: flex;
@@ -70,4 +71,23 @@
 .postFooter p {
   width: 20%;
   text-align: right;
+}
+.SocialIcons {
+  margin-left: 40px;
+}
+.SocialIcons img {
+  padding-right: 10px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
+  cursor: pointer;
+}
+.SocialIcons img:hover {
+  transform: translateY(-5px);
+}
+.list-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+  padding-right: 10px;
 }

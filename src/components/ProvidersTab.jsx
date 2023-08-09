@@ -1,9 +1,14 @@
 import React from "react";
 import About from "../pages/About";
+import HeroCommon from "../pages/HeroCommon";
+import "../styles/ProvidersTab.css";
 const ProvidersTab = () => {
   return (
     <div className="Service-Providers">
-      <About heading="Service Providers" />
+      <HeroCommon
+        heading="Service Providers"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+      />
       <div className="CheckProviders">
         <h2 className="title">SHOP SATELLITE TV</h2>
         <h2 className="heading">Need Fast & Secure Broadband?</h2>

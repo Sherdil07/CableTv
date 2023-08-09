@@ -3,6 +3,9 @@ import FooterLogo from "../assests/footer-logo.png";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailIcon from "@mui/icons-material/Mail";
 import CallIcon from "@mui/icons-material/Call";
+import FacebookIcon from "../assests/facebook-app-symbol.png";
+import TwitterIcon from "../assests/twitter.png";
+import YoutubeIcon from "../assests/youtube.png";
 import "../styles/Footer.css";
 const Footer = () => {
   return (
@@ -55,12 +58,17 @@ const Footer = () => {
                   <CallIcon /> (111) 222-3333
                 </li>
                 <li className="list-item">
-                  <MailIcon /> SUPPORT@SHOPSATELLITETV.COM
+                  <MailIcon /> support@shopsatellitetv.com
                 </li>
                 <li className="list-item">
-                  <LocationOnIcon /> UNITED STATESUNITED STATE
+                  <LocationOnIcon /> United State
                 </li>
               </ul>
+              <div className="SocialIcons">
+                <img src={FacebookIcon} alt="" />
+                <img src={TwitterIcon} alt="" />
+                <img src={YoutubeIcon} alt="" />
+              </div>
             </div>
           </div>
         </div>

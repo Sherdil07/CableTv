@@ -1,11 +1,16 @@
 import React from "react";
 import About from "../pages/About";
 import ContactForm from "../pages/ContactForm";
+import HeroCommon from "../pages/HeroCommon";
+import "../styles/ContactUs.css";
 
 const ContatctUs = () => {
   return (
     <div className="ContatctUs">
-      <About heading="Contact Us" />
+      <HeroCommon
+        heading="Contact Us"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+      />
       <div className="Contact-Content">
         <div className="leftSide">
           <h2 className="title">Contact Us</h2>
