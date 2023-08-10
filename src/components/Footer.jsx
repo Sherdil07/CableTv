@@ -61,7 +61,8 @@ const Footer = () => {
                   <MailIcon /> support@shopsatellitetv.com
                 </li>
                 <li className="list-item">
-                  <LocationOnIcon /> United State
+                  <LocationOnIcon /> 5075 memorial dr suite, 343-B stone
+                  mountain GA 30083
                 </li>
               </ul>
               <div className="SocialIcons">
