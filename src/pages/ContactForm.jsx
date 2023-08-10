@@ -13,8 +13,8 @@ function ContactForm() {
     name: "",
     phone: "",
     email: "",
-    message: "",
     selectedService: "", // Initially, no service is selected
+    message: "",
   });
 
   const handleChange = (event) => {
@@ -66,16 +66,7 @@ function ContactForm() {
             required
           />
         </div>
-        <div>
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </div>
+
         <div>
           <label htmlFor="services">Services</label>
           <select
@@ -94,6 +85,18 @@ function ContactForm() {
               </option>
             ))}
           </select>
+        </div>
+
+        <div>
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Type Your Message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
         </div>
         <button type="submit">Send</button>
       </form>

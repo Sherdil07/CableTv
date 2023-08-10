@@ -12,6 +12,7 @@ import CableInternet from "./pages/CableInternet";
 import SatelliteInternet from "./pages/SatelliteInternet";
 import SatelliteTv from "./pages/SatelliteTv";
 import CableTv from "./pages/CableTv";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           Component={SatelliteInternet}
         />
         <Route path="services/satellite-tv" exact Component={SatelliteTv} />
+        <Route path="/privacypolicy" exact Component={PrivacyPolicy} />
       </Routes>
       <Footer />
     </div>
