@@ -31,7 +31,7 @@ function ContactForm() {
   };
 
   return (
-    <div>
+    <div className="row">
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name</label>

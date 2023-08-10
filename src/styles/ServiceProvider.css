@@ -51,3 +51,11 @@
 .rightSide {
   position: relative;
 }
+@media only screen and (max-width: 1024px) {
+  .AboutContent {
+    flex-wrap: wrap;
+  }
+  .AboutContent .RightSide {
+    margin: 0px;
+  }
+}

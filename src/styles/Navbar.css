@@ -71,9 +71,9 @@
     display: none;
   }
 
-  .rightSide {
+  /* .rightSide {
     display: flex;
-  }
+  } */
   .menu-button {
     display: none;
   }

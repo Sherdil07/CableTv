@@ -73,3 +73,9 @@ input.searchBar {
   text-align: left;
 }
 
+@media only screen and (max-width: 1024px) {
+  .mainContent .subTitle {
+    font-size: 25px;
+    font-size: 14px
+  }
+}

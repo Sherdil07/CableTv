@@ -43,7 +43,9 @@ const ServiceProvider = () => {
             <h1>40 MB</h1>
             <h2>PER Second</h2>
           </div>
-          <img src={ServiceImage} alt="" />
+          <div className="serviceimg">
+            <img src={ServiceImage} alt="" />
+          </div>
         </div>
       </div>
     </div>

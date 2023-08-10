@@ -40,3 +40,14 @@
   text-align: left;
   text-transform: capitalize;
 }
+@media only screen and (max-width: 1024px) {
+  .row {
+    flex-wrap: wrap;
+  }
+  .content .row .col-6 {
+    width: 100%;
+  }
+  .col-6 .LeftSide img {
+    width: 100%;
+  }
+}
