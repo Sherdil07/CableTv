@@ -45,8 +45,8 @@
 .mainContent .searchBar {
   text-align: left;
 }
-input.searchBar {
-  background-color: #ffffffbf;
+.mainContent input.searchBar {
+  background-color: #9697adad;
   border-width: 0;
   padding: 12px;
   margin-right: 10px;
@@ -76,6 +76,15 @@ input.searchBar {
 @media only screen and (max-width: 1024px) {
   .mainContent .subTitle {
     font-size: 25px;
-    font-size: 14px
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .mainContent {
+    width: 52%;
+    padding-left: 10px;
+  }
+  .mainSection {
+    padding-bottom: 0px;
   }
 }

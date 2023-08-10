@@ -33,13 +33,14 @@ const ContatctUs = () => {
               <div className="contact-info">
                 <ul className="list-items">
                   <li className="list-item">
-                    <CallIcon /> (111) 222-3333
+                    <CallIcon /> (866) 236-3017
                   </li>
                   <li className="list-item">
                     <MailIcon /> support@shopsatellitetv.com
                   </li>
                   <li className="list-item">
-                    <LocationOnIcon /> United State
+                    <LocationOnIcon /> 5075 memorial dr suite, 343-B stone
+                    mountain GA 30083
                   </li>
                 </ul>
               </div>

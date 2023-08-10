@@ -66,7 +66,8 @@ function Navbar() {
             {/* {/ Links /} */}
             <Link to="/"> Home </Link>
             <Link to="/about"> About Us</Link>
-            <div className="dropdown">
+            <Link to="/services"> Services</Link>
+            {/* <div className="dropdown">
               <button className="dropbtn">
                 <Link to="/services"> Services</Link>
               </button>
@@ -80,7 +81,7 @@ function Navbar() {
                   </Link>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             <Link to="/serviceproviders"> Service Providers</Link>
             <Link to="/contactus"> Contact Us</Link>
