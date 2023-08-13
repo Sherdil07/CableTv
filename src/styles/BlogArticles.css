@@ -79,7 +79,7 @@
   margin-top: -10px;
   text-transform: capitalize;
 }
-.cards-container {
+.cards-app-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +131,7 @@
   .card-3 {
     margin-bottom: 50px;
   }
-  .cards-container {
+  .cards-app-container {
     flex-wrap: wrap;
   }
 }

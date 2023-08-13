@@ -16,7 +16,7 @@ const BlogArticles = () => {
           tortor lorem, quis tempor felis commodo vel.
         </p>
       </div>
-      <div className="cards-container">
+      <div className="cards-app-container">
         <div className="card-1">
           <div className="ImageBox">
             <div className="img-1">

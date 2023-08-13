@@ -39,7 +39,7 @@ function Home() {
   
   }
   return (
-    <div className="container">
+    <div className="app-container">
       <div
         className="mainSection"
         style={{

@@ -10,7 +10,7 @@ import "../styles/Footer.css";
 const Footer = () => {
   return (
     <div className="Footer">
-      <div className="container">
+      <div className="app-container">
         <div className="row">
           <div className="col-3">
             <div className="FooterContent">

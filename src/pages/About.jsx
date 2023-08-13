@@ -5,7 +5,7 @@ import "../styles/About.css";
 const About = ({ heading }) => {
   return (
     <div className="HeroSection">
-      <div className="container">
+      <div className="app-container">
         <div
           className="HeroContent"
           style={{

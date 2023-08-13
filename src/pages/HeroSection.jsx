@@ -8,7 +8,7 @@ const HeroSection = () => {
 
   return (
     <div className="HeroSection">
-      <div className="container">
+      <div className="app-container">
         <div
           className="HeroContent"
           style={{

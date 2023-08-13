@@ -66,7 +66,7 @@ const ServiceSlider = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="container">
+        <div className="app-container">
           <div className="heroContent">
             <h2 className="heading">SERVICES</h2>
             <h2 className="title">Find Perfect Network Solutions</h2>
@@ -75,7 +75,7 @@ const ServiceSlider = () => {
               consequat tortor lorem, quis tempor felis commodo vel.
             </p>
           </div>
-          <div className="slider-container">
+          <div className="slider-app-container">
             <Slider {...sliderSettings} ref={sliderRef}>
               <Slide
                 image={CableTv}

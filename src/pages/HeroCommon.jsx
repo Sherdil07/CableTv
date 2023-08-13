@@ -5,7 +5,7 @@ import "../styles/HeroCommon.css";
 const HeroCommon = ({ heading, description }) => {
   return (
     <div className="HeroCommon">
-      <div className="container">
+      <div className="app-container">
         <div
           className="HeroBackground"
           style={{

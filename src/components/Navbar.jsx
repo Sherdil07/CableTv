@@ -18,7 +18,7 @@ function Navbar() {
   };
 
   return (
-    <div className="container">
+    <div className="app-container">
       <div className="Navbar">
         <div className="leftSide">
           <img className="ImgLogo" src={logo} alt="logo" />
