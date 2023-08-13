@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState} from "react";
 import MainSection from "../assests/main-hero-sec-home.jpg";
 import "../styles/Home.css";
 import AboutSatteliteTv from "../pages/AboutSatteliteTv";
@@ -6,8 +6,38 @@ import ServiceProvider from "../pages/ServiceProviders";
 import HeroSection from "../pages/HeroSection";
 import BlogArticles from "../pages/BlogArticles";
 import ServiceSlider from "../pages/ServiceSlider";
+import axios from "axios";
+import { setZipCodeData } from "../reducers/zipCodeReducer";
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Home() {
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const [zipCode, setzipCode] = useState("")
+
+
+  const handleClick = async() =>{
+
+    if(!zipCode)
+    return;
+
+    try {
+      const res = await axios.post("http://localhost:5000",{zipCode:"00601"})
+      console.log(res.data)
+
+      dispatch(setZipCodeData(res.data))
+
+      navigate(`/zipCode/${zipCode}`)
+
+
+    } catch (error) {
+      // show error on screen
+      console.log(error)
+    }
+  
+  }
   return (
     <div className="container">
       <div
@@ -34,10 +64,12 @@ function Home() {
               className="searchBar"
               type="text"
               placeholder="Enter Zip Code"
+              value={zipCode}
+              onChange={(e)=> setzipCode(e.target.value)}
             />
             {/* </div> */}
             {/* <div className="btn"> */}
-            <button className="btn-findnow"> Find Now</button>
+            <button className="btn-findnow" onClick={handleClick}> Find Now</button>
             {/* </div> */}
           </div>
         </div>

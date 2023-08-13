@@ -3,6 +3,9 @@ import HeroBG from "../assests/hero-section-and-pre-footer-bg.jpg";
 import "../styles/HeroSection.css";
 
 const HeroSection = () => {
+
+
+
   return (
     <div className="HeroSection">
       <div className="container">
@@ -27,7 +30,7 @@ const HeroSection = () => {
               type="text"
               placeholder="Enter Zip Code"
             />
-            <button className="btn-findnow"> Find Now</button>
+            <button className="btn-findnow" > Find Now</button>
           </div>
         </div>
       </div>
