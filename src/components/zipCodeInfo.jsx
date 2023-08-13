@@ -14,8 +14,7 @@ function ZipCodeInfo() {
     for (const key in obj) {
       if (obj.hasOwnProperty(key)) {
           const value = obj[key];
-          if (key === "Column5" && obj[key])
-          arr.push(<li>{value}</li>)
+  
           if (key === "Column7" && obj[key])
           arr.push(<li>{value}</li>)
           if (key === "Column8" && obj[key])
