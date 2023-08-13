@@ -6,7 +6,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const zipCodeReducer = createSlice({
   name: 'zipCode',
   initialState : {
-    zipCodeData : {}
+    zipCodeData : null
   },
 
 
