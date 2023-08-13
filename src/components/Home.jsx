@@ -24,7 +24,7 @@ function Home() {
     return;
 
     try {
-      const res = await axios.post("http://localhost:5000",{zipCode:"00601"})
+      const res = await axios.post("http://localhost:5000",{zipCode:zipCode})
       console.log(res.data)
 
       dispatch(setZipCodeData(res.data))
