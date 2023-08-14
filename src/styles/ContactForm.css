@@ -4,7 +4,7 @@ form {
 }
 
 label {
-  display: block;
+  display: block !important;
   margin-bottom: 8px;
   font-weight: bold;
   margin-top: 20px;
@@ -14,7 +14,7 @@ label {
 input,
 textarea,
 select {
-  width: 97%;
+  width: 100%;
   padding: 8px;
   margin-bottom: 16px;
   border: 1px solid #ccc;
@@ -43,6 +43,7 @@ button[type="submit"]:hover {
 #message {
   width: 548px;
   height: 96px;
+  margin-bottom: 30px;
 }
 @media only screen and (max-width: 1024px) {
 .row {
