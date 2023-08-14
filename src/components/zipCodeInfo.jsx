@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/zipCodeInfo.css";
+import CallIcon from "@mui/icons-material/Call";
 
 function Tab(props) {
   return (
@@ -33,6 +34,10 @@ function ZipCodeInfo() {
     }
 
     return arr;
+  };
+
+  const makeCall = (phoneNumber) => {
+    window.location.href = `tel:${phoneNumber}`;
   };
 
   const scrollToRef = (ref) => {
@@ -129,7 +134,9 @@ function ZipCodeInfo() {
                         <td>{i["Column4"]}</td>
                         <td>
                           {" "}
-                          <button>View Plans</button>
+                          <button onClick={() => makeCall("1112223333")}>
+                            <CallIcon /> (111) 222-3333
+                          </button>{" "}
                         </td>
                       </tr>
                     );
@@ -169,7 +176,9 @@ function ZipCodeInfo() {
                         <td>{i["Column4"]}</td>
                         <td>
                           {" "}
-                          <button>View Plans</button>
+                          <button onClick={() => makeCall("1112223333")}>
+                            <CallIcon /> (111) 222-3333
+                          </button>{" "}
                         </td>
                       </tr>
                     );
@@ -213,7 +222,9 @@ function ZipCodeInfo() {
                         <td>{i["Column4"]}</td>
                         <td>
                           {" "}
-                          <button>View Plans</button>
+                          <button onClick={() => makeCall("1112223333")}>
+                            <CallIcon /> (111) 222-3333
+                          </button>{" "}
                         </td>
                       </tr>
                     );

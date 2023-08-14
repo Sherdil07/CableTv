@@ -6,6 +6,7 @@ import CallIcon from "@mui/icons-material/Call";
 import FacebookIcon from "../assests/facebook-app-symbol.png";
 import TwitterIcon from "../assests/twitter.png";
 import YoutubeIcon from "../assests/youtube.png";
+import { Link } from "react-router-dom";
 import "../styles/Footer.css";
 const Footer = () => {
   return (
@@ -30,11 +31,21 @@ const Footer = () => {
             <div className="FooterContent">
               <h2>Important Links</h2>
               <ul className="list-items">
-                <li className="list-item">Home</li>
-                <li className="list-item">About</li>
-                <li className="list-item">Services</li>
-                <li className="list-item">Blogs</li>
-                <li className="list-item">Contact Us</li>
+                <li className="list-item">
+                  <Link to="/">Home</Link>
+                </li>
+                <li className="list-item">
+                  <Link to="/about">About</Link>
+                </li>
+                <li className="list-item">
+                  <Link to="/services">Services</Link>
+                </li>
+                <li className="list-item">
+                  <Link to="/blogs">Blogs</Link>
+                </li>
+                <li className="list-item">
+                  <Link to="/contactus">Contact Us</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -42,11 +53,23 @@ const Footer = () => {
             <div className="FooterContent">
               <h2>Services</h2>
               <ul className="list-items">
-                <li className="list-item">Service Provider</li>
-                <li className="list-item">Cable Tv</li>
-                <li className="list-item">Cable Internet</li>
-                <li className="list-item">Satellite Tv</li>
-                <li className="list-item">Satellite Internet</li>
+                <li className="list-item">
+                  <Link to="serviceproviders">Service Provider</Link>
+                </li>
+                <li className="list-item">
+                  <Link to="/services/cable-tv">Cable Tv</Link>
+                </li>
+                <li className="list-item">
+                  <Link to="/services/cable-internet">Cable Internet</Link>{" "}
+                </li>
+                <li className="list-item">
+                  <Link to="/services/satellite-tv">Satellite Tv</Link>
+                </li>
+                <li className="list-item">
+                  <Link to="/services/satellite-internet">
+                    Satellite Internet
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
