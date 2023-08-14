@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import logo from "../assests/header-Logo.png";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
+import axios from "axios";
+import { setZipCodeData } from "../reducers/zipCodeReducer";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 const servicesOptions = [
   "Cable Tv",
@@ -12,9 +16,35 @@ const servicesOptions = [
 
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [zipCode, setzipCode] = useState("");
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  };
+  const handleSearch = async () => {
+    if (!zipCode) return;
+
+    try {
+      const res = await axios.post("http://localhost:5000", {
+        zipCode: zipCode,
+      });
+      console.log(res.data);
+
+      dispatch(setZipCodeData(res.data));
+
+      navigate(`/zipCode/${zipCode}`);
+    } catch (error) {
+      // show error on screen
+      console.log(error);
+    }
+  };
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
+      setzipCode(""); // Clear the search bar after search
+    }
   };
 
   return (
@@ -48,7 +78,17 @@ function Navbar() {
               className="header-searchBar"
               type="text"
               placeholder="Enter Zip Code"
+              value={zipCode}
+              onChange={(e) => setzipCode(e.target.value)}
+              onKeyDown={handleKeyDown} // Call the handleKeyPress function on key press
             />
+
+            {/* </div> */}
+            {/* <div className="btn"> */}
+            {/* <button className="btn-findnow" onClick={handleClick}>
+              {" "}
+              Find Now
+            </button> */}
           </>
         </div>
         <button className="menu-button" onClick={toggleSidebar}>

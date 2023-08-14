@@ -1,4 +1,11 @@
 .custom-container {
-    margin-top: 20px;
-  }
-  
+  margin-top: 20px;
+}
+span {
+  cursor: pointer;
+}
+.jump-to-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
