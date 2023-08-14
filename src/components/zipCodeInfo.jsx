@@ -143,7 +143,10 @@ function ZipCodeInfo() {
                   zipCodeInfo?.internetProviders.map((i) => {
                     return (
                       <tr>
-                        <th scope="row">{i["Column2"]}</th>
+                        <th scope="row">
+                          <img src={`/companies/${i["Column2"]}.png`} alt="image" />
+                          
+                          </th>
                         <td> ${i["Price"]}</td>
                         <td>{i["Column5"]}</td>
                         <td>
