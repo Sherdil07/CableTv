@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/zipCodeInfo.css";
@@ -28,7 +28,6 @@ function ZipCodeInfo() {
         if (key === "Column7" && obj[key]) arr.push(<li>{value}</li>);
         if (key === "Column8" && obj[key]) arr.push(<li>{value}</li>);
         if (key === "Column9" && obj[key]) arr.push(<li>{value}</li>);
-
         if (key === "Features" && obj[key]) arr.push(<li>{value}</li>);
       }
     }
@@ -37,10 +36,12 @@ function ZipCodeInfo() {
   };
 
   const scrollToRef = (ref) => {
-    window.scrollTo({
-      top: ref.current.offsetTop - 50, // Adjust scroll position
-      behavior: "smooth", // Smooth scrolling
-    });
+    if (ref && ref.current) {
+      window.scrollTo({
+        top: ref.current.offsetTop - 50, // Adjust scroll position
+        behavior: "smooth", // Smooth scrolling
+      });
+    }
   };
 
   // Create refs for each section
@@ -57,7 +58,7 @@ function ZipCodeInfo() {
     );
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (activeTab === "Internet") {
       scrollToRef(internetRef);
     } else if (activeTab === "TV") {
@@ -76,13 +77,13 @@ function ZipCodeInfo() {
         <span onClick={() => scrollToRef(bundlesRef)}>Bundles</span> */}
         <div className="jump">Jump To:</div>
         <Tab
-          label="Internet"
-          active={activeTab === "Internet"}
+          label="Internet|"
+          active={activeTab === "Internet|"}
           onClick={() => handleTabClick("Internet")}
         />
         <Tab
-          label="TV"
-          active={activeTab === "TV"}
+          label="TV|"
+          active={activeTab === "TV|"}
           onClick={() => handleTabClick("TV")}
         />
         <Tab
