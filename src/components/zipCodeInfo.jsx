@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/zipCodeInfo.css";
 import CallIcon from "@mui/icons-material/Call";
+import StarIcon from "@mui/icons-material/Star";
+import StarOutlineIcon from "@mui/icons-material/StarOutline";
 
 function Tab(props) {
   return (
@@ -73,6 +75,22 @@ function ZipCodeInfo() {
     }
   }, [activeTab, internetRef, tvRef, bundlesRef]);
 
+  function renderRatingStars(rating) {
+    const filledStars = Math.floor(rating);
+    const emptyStars = 5 - filledStars;
+
+    const stars = [];
+
+    for (let i = 0; i < filledStars; i++) {
+      stars.push(<StarIcon key={`filled-${i}`} />);
+    }
+
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(<StarOutlineIcon key={`empty-${i}`} />);
+    }
+
+    return stars;
+  }
   return (
     <div className="custom-container">
       <div className="jump-to-links">
@@ -126,12 +144,13 @@ function ZipCodeInfo() {
                     return (
                       <tr>
                         <th scope="row">{i["Column2"]}</th>
-                        <td>{i["Price"]}</td>
+                        <td> ${i["Price"]}</td>
                         <td>{i["Column5"]}</td>
                         <td>
                           <ul>{getList(i)}</ul>
                         </td>
-                        <td>{i["Column4"]}</td>
+                        <td>{renderRatingStars(i["Column4"])}</td>{" "}
+                        {/* Render stars here */}{" "}
                         <td>
                           {" "}
                           <button onClick={() => makeCall("1112223333")}>
@@ -168,12 +187,12 @@ function ZipCodeInfo() {
                     return (
                       <tr>
                         <th scope="row">{i["Column2"]}</th>
-                        <td>{i["Price"]}</td>
+                        <td>${i["Price"]}</td>
                         <td>{i["Column5"]}</td>
                         <td>
                           <ul>{getList(i)}</ul>
                         </td>
-                        <td>{i["Column4"]}</td>
+                        <td>{renderRatingStars(i["Column4"])}</td>{" "}
                         <td>
                           {" "}
                           <button onClick={() => makeCall("1112223333")}>
@@ -214,12 +233,12 @@ function ZipCodeInfo() {
                     return (
                       <tr>
                         <th scope="row">{i["Column2"]}</th>
-                        <td>{i["Price"]}</td>
+                        <td>${i["Price"]}</td>
                         <td>{i["Column5"]}</td>
                         <td>
                           <ul>{getList(i)}</ul>
                         </td>
-                        <td>{i["Column4"]}</td>
+                        <td>{renderRatingStars(i["Column4"])}</td>{" "}
                         <td>
                           {" "}
                           <button onClick={() => makeCall("1112223333")}>
