@@ -72,6 +72,7 @@
 .postFooter h2 {
   width: 80%;
   color: white;
+  font-size: 16px;
 }
 .postFooter p {
   width: 20%;
@@ -95,6 +96,7 @@
 }
 .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
   padding-right: 10px;
+  width: 40px;
 }
 @media only screen and (max-width: 1024px) {
   .col-3 {
