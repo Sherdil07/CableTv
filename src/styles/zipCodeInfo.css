@@ -1,5 +1,6 @@
 .custom-container {
   margin-top: 20px;
+  padding: 60px;
 }
 span {
   cursor: pointer;
@@ -20,6 +21,11 @@ span {
 }
 .table-head {
   text-align: center;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 li {
   list-style: none;

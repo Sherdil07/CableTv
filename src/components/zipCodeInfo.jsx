@@ -158,7 +158,7 @@ function ZipCodeInfo() {
             </h2>
 
             <table className="table table-bordered" ref={internetRef}>
-              <thead>
+              <thead className="head">
                 <tr>
                   <th className="table-head" scope="col">
                     Provider
