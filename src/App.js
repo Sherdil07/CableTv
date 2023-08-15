@@ -14,6 +14,7 @@ import SatelliteTv from "./pages/SatelliteTv";
 import CableTv from "./pages/CableTv";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ZipCodeInfo from "./components/zipCodeInfo";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/services" exact Component={Services} />
         <Route path="/serviceproviders" exact Component={ProvidersTab} />
         <Route path="/contactus" exact Component={ContatctUs} />
+        <Route path="/write-json" exact Component={Dashboard} />
         <Route path="services/cable-internet" exact Component={CableInternet} />
         <Route path="services/cable-tv" exact Component={CableTv} />
         <Route
