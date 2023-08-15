@@ -5,6 +5,7 @@ import "../styles/zipCodeInfo.css";
 import CallIcon from "@mui/icons-material/Call";
 import StarIcon from "@mui/icons-material/Star";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
+import DoneIcon from "@mui/icons-material/Done";
 
 function Tab(props) {
   return (
@@ -28,10 +29,38 @@ function ZipCodeInfo() {
       if (obj.hasOwnProperty(key)) {
         const value = obj[key];
 
-        if (key === "Column7" && obj[key]) arr.push(<li>{value}</li>);
-        if (key === "Column8" && obj[key]) arr.push(<li>{value}</li>);
-        if (key === "Column9" && obj[key]) arr.push(<li>{value}</li>);
-        if (key === "Features" && obj[key]) arr.push(<li>{value}</li>);
+        if (key === "Column7" && obj[key])
+          arr.push(
+            <li>
+              {" "}
+              <DoneIcon />
+              {value}
+            </li>
+          );
+        if (key === "Column8" && obj[key])
+          arr.push(
+            <li>
+              {" "}
+              <DoneIcon />
+              {value}
+            </li>
+          );
+        if (key === "Column9" && obj[key])
+          arr.push(
+            <li>
+              {" "}
+              <DoneIcon />
+              {value}
+            </li>
+          );
+        if (key === "Features" && obj[key])
+          arr.push(
+            <li>
+              {" "}
+              <DoneIcon />
+              {value}
+            </li>
+          );
       }
     }
 
@@ -99,6 +128,7 @@ function ZipCodeInfo() {
         <span onClick={() => scrollToRef(tvRef)}>TV</span> |{" "}
         <span onClick={() => scrollToRef(bundlesRef)}>Bundles</span> */}
         <div className="jump">Jump To:</div>
+        <div className="line"></div>
         <Tab
           label="Internet|"
           active={activeTab === "Internet|"}
@@ -127,15 +157,25 @@ function ZipCodeInfo() {
               Internet Providers
             </h2>
 
-            <table class="table table-bordered" ref={internetRef}>
+            <table className="table table-bordered" ref={internetRef}>
               <thead>
                 <tr>
-                  <th scope="col">Provider</th>
-                  <th scope="col">Prices starting at*</th>
-                  <th scope="col">Max download speeds up to</th>
-                  <th scope="col">Features </th>
-                  <th scope="col">Customer Rating</th>
-                  <th scope="col"></th>
+                  <th className="table-head" scope="col">
+                    Provider
+                  </th>
+                  <th className="table-head" scope="col">
+                    Prices starting at*
+                  </th>
+                  <th className="table-head" scope="col">
+                    Max download speeds up to
+                  </th>
+                  <th className="table-head" scope="col">
+                    Features{" "}
+                  </th>
+                  <th className="table-head" scope="col">
+                    Customer Rating
+                  </th>
+                  <th className="table-head" scope="col"></th>
                 </tr>
               </thead>
               <tbody>
@@ -144,17 +184,21 @@ function ZipCodeInfo() {
                     return (
                       <tr>
                         <th scope="row">
-                          <img src={`/companies/${i["Column2"]}.png`} alt="image" />
-                          
-                          </th>
-                        <td> ${i["Price"]}</td>
-                        <td>{i["Column5"]}</td>
-                        <td>
+                          <img
+                            src={`/companies/${i["Column2"]}.png`}
+                            alt="image"
+                          />
+                        </th>
+                        <td className="table-data">${i["Price"]}/mo.</td>
+                        <td className="table-data">{i["Column5"]}</td>
+                        <td className="table-data">
                           <ul>{getList(i)}</ul>
                         </td>
-                        <td>{renderRatingStars(i["Column4"])}</td>{" "}
+                        <td className="table-data">
+                          {renderRatingStars(i["Column4"])}
+                        </td>{" "}
                         {/* Render stars here */}{" "}
-                        <td>
+                        <td className="table-data">
                           {" "}
                           <button onClick={() => makeCall("1112223333")}>
                             <CallIcon /> (111) 222-3333
@@ -176,12 +220,22 @@ function ZipCodeInfo() {
             <table class="table table-bordered">
               <thead>
                 <tr>
-                  <th scope="col">Provider</th>
-                  <th scope="col">Prices starting at*</th>
-                  <th scope="col">Max download speeds up to</th>
-                  <th scope="col">Features </th>
-                  <th scope="col">Customer Rating</th>
-                  <th scope="col"></th>
+                  <th className="table-head" scope="col">
+                    Provider
+                  </th>
+                  <th className="table-head" scope="col">
+                    Prices starting at*
+                  </th>
+                  <th className="table-head" scope="col">
+                    Max download speeds up to
+                  </th>
+                  <th className="table-head" scope="col">
+                    Features{" "}
+                  </th>
+                  <th className="table-head" scope="col">
+                    Customer Rating
+                  </th>
+                  <th className="table-head" scope="col"></th>
                 </tr>
               </thead>
               <tbody>
@@ -189,14 +243,21 @@ function ZipCodeInfo() {
                   zipCodeInfo?.tvProviders.map((i) => {
                     return (
                       <tr>
-                        <th scope="row">{i["Column2"]}</th>
-                        <td>${i["Price"]}</td>
-                        <td>{i["Column5"]}</td>
-                        <td>
+                        <th scope="row">
+                          <img
+                            src={`/companies/${i["Column2"]}.png`}
+                            alt="image"
+                          />
+                        </th>{" "}
+                        <td className="table-data">${i["Price"]}/mo.</td>
+                        <td className="table-data">{i["Column5"]}</td>
+                        <td className="table-data">
                           <ul>{getList(i)}</ul>
                         </td>
-                        <td>{renderRatingStars(i["Column4"])}</td>{" "}
-                        <td>
+                        <td className="table-data">
+                          {renderRatingStars(i["Column4"])}
+                        </td>{" "}
+                        <td className="table-data">
                           {" "}
                           <button onClick={() => makeCall("1112223333")}>
                             <CallIcon /> (111) 222-3333
@@ -235,18 +296,24 @@ function ZipCodeInfo() {
                   zipCodeInfo?.bundles.map((i) => {
                     return (
                       <tr>
-                        <th scope="row">{i["Column2"]}</th>
-                        <td>${i["Price"]}</td>
-                        <td>{i["Column5"]}</td>
-                        <td>
+                        <th scope="row">
+                          <img
+                            src={`/companies/${i["Column2"]}.png`}
+                            alt="image"
+                          />
+                        </th>
+                        <td className="table-data">${i["Price"]}/mo.</td>
+                        <td className="table-data">{i["Column5"]}</td>
+                        <td className="table-data">
                           <ul>{getList(i)}</ul>
                         </td>
-                        <td>{renderRatingStars(i["Column4"])}</td>{" "}
-                        <td>
-                          {" "}
+                        <td className="table-data">
+                          {renderRatingStars(i["Column4"])}
+                        </td>
+                        <td className="table-data">
                           <button onClick={() => makeCall("1112223333")}>
                             <CallIcon /> (111) 222-3333
-                          </button>{" "}
+                          </button>
                         </td>
                       </tr>
                     );

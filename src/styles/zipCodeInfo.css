@@ -9,3 +9,24 @@ span {
   align-items: center;
   justify-content: center;
 }
+.table-data {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  font-family: "Oswald", "Helvetica", "Arial", sans-serif !important;
+  font-weight: 700;
+  text-transform: initial;
+  text-align: center;
+}
+.table-head {
+  text-align: center;
+}
+li {
+  list-style: none;
+}
+.table-data ul li {
+  text-transform: initial;
+}
+table.table.table-bordered {
+  margin-bottom: 100px;
+}
