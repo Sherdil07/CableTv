@@ -67,6 +67,7 @@ li {
 .table-data ul li {
   text-transform: initial;
   margin-bottom: 10px;
+  text-align: left;
 }
 table.table.table-bordered {
   margin-bottom: 100px;
@@ -96,4 +97,7 @@ h2.ref {
 }
 svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
   /* color: #da9292e0; */
+}
+.img-col{
+  text-align: center;
 }
