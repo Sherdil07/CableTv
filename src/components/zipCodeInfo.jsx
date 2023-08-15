@@ -7,6 +7,10 @@ import StarIcon from "@mui/icons-material/Star";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import DoneIcon from "@mui/icons-material/Done";
 import HeroCommon from "../pages/HeroCommon";
+import axios from "axios";
+import { setZipCodeData } from "../reducers/zipCodeReducer";
+import { useParams } from 'react-router-dom';
+
 
 function Tab(props) {
   return (
@@ -21,7 +25,30 @@ function Tab(props) {
 
 function ZipCodeInfo() {
   const zipCodeInfo = useSelector((state) => state.zipCodeReducer.zipCodeData);
-  console.log(zipCodeInfo);
+  const dispatch = useDispatch()
+  const { zipCode } = useParams();
+
+  
+
+  const fetchZipCodeInfo = async () => {
+
+    try {
+
+      const res = await axios.post("http://localhost:5000",{zipCode:zipCode})
+
+      dispatch(setZipCodeData(res.data))
+    } catch (error) {
+      
+    }
+  }
+  useEffect(() => {
+    fetchZipCodeInfo();
+
+    return () =>{
+      setZipCodeData([])
+    }
+  }, [])
+  
 
   const getList = (obj) => {
     let arr = [];
