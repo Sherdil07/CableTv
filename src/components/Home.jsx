@@ -6,15 +6,11 @@ import ServiceProvider from "../pages/ServiceProviders";
 import HeroSection from "../pages/HeroSection";
 import BlogArticles from "../pages/BlogArticles";
 import ServiceSlider from "../pages/ServiceSlider";
-import axios from "axios";
-import { setZipCodeData } from "../reducers/zipCodeReducer";
 import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 
 function Home() {
 
   const navigate = useNavigate();
-  const dispatch = useDispatch()
   const [zipCode, setzipCode] = useState("")
 
 
@@ -23,19 +19,7 @@ function Home() {
     if(!zipCode)
     return;
 
-    try {
-      const res = await axios.post("http://localhost:5000",{zipCode:zipCode})
-      console.log(res.data)
-
-      dispatch(setZipCodeData(res.data))
-
       navigate(`/zipCode/${zipCode}`)
-
-
-    } catch (error) {
-      // show error on screen
-      console.log(error)
-    }
   
   }
   return (
