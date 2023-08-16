@@ -27,6 +27,7 @@ function App() {
         <Route path="/serviceproviders" exact Component={ProvidersTab} />
         <Route path="/contactus" exact Component={ContatctUs} />
         <Route path="/write-json" exact Component={Dashboard} />
+        <Route path="/privacy-policy" exact Component={PrivacyPolicy} />
         <Route path="services/cable-internet" exact Component={CableInternet} />
         <Route path="services/cable-tv" exact Component={CableTv} />
         <Route

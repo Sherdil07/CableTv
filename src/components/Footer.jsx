@@ -98,7 +98,9 @@ const Footer = () => {
         </div>
         <div className="postFooter">
           <h2>© 2023 Shop Satellite Tv. All rights reserved.</h2>
-          <p>PRIVACY POLICY</p>
+          <p className="privacy-policy">
+            <Link to="/privacy-policy">PRIVACY POLICY</Link>
+          </p>
         </div>
       </div>
     </div>

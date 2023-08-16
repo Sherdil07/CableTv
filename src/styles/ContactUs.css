@@ -64,3 +64,8 @@
 .Contact-SocialIcons img:hover {
   transform: translateY(-5px);
 }
+@media only screen and (max-width: 1024px) {
+  .Contact-Content .col-6 {
+    width: 100%;
+  }
+}

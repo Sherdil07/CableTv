@@ -90,3 +90,11 @@
     background-position: inherit !important;
   }
 }
+@media only screen and (max-width: 768px) {
+  .SatelliteSection {
+    margin-top: 30px;
+  }
+  .figures-1 {
+    margin-right: 10px;
+  }
+}

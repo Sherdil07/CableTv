@@ -96,7 +96,11 @@
 }
 .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
   padding-right: 10px;
-  width: 40px;
+  width: 28px;
+}
+.postFooter .privacy-policy a {
+  color: white;
+  font-size: 16px;
 }
 @media only screen and (max-width: 1024px) {
   .col-3 {
@@ -110,5 +114,16 @@
 @media only screen and (max-width: 991px) {
   .postFooter p {
     font-size: 14px;
+  }
+  .Footer .col-3 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content .RightSide {
+    margin-top: 30px;
+  }
+  .Footer .col-3 {
+    width: 100%;
   }
 }

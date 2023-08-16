@@ -59,3 +59,22 @@
     margin: 0px;
   }
 }
+@media only screen and (max-width: 768px) {
+  /* .Counter {
+    left: -47px;
+  } */
+  .AboutContent {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    flex-direction: column-reverse;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .serviceimg img {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+}

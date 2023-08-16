@@ -54,12 +54,15 @@ hr.rule--is-medium,
   text-align: center;
   color: #222121;
   font-family: "Montserrat", Sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 50px;
   letter-spacing: 1px;
   text-transform: capitalize;
   margin-bottom: 20px;
+}
+.table > :not(caption) > * > * {
+  padding: 0;
 }
 li {
   list-style: none;
@@ -67,6 +70,7 @@ li {
 .table-data ul li {
   text-transform: initial;
   margin-bottom: 10px;
+  margin-top: 10px;
   text-align: left;
 }
 table.table.table-bordered {
@@ -93,8 +97,31 @@ h2.ref {
   padding: 12px;
   border-radius: 25px;
   cursor: pointer;
-  width: auto;
+  width: 180px;
 }
 .img-col {
   text-align: center;
+}
+.table-container {
+  overflow-x: auto; /* Enable horizontal scrolling on small screens */
+}
+/* Apply responsive styling for DataTable */
+@media only screen and (max-width: 768px) {
+  /* Remove horizontal scroll for small screens */
+  .dataTables_wrapper .dataTables_scroll {
+    overflow-x: auto;
+    width: auto;
+    max-width: 100%;
+  }
+
+  /* Center-align text in th and td cells */
+  .dataTables_wrapper table.dataTable thead th,
+  .dataTables_wrapper table.dataTable tbody td {
+    text-align: center;
+  }
+
+  /* Hide thead cells for small screens */
+  .dataTables_wrapper table.dataTable thead th {
+    display: none;
+  }
 }

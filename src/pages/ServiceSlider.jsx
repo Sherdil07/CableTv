@@ -47,11 +47,14 @@ const ServiceSlider = () => {
     // Clear the interval when the component unmounts
     return () => clearInterval(interval);
   }, []);
+  
+  const isMobile = window.innerWidth < 768;
+
   const sliderSettings = {
     // dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: isMobile ? 1 : 3, // Show only 1 slide if isMobile is true, else show 3 slides
     slidesToScroll: 1,
   };
 

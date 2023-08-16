@@ -8,7 +8,20 @@
   .HeroBackground {
     padding-left: 0px;
   }
-  .btn-findnow{
-    width: 25%;
+  .btn-findnow {
+    width: 66%;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    height: 37px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .btn-findnow {
+    width: 50%;
+  }
+  .HeroContent {
+    padding-top: 0;
   }
 }

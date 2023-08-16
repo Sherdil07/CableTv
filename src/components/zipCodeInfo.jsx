@@ -171,6 +171,7 @@ function ZipCodeInfo() {
 
         <hr className="rule--is-medium medium-12 small-10"></hr>
         <div>
+          {/* <div className="table-container"> */}
           {activeTab === "Internet" && (
             <div>
               <h2
@@ -355,6 +356,7 @@ function ZipCodeInfo() {
               </table>
             </div>
           )}
+          {/* </div> */}
         </div>
       </div>
     </>
