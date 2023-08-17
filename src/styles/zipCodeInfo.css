@@ -102,26 +102,3 @@ h2.ref {
 .img-col {
   text-align: center;
 }
-.table-container {
-  overflow-x: auto; /* Enable horizontal scrolling on small screens */
-}
-/* Apply responsive styling for DataTable */
-@media only screen and (max-width: 768px) {
-  /* Remove horizontal scroll for small screens */
-  .dataTables_wrapper .dataTables_scroll {
-    overflow-x: auto;
-    width: auto;
-    max-width: 100%;
-  }
-
-  /* Center-align text in th and td cells */
-  .dataTables_wrapper table.dataTable thead th,
-  .dataTables_wrapper table.dataTable tbody td {
-    text-align: center;
-  }
-
-  /* Hide thead cells for small screens */
-  .dataTables_wrapper table.dataTable thead th {
-    display: none;
-  }
-}

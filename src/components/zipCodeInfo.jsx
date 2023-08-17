@@ -182,7 +182,10 @@ function ZipCodeInfo() {
                 Internet Providers
               </h2>
 
-              <table className="table table-bordered" ref={internetRef}>
+              <table
+                className="table table-striped w-auto table table-bordered"
+                ref={internetRef}
+              >
                 <thead className="head">
                   <tr>
                     <th className="table-head" scope="col">
@@ -245,7 +248,7 @@ function ZipCodeInfo() {
                 Tv Providers
               </h2>
 
-              <table class="table table-bordered">
+              <table className="table table-striped w-auto table table-bordered">
                 <thead>
                   <tr>
                     <th className="table-head" scope="col">
@@ -311,7 +314,7 @@ function ZipCodeInfo() {
                 Bundles
               </h2>
 
-              <table class="table table-bordered">
+              <table className="table table-striped w-auto table table-bordered">
                 <thead>
                   <tr>
                     <th scope="col">Provider</th>

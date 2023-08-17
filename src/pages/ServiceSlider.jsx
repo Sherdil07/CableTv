@@ -47,7 +47,7 @@ const ServiceSlider = () => {
     // Clear the interval when the component unmounts
     return () => clearInterval(interval);
   }, []);
-  
+
   const isMobile = window.innerWidth < 768;
 
   const sliderSettings = {
