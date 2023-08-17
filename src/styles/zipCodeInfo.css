@@ -13,7 +13,6 @@ span {
   margin-bottom: 50px;
 }
 .tab {
-  /* position: relative; */
   padding-right: 8px;
   cursor: pointer;
   background-color: #8c7877;
@@ -28,12 +27,6 @@ span {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
 }
 
-/* .tab.active::after {
-  content: "";
-  position: absolute;
-  border-bottom: 1px solid red;
-  background-color: #ae2828; 
-} */
 hr.rule--is-medium,
 .hr.rule--is-medium {
   width: 50rem;
@@ -63,6 +56,7 @@ hr.rule--is-medium,
 }
 .table > :not(caption) > * > * {
   padding: 0;
+  text-align: center;
 }
 li {
   list-style: none;
@@ -101,4 +95,20 @@ h2.ref {
 }
 .img-col {
   text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .tab {
+    width: 15%;
+  }
+  .custom-container {
+    padding: 0px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .tab {
+    width: 15%;
+  }
+  .custom-container {
+    padding: 0px;
+  }
 }
