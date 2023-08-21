@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./components/Home";
+// import "./App.css";
 import "./App.css";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
@@ -15,8 +16,12 @@ import CableTv from "./pages/CableTv";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ZipCodeInfo from "./components/zipCodeInfo";
 import Dashboard from "./components/Dashboard";
+import SignUp from "./components/SignUp";
+import Login from "./components/Login";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div className="App">
       <Navbar />
@@ -38,10 +43,23 @@ function App() {
         <Route path="services/satellite-tv" exact Component={SatelliteTv} />
         <Route path="/privacypolicy" exact Component={PrivacyPolicy} />
         <Route path="/zipCode/:zipCode" exact Component={ZipCodeInfo} />
+        <Route path="/signup" exact Component={SignUp} />
+        <Route
+          path="/login"
+          exact element={<Login setIsLoggedIn={setIsLoggedIn} />} // This route should have the prop
+        />
+        <Route
+          path="/dashboard/*"
+          exact element={
+            isLoggedIn ? <ProtectedDashboard /> : <Navigate to="/login" />
+          } // Protected route
+        />
       </Routes>
       <Footer />
     </div>
   );
 }
-
+function ProtectedDashboard() {
+  return <Dashboard />;
+}
 export default App;
