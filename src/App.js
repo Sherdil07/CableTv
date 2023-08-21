@@ -20,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+
       <Routes>
         <Route path="/" exact Component={Home} />
         <Route path="/about" exact Component={AboutUs} />

@@ -28,6 +28,12 @@ const ProvidersTab = () => {
       console.log(error);
     }
   };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleClick();
+    }
+  };
   return (
     <div className="Service-Providers">
       <HeroCommon
@@ -47,6 +53,7 @@ const ProvidersTab = () => {
             type="text"
             placeholder="Enter Zip Code"
             onChange={(e) => setzipCode(e.target.value)}
+            onKeyDown={handleKeyPress}
           />
           <button className="btn-findnow" onClick={handleClick}>
             Find Now

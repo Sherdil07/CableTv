@@ -69,6 +69,7 @@ li {
 }
 table.table.table-bordered {
   margin-bottom: 100px;
+  margin: auto;
 }
 .jump {
   color: #835656;

@@ -28,6 +28,11 @@ const HeroSection = () => {
       console.log(error);
     }
   };
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleClick();
+    }
+  };
 
   return (
     <div className="HeroSection">
@@ -54,6 +59,7 @@ const HeroSection = () => {
               placeholder="Enter Zip Code"
               value={zipCode}
               onChange={(e) => setzipCode(e.target.value)}
+              onKeyDown={handleKeyPress}
             />
             <button className="btn-findnow" onClick={handleClick}>
               Find Now

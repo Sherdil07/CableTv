@@ -1,4 +1,4 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
 import MainSection from "../assests/main-hero-sec-home.jpg";
 import "../styles/Home.css";
 import AboutSatteliteTv from "../pages/AboutSatteliteTv";
@@ -6,22 +6,22 @@ import ServiceProvider from "../pages/ServiceProviders";
 import HeroSection from "../pages/HeroSection";
 import BlogArticles from "../pages/BlogArticles";
 import ServiceSlider from "../pages/ServiceSlider";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function Home() {
-
   const navigate = useNavigate();
-  const [zipCode, setzipCode] = useState("")
+  const [zipCode, setzipCode] = useState("");
 
+  const handleClick = async () => {
+    if (!zipCode) return;
 
-  const handleClick = async() =>{
-
-    if(!zipCode)
-    return;
-
-      navigate(`/zipCode/${zipCode}`)
-  
-  }
+    navigate(`/zipCode/${zipCode}`);
+  };
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleClick();
+    }
+  };
   return (
     <div className="app-container">
       <div
@@ -43,18 +43,18 @@ function Home() {
             luctus at tortor.
           </p>
           <div className="searchBar">
-            {/* <div className="inputSearch"> */}
             <input
               className="searchBar"
               type="text"
               placeholder="Enter Zip Code"
               value={zipCode}
-              onChange={(e)=> setzipCode(e.target.value)}
+              onChange={(e) => setzipCode(e.target.value)}
+              onKeyDown={handleKeyPress}
             />
-            {/* </div> */}
-            {/* <div className="btn"> */}
-            <button className="btn-findnow" onClick={handleClick}> Find Now</button>
-            {/* </div> */}
+
+            <button className="btn-findnow" onClick={handleClick}>
+              Find Now
+            </button>
           </div>
         </div>
       </div>
