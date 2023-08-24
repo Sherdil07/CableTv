@@ -32,7 +32,6 @@ function ZipCodeInfo() {
       const res = await axios.post("http://localhost:5000", {
         zipCode: zipCode,
       });
-
       dispatch(setZipCodeData(res.data));
     } catch (error) {}
   };
@@ -54,7 +53,6 @@ function ZipCodeInfo() {
         if (key === "Column7" && obj[key])
           arr.push(
             <li>
-              {" "}
               <DoneIcon />
               {value}
             </li>
@@ -62,7 +60,6 @@ function ZipCodeInfo() {
         if (key === "Column8" && obj[key])
           arr.push(
             <li>
-              {" "}
               <DoneIcon />
               {value}
             </li>
@@ -70,7 +67,6 @@ function ZipCodeInfo() {
         if (key === "Column9" && obj[key])
           arr.push(
             <li>
-              {" "}
               <DoneIcon />
               {value}
             </li>
@@ -78,7 +74,6 @@ function ZipCodeInfo() {
         if (key === "Features" && obj[key])
           arr.push(
             <li>
-              {" "}
               <DoneIcon />
               {value}
             </li>
@@ -261,7 +256,7 @@ function ZipCodeInfo() {
                       Max download speeds up to
                     </th>
                     <th className="table-head" scope="col">
-                      Features{" "}
+                      Features
                     </th>
                     <th className="table-head" scope="col">
                       Customer Rating
@@ -279,7 +274,7 @@ function ZipCodeInfo() {
                               src={`/companies/${i["Column2"]}.png`}
                               alt="image"
                             />
-                          </th>{" "}
+                          </th>
                           <td className="table-data">${i["Price"]}/mo.</td>
                           <td className="table-data">{i["Column5"]}</td>
                           <td className="table-data">
@@ -287,15 +282,14 @@ function ZipCodeInfo() {
                           </td>
                           <td className="table-data">
                             {renderRatingStars(i["Column4"])}
-                          </td>{" "}
+                          </td>
                           <td className="table-data">
-                            {" "}
                             <button
                               className="Call-Now"
                               onClick={() => makeCall("1112223333")}
                             >
                               <CallIcon /> (111) 222-3333
-                            </button>{" "}
+                            </button>
                           </td>
                         </tr>
                       );
