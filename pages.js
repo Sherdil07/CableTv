@@ -4,15 +4,6 @@ const pages = {
       heading: "Welcome to Our About Us Page",
       description: "Learn more about our mission and values.",
     },
-    ServiceProvider: {
-      heading: "Our Service Providers",
-      description: "Learn about our trusted service providers.",
-      title: "Our Trusted Partners",
-      "figure-1": "Image 1 of our service provider",
-      "figure-2": "Image 2 of our service provider",
-      "figure-3": "Image 3 of our service provider",
-      serviceimg: "Image of our service",
-    },
   },
   Home: {
     "main-section": {
@@ -92,6 +83,9 @@ const pages = {
       "fig-2": "Image 2 of the satellite",
       "fig-3": "Image 3 of the satellite",
     },
+    Footer: {
+      "footer-text": "This is footer text",
+    },
   },
   Services: {
     HeroCommon: {
@@ -126,8 +120,5 @@ const pages = {
       heading: "Discover the Universe",
       description: "Explore the wonders of the cosmos with us.",
     },
-  },
-  Footer: {
-    "footer-text": "This is footer text",
   },
 };
