@@ -8,6 +8,9 @@
   /* text-align: center; */
   text-align: left;
 }
+li.list-item {
+  text-transform: initial !important;
+}
 .leftSide h2.heading {
   color: #222121;
   font-size: 36px;
