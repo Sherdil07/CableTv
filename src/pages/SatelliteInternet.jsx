@@ -3,10 +3,21 @@ import HeroCommon from "./HeroCommon";
 import SatelliteInternetImg from "../assests/satellite-int.png";
 import ProvidersCommon from "./ProvidersCommon";
 import HeroSection from "./HeroSection";
+import { Helmet } from "react-helmet";
 
 const SatelliteInternet = () => {
   return (
     <div className="SatelliteInternet">
+      {/* START POINT FOR SEO PURPOSE */}
+      <Helmet>
+        <title>About Us - Your Website</title>
+        <meta
+          name="description"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+        />
+        <meta name="slug" content="about-us" />
+      </Helmet>
+      {/* END POINT FOR SEO PURPOSE */}
       <HeroCommon
         heading="Satellite Internet"
         description="Satellite Internet Description"

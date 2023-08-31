@@ -1,10 +1,22 @@
 import React from "react";
 import "../styles/PrivacyPolicy.css";
 import HeroCommon from "./HeroCommon";
+import { Helmet } from "react-helmet";
 
 const PrivacyPolicy = () => {
   return (
     <div className="PrivacyPolicy">
+      {/* START POINT FOR SEO PURPOSE */}
+      <Helmet>
+        <title>About Us - Your Website</title>
+        <meta
+          name="description"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+        />
+        <meta name="slug" content="about-us" />
+      </Helmet>
+      {/* END POINT FOR SEO PURPOSE */}
+
       <HeroCommon
         heading="Privacy Policy"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."

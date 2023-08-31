@@ -7,6 +7,7 @@ import HeroSection from "../pages/HeroSection";
 import BlogArticles from "../pages/BlogArticles";
 import ServiceSlider from "../pages/ServiceSlider";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Home() {
   const navigate = useNavigate();
@@ -24,6 +25,17 @@ function Home() {
   };
   return (
     <div className="app-container">
+      {/* START POINT FOR SEO PURPOSE */}
+      <Helmet>
+        <title>About Us - Your Website</title>
+        <meta
+          name="description"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+        />
+        <meta name="slug" content="about-us" />
+      </Helmet>
+      {/* END POINT FOR SEO PURPOSE */}
+
       <div
         className="mainSection"
         style={{

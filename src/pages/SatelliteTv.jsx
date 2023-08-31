@@ -2,12 +2,22 @@ import React from "react";
 import SatelliteTvImg from "../assests/satellite-tv.png";
 import ProvidersCommon from "./ProvidersCommon";
 import HeroCommon from "./HeroCommon";
-
+import { Helmet } from "react-helmet";
 import HeroSection from "./HeroSection";
 
 const SatelliteTv = () => {
   return (
     <div className="SatelliteTv">
+      {/* START POINT FOR SEO PURPOSE */}
+      <Helmet>
+        <title>About Us - Your Website</title>
+        <meta
+          name="description"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+        />
+        <meta name="slug" content="about-us" />
+      </Helmet>
+      {/* END POINT FOR SEO PURPOSE */}
       <HeroCommon heading="Satellite Tv" description="Satellite Description" />
       <ProvidersCommon
         title="Satellite Tv"

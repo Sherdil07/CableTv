@@ -1,10 +1,21 @@
 import React from "react";
 import ServiceImage from "../assests/why-choose-sect.jpg";
 import "../styles/ServiceProvider.css";
+import { Helmet } from "react-helmet";
 
 const ServiceProvider = () => {
   return (
     <div className="ServiceProviderSection">
+      {/* START POINT FOR SEO PURPOSE */}
+      <Helmet>
+        <title>About Us - Your Website</title>
+        <meta
+          name="description"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+        />
+        <meta name="slug" content="about-us" />
+      </Helmet>
+      {/* END POINT FOR SEO PURPOSE */}
       <div className="AboutContent">
         <div className="leftSide">
           <h2 className="title">CHECK SERVICES PROVIDERS</h2>

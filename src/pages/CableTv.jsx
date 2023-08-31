@@ -4,10 +4,22 @@ import CableTvImg from "../assests/cable-tv.png";
 import HeroCommon from "./HeroCommon";
 import HeroSection from "./HeroSection";
 import "../styles/CableTv.css";
+import { Helmet } from "react-helmet";
 
 const CableTv = () => {
   return (
     <div className="CableTv">
+      {/* START POINT FOR SEO PURPOSE */}
+      <Helmet>
+        <title>About Us - Your Website</title>
+        <meta
+          name="description"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+        />
+        <meta name="slug" content="about-us" />
+      </Helmet>
+      {/* END POINT FOR SEO PURPOSE */}
+
       <HeroCommon
         heading="Cable Tv"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
