@@ -1,7 +1,7 @@
 import React from "react";
 import AboutBG from "../assests/about-bg.jpg";
 import "../styles/AboutSatellite.css";
-
+import { Link } from "react-router-dom";
 const AboutSatteliteTv = () => {
   return (
     <div className="SatelliteSection">
@@ -44,7 +44,9 @@ const AboutSatteliteTv = () => {
               </div>
             </div>
             <div className="btn">
-              <button className="CheckNow">Check Now</button>
+              <Link to="serviceproviders">
+                <button className="CheckNow">Check Now</button>
+              </Link>
             </div>
           </div>
         </div>

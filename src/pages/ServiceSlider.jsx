@@ -80,30 +80,37 @@ const ServiceSlider = () => {
           </div>
           <div className="slider-app-container">
             <Slider {...sliderSettings} ref={sliderRef}>
-              <Slide
-                image={CableTv}
-                title="Cable Tv"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-                linkTo="services/cable-tv"
-              />
-              <Slide
-                image={Cable}
-                title="Cable Internet"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-                linkTo="services/cable-internet"
-              />
-              <Slide
-                image={Satellite}
-                title="Satellite Tv"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-                linkTo="services/satellite-tv"
-              />
-              <Slide
-                image={SatelliteTv}
-                title="Satellite Internet"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
-                linkTo="services/satellite-internet"
-              />
+              <Link to="services/cable-tv">
+                <Slide
+                  image={CableTv}
+                  title="Cable Tv"
+                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                />
+              </Link>
+              <Link to="services/cable-internet">
+                <Slide
+                  image={Cable}
+                  title="Cable Internet"
+                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                  linkTo="services/cable-internet"
+                />
+              </Link>
+              <Link to="services/satellite-tv">
+                <Slide
+                  image={Satellite}
+                  title="Satellite Tv"
+                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                  linkTo="services/satellite-tv"
+                />
+              </Link>
+              <Link to="services/satellite-internet">
+                <Slide
+                  image={SatelliteTv}
+                  title="Satellite Internet"
+                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                  linkTo="services/satellite-internet"
+                />
+              </Link>
             </Slider>
           </div>
         </div>

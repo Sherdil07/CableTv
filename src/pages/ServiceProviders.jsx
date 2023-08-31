@@ -2,7 +2,7 @@ import React from "react";
 import ServiceImage from "../assests/why-choose-sect.jpg";
 import "../styles/ServiceProvider.css";
 import { Helmet } from "react-helmet";
-
+import { Link } from "react-router-dom";
 const ServiceProvider = () => {
   return (
     <div className="ServiceProviderSection">
@@ -45,7 +45,9 @@ const ServiceProvider = () => {
             </div>
           </div>
           <div className="btn">
-            <button className="CheckNow">Check Now</button>
+            <Link to="serviceproviders">
+              <button className="CheckNow">Check Now</button>
+            </Link>
           </div>
         </div>
         <div className="rightSide">
