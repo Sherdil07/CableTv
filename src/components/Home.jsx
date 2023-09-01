@@ -15,7 +15,7 @@ function Home() {
   const [zipCode, setzipCode] = useState("");
 
   const pageData = useSelector((state) => state.pages.pageData);
-
+  console.log("pageData", pageData);
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();
 
@@ -60,8 +60,8 @@ function Home() {
         }}
       >
         <div className="mainContent">
-          <h2 className="title">SHOP SATELLITE TV</h2>
-          <h2 className="subTitle">Journey With Fast Internet</h2>
+          <h2 className="title"> {"pageData.Home.main_section.title"}</h2>
+          <h2 className="subTitle">{"pageData.Home.main_section.subtitle"}</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
             consequat tortor lorem, quis tempor felis commodo vel. Mauris eu

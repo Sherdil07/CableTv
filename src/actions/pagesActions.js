@@ -1,4 +1,5 @@
 // src/actions/pagesActions.js
+import axios from "axios";
 
 export const setPageData = (data) => ({
   type: "SET_PAGE_DATA",
@@ -9,8 +10,9 @@ export const fetchPageData = () => {
   // Implement your API request logic here to fetch page data
   return async (dispatch) => {
     try {
-      const response = await fetch("http://localhost:5000/api/pages");
-      const data = await response.json();
+      const response = await axios.get("http://localhost:5000/api/pages");
+      const data = response.data; // Access data directly from response
+      console.log(data);
       dispatch(setPageData(data));
     } catch (error) {
       console.error("Error fetching page data:", error);
