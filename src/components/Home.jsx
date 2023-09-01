@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
 import MainSection from "../assests/main-hero-sec-home.jpg";
 import "../styles/Home.css";
 import AboutSatteliteTv from "../pages/AboutSatteliteTv";
@@ -8,21 +9,38 @@ import BlogArticles from "../pages/BlogArticles";
 import ServiceSlider from "../pages/ServiceSlider";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 
 function Home() {
   const navigate = useNavigate();
   const [zipCode, setzipCode] = useState("");
+
+  // Access pageData from the Redux store using useSelector
+  const pageData = useSelector((state) => state.pages.pageData);
+
+  // Access dispatch function to dispatch actions
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Fetch page data when the component mounts
+    dispatch(fetchPageData());
+  }, [dispatch]);
 
   const handleClick = async () => {
     if (!zipCode) return;
 
     navigate(`/zipCode/${zipCode}`);
   };
+
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       handleClick();
     }
   };
+
+  // Log the pageData to verify if it's updating
+  console.log("Page Data in Home Component:", pageData);
+
   return (
     <div className="app-container">
       {/* START POINT FOR SEO PURPOSE */}
@@ -70,11 +88,16 @@ function Home() {
           </div>
         </div>
       </div>
-      <ServiceSlider />
-      <AboutSatteliteTv />
-      <ServiceProvider />
-      <HeroSection />
-      <BlogArticles />
+      {/* Use pageData in your component */}
+      {pageData && (
+        <>
+          <ServiceSlider />
+          <AboutSatteliteTv />
+          <ServiceProvider />
+          <HeroSection />
+          <BlogArticles />
+        </>
+      )}
     </div>
   );
 }

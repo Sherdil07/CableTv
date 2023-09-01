@@ -1,18 +1,13 @@
 // src/store.js
 
-import { configureStore } from '@reduxjs/toolkit';
-import zipCodeReducer from './reducers/zipCodeReducer';
-
-// Import your reducers here
-// For example:
-// import counterReducer from './features/counter/counterSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import zipCodeReducer from "./reducers/zipCodeReducer";
+import pagesReducer from "./reducers/pagesReducer";
 
 const store = configureStore({
   reducer: {
-    zipCodeReducer
-    // Add your reducers here
-    // For example:
-    // counter: counterReducer,
+    zipCodeReducer,
+    pages: pagesReducer,
   },
 });
 

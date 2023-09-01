@@ -23,5 +23,6 @@ const zipCodeReducer = createSlice({
 
 });
 
+
 export const { setZipCodeData } = zipCodeReducer.actions;
 export default zipCodeReducer.reducer;
