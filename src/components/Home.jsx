@@ -60,8 +60,8 @@ function Home() {
         }}
       >
         <div className="mainContent">
-          <h2 className="title"> {"pageData.Home.main_section.title"}</h2>
-          <h2 className="subTitle">{"pageData.Home.main_section.subtitle"}</h2>
+          <h2 className="title"> {pageData.Home.main_section.title}</h2>
+          <h2 className="subTitle">{pageData.Home.main_section.subtitle}</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
             consequat tortor lorem, quis tempor felis commodo vel. Mauris eu
