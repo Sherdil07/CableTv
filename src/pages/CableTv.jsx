@@ -1,34 +1,47 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProvidersCommon from "./ProvidersCommon";
 import CableTvImg from "../assests/cable-tv.png";
-import HeroCommon from "./HeroCommon";
+import HeroCommon from "./HeroCommon?";
 import HeroSection from "./HeroSection";
 import "../styles/CableTv.css";
 import { Helmet } from "react-helmet";
+import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
+import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
 
 const CableTv = () => {
+  const pageData = useSelector((state) => state.pages.pageData);
+  const backgroundImageObject = pageData?.CableTv_Section?.CableTv?.imageSrc;
+  const backgroundImageURL = backgroundImageObject || "Loading...";
+  // Access dispatch function to dispatch actions
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Fetch page data when the component mounts
+    dispatch(fetchPageData());
+  }, [dispatch]);
+
   return (
-    <div className="CableTv">
+    <div className="CableTv?">
       {/* START POINT FOR SEO PURPOSE */}
       <Helmet>
-        <title>About Us - Your Website</title>
+        <title> Cable TV Providers Near Your Area | ShopSatelliteTV</title>
         <meta
           name="description"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+          content=" Unlock a world of entertainment with leading cable TV providers. Choose from a diverse range of channels and shows for an immersive viewing experience"
         />
-        <meta name="slug" content="about-us" />
+        <meta name="slug" content="cable-tv-providers" />
       </Helmet>
       {/* END POINT FOR SEO PURPOSE */}
 
       <HeroCommon
-        heading="Cable Tv"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+        heading={pageData?.CableTv_Section?.HeroCommon?.heading}
+        description={pageData?.CableTv_Section?.HeroCommon?.description}
       />
       <ProvidersCommon
-        imageSrc={CableTvImg}
-        title="Cable Tv"
-        heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate nisl nec diam convallis sodales. Pellentesque semper, tellus at lacinia suscipit, sapien erat tincidunt dolor, quis dictum leo augue id dui. Duis tincidunt nisl turpis, quis fringilla mi fringilla sit amet. Sed auctor, eros non hendrerit tincidunt, eros urna mattis tellus, vitae pellentesque turpis elit sit amet mi. Sed in nunc ac metus viverra ultrices. Integer imperdiet varius consectetur. Nulla id neque vel est varius viverra. Mauris ultricies commodo dui vitae eleifend. Quisque viverra turpis eu augue dapibus tristique. Donec eget purus dictum mi interdum efficitur. Duis eu ex vel orci pulvinar blandit feugiat nec ex. Sed posuere augue ut sodales aliquam. Praesent ac orci at ex placerat congue. Sed ac erat non felis vulputate iaculis. Praesent facilisis nunc nec tortor aliquam iaculis. Nulla nibh lorem, ultrices vitae nibh a, malesuada blandit ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        imageSrc={backgroundImageURL}
+        title={pageData?.CableTv_Section?.CableTv?.title}
+        heading={pageData?.CableTv_Section?.CableTv?.heading}
+        description={pageData?.CableTv_Section?.CableTv?.description}
       />
       <HeroSection />
     </div>

@@ -1,46 +1,57 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ServiceImage from "../assests/why-choose-sect.jpg";
 import "../styles/ServiceProvider.css";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
+import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 const ServiceProvider = () => {
+  const pageData = useSelector((state) => state.pages.pageData);
+  const backgroundImageObject =
+    pageData?.Home?.checkservicesproviders?.CheckServicesProvidersBG;
+  const backgroundImageURL = backgroundImageObject || "Loading...";
+  // Access dispatch function to dispatch actions
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Fetch page data when the component mounts
+    dispatch(fetchPageData());
+  }, [dispatch]);
+
+  // Log the pageData to verify if it's updating
+  console.log("Page Data in Home Component:", pageData);
   return (
     <div className="ServiceProviderSection">
       {/* START POINT FOR SEO PURPOSE */}
       <Helmet>
-        <title>About Us - Your Website</title>
+        <title> Service Providers | ShopSatelliteTV</title>
         <meta
           name="description"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+          content=" Explore the list of best internet, satellite TV, cable TV, and phone service providers with Shop Satellite TV. Elevate your entertainment and connectivity experience."
         />
-        <meta name="slug" content="about-us" />
+        <meta name="slug" content="service-providers" />
       </Helmet>
       {/* END POINT FOR SEO PURPOSE */}
       <div className="AboutContent">
         <div className="leftSide">
-          <h2 className="title">CHECK SERVICES PROVIDERS</h2>
-          <h2 className="heading">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <h2 className="title">
+            {pageData?.Home?.checkservicesproviders?.title}
           </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            dignissim, urna faucibus tincidunt viverra, ipsum nibh dignissim
-            nunc, eget tristique ex urna vel magna. Cras ullamcorper dui mi.
-            Nulla porta porta faucibus. Fusce id ligula velit. Vestibulum
-            lacinia nisi vel nulla blandit, quis euismod lorem posuere. Donec at
-            elit ex.
-          </p>
+          <h2 className="heading">
+            {pageData?.Home?.checkservicesproviders?.heading}
+          </h2>
+          <p>{pageData?.Home?.checkservicesproviders?.description}</p>
           <div className="figures">
             <div className="figures-1">
-              <p>4 K</p>
+              <p>{pageData?.Home?.checkservicesproviders?.fig_1}</p>
               <p>Ultra HD Quality</p>
             </div>
             <div className="figures-1">
-              <p>90 +</p>
+              <p>{pageData?.Home?.checkservicesproviders?.fig_2}</p>
               <p>Online Channels</p>
             </div>
             <div className="figures-1">
-              <p>350 +</p>
+              <p>{pageData?.Home?.checkservicesproviders?.fig_3}</p>
               <p>Internet Speed</p>
             </div>
           </div>
@@ -57,7 +68,7 @@ const ServiceProvider = () => {
             <h2>PER Second</h2>
           </div>
           <div className="serviceimg">
-            <img src={ServiceImage} alt="" />
+            <img src={backgroundImageURL} alt="" />
           </div>
         </div>
       </div>

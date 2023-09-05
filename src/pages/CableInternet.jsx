@@ -1,32 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CableInternetImg from "../assests/cable-int.png";
 import ProvidersCommon from "./ProvidersCommon";
 import HeroCommon from "./HeroCommon";
 import HeroSection from "./HeroSection";
 import { Helmet } from "react-helmet";
-
+import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
+import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
 const CableInternet = () => {
+  const pageData = useSelector((state) => state.pages.pageData);
+  const backgroundImageObject =
+    pageData?.CableInternet_Section?.CableInternet?.imageSrc;
+  const backgroundImageURL = backgroundImageObject || "Loading...";
+  // Access dispatch function to dispatch actions
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Fetch page data when the component mounts
+    dispatch(fetchPageData());
+  }, [dispatch]);
   return (
     <div className="CableInternet">
       {/* START POINT FOR SEO PURPOSE */}
       <Helmet>
-        <title>About Us - Your Website</title>
+        <title>
+          {" "}
+          Cable Internet Providers Near Your Area | ShopSatelliteTV
+        </title>
         <meta
           name="description"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+          content="Experience seamless online connectivity with premier cable internet providers. Enjoy fast and reliable speeds for all your browsing and streaming needs."
         />
-        <meta name="slug" content="about-us" />
+        <meta name="slug" content="cable-internet-providers" />
       </Helmet>
       {/* END POINT FOR SEO PURPOSE */}
       <HeroCommon
-        heading="Cable Internet"
-        description="Cable Internet Description"
+        heading={pageData?.CableInternet_Section?.HeroCommon?.heading}
+        description={pageData?.CableInternet_Section?.HeroCommon?.description}
       />
       <ProvidersCommon
-        title="Cable Internet"
-        heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate nisl nec diam convallis sodales. Pellentesque semper, tellus at lacinia suscipit, sapien erat tincidunt dolor, quis dictum leo augue id dui. Duis tincidunt nisl turpis, quis fringilla mi fringilla sit amet. Sed auctor, eros non hendrerit tincidunt, eros urna mattis tellus, vitae pellentesque turpis elit sit amet mi. Sed in nunc ac metus viverra ultrices. Integer imperdiet varius consectetur. Nulla id neque vel est varius viverra. Mauris ultricies commodo dui vitae eleifend. Quisque viverra turpis eu augue dapibus tristique. Donec eget purus dictum mi interdum efficitur. Duis eu ex vel orci pulvinar blandit feugiat nec ex. Sed posuere augue ut sodales aliquam. Praesent ac orci at ex placerat congue. Sed ac erat non felis vulputate iaculis. Praesent facilisis nunc nec tortor aliquam iaculis. Nulla nibh lorem, ultrices vitae nibh a, malesuada blandit ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-        imageSrc={CableInternetImg}
+        imageSrc={backgroundImageURL}
+        title={pageData?.CableInternet_Section?.CableInternet?.title}
+        heading={pageData?.CableInternet_Section?.CableInternet?.heading}
+        description={
+          pageData?.CableInternet_Section?.CableInternet?.description
+        }
       />
       <HeroSection />
     </div>

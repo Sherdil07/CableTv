@@ -16,7 +16,7 @@ function Home() {
 
   const pageData = useSelector((state) => state.pages.pageData);
   const backgroundImageObject = pageData?.Home?.main_section?.MainBG;
-  const backgroundImageURL = backgroundImageObject|| "Loading..."; 
+  const backgroundImageURL = backgroundImageObject || "Loading...";
 
   console.log("pageData", pageData);
   // Access dispatch function to dispatch actions
@@ -44,12 +44,14 @@ function Home() {
     <div className="app-container">
       {/* START POINT FOR SEO PURPOSE */}
       <Helmet>
-        <title>About Us - Your Website</title>
+        <title>
+          Find The Best Cable TV & Internet Providers Near You | ShopSatelliteTV
+        </title>
         <meta
           name="description"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+          content=" Discover top Cable TV and Internet providers in your area with ShopSatelliteTV. Compare plans, prices, and packages to find the best deals near you."
         />
-        <meta name="slug" content="about-us" />
+        <meta name="slug" content="" />
       </Helmet>
       {/* END POINT FOR SEO PURPOSE */}
 
@@ -59,16 +61,14 @@ function Home() {
           background: `url(${backgroundImageURL})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          // backgroundSize: "cover",
+          backgroundSize: "cover",
         }}
       >
         <div className="mainContent">
           <h2 className="title">
-            {" "}
             {pageData?.Home?.main_section?.title || "Loading..."}
           </h2>
           <h2 className="subTitle">
-            {" "}
             {pageData?.Home?.main_section?.subtitle || "Loading..."}
           </h2>
           <p>{pageData?.Home?.main_section?.main_content || "Loading..."}</p>

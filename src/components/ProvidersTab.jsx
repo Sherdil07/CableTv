@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HeroCommon from "../pages/HeroCommon";
 import "../styles/ProvidersTab.css";
 import axios from "axios";
 import { setZipCodeData } from "../reducers/zipCodeReducer";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-
+import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 const ProvidersTab = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [zipCode, setzipCode] = useState("");
+  const pageData = useSelector((state) => state.pages.pageData);
+  // Access dispatch function to dispatch actions
 
+  useEffect(() => {
+    // Fetch page data when the component mounts
+    dispatch(fetchPageData());
+  }, [dispatch]);
   const handleClick = async () => {
     if (!zipCode) return;
 
@@ -37,16 +43,13 @@ const ProvidersTab = () => {
   return (
     <div className="Service-Providers">
       <HeroCommon
-        heading="Service Providers"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+        heading={pageData?.ServiceProviders?.HeroCommon?.heading}
+        description={pageData?.ServiceProviders?.HeroCommon?.description}
       />
       <div className="CheckProviders">
-        <h2 className="title">SHOP SATELLITE TV</h2>
-        <h2 className="heading">Need Fast & Secure Broadband?</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat
-          tortor lorem, quis tempor felis commodo vel.
-        </p>
+        <h2 className="title">{pageData?.Home?.hero_section?.title}</h2>
+        <h2 className="heading">{pageData?.Home?.hero_section?.heading}</h2>
+        <p>{pageData?.Home?.hero_section?.description}</p>
         <div className="searchBar">
           <input
             className="searchBar"

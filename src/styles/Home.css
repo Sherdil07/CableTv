@@ -6,6 +6,9 @@
   margin: auto;
   padding: 0;
 }
+.mainSection {
+  height: 700px;
+}
 .mainContent {
   padding-top: 113px;
   padding-left: 86px;

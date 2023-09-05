@@ -1,32 +1,53 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroCommon from "./HeroCommon";
 import SatelliteInternetImg from "../assests/satellite-int.png";
 import ProvidersCommon from "./ProvidersCommon";
 import HeroSection from "./HeroSection";
 import { Helmet } from "react-helmet";
-
+import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
+import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
 const SatelliteInternet = () => {
+  const pageData = useSelector((state) => state.pages.pageData);
+  const backgroundImageObject =
+    pageData?.SatelliteInternet_Section?.SatelliteInternet?.imageSrc;
+  const backgroundImageURL = backgroundImageObject || "Loading...";
+  // Access dispatch function to dispatch actions
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Fetch page data when the component mounts
+    dispatch(fetchPageData());
+  }, [dispatch]);
   return (
     <div className="SatelliteInternet">
       {/* START POINT FOR SEO PURPOSE */}
       <Helmet>
-        <title>About Us - Your Website</title>
+        <title>
+          {" "}
+          Satellite Internet Providers Near Your Area | ShopSatelliteTV
+        </title>
         <meta
           name="description"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+          content="Connect to the world with leading satellite internet providers. Experience high-speed connectivity wherever you are, bridging the digital divide."
         />
-        <meta name="slug" content="about-us" />
+        <meta name="slug" content="satellite-internet-providers" />
       </Helmet>
       {/* END POINT FOR SEO PURPOSE */}
       <HeroCommon
-        heading="Satellite Internet"
-        description="Satellite Internet Description"
+        heading={pageData?.SatelliteInternet_Section?.HeroCommon?.heading}
+        description={
+          pageData?.SatelliteInternet_Section?.HeroCommon?.description
+        }
       />
       <ProvidersCommon
-        title="Satellite Internet"
-        heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate nisl nec diam convallis sodales. Pellentesque semper, tellus at lacinia suscipit, sapien erat tincidunt dolor, quis dictum leo augue id dui. Duis tincidunt nisl turpis, quis fringilla mi fringilla sit amet. Sed auctor, eros non hendrerit tincidunt, eros urna mattis tellus, vitae pellentesque turpis elit sit amet mi. Sed in nunc ac metus viverra ultrices. Integer imperdiet varius consectetur. Nulla id neque vel est varius viverra. Mauris ultricies commodo dui vitae eleifend. Quisque viverra turpis eu augue dapibus tristique. Donec eget purus dictum mi interdum efficitur. Duis eu ex vel orci pulvinar blandit feugiat nec ex. Sed posuere augue ut sodales aliquam. Praesent ac orci at ex placerat congue. Sed ac erat non felis vulputate iaculis. Praesent facilisis nunc nec tortor aliquam iaculis. Nulla nibh lorem, ultrices vitae nibh a, malesuada blandit ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        imageSrc={SatelliteInternetImg}
+        imageSrc={backgroundImageURL}
+        title={pageData?.SatelliteInternet_Section?.SatelliteInternet?.title}
+        heading={
+          pageData?.SatelliteInternet_Section?.SatelliteInternet?.heading
+        }
+        description={
+          pageData?.SatelliteInternet_Section?.SatelliteInternet?.description
+        }
       />
       <HeroSection />
     </div>

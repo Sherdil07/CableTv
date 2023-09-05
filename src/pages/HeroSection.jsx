@@ -1,16 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HeroBG from "../assests/hero-section-and-pre-footer-bg.jpg";
 import "../styles/HeroSection.css";
 import axios from "axios";
 import { setZipCodeData } from "../reducers/zipCodeReducer";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 
 const HeroSection = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [zipCode, setzipCode] = useState("");
+  const pageData = useSelector((state) => state.pages.pageData);
+  const backgroundImageObject = pageData?.Home?.hero_section?.hero_sectionBG;
+  const backgroundImageURL = backgroundImageObject || "Loading...";
 
+  useEffect(() => {
+    // Fetch page data when the component mounts
+    dispatch(fetchPageData());
+  }, [dispatch]);
+
+  // Log the pageData to verify if it's updating
+  console.log("Page Data in Home Component:", pageData);
   const handleClick = async () => {
     if (!zipCode) return;
 
@@ -40,18 +51,15 @@ const HeroSection = () => {
         <div
           className="HeroContent"
           style={{
-            backgroundImage: `url(${HeroBG})`,
+            backgroundImage: `url(${backgroundImageURL})`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
         >
-          <h2 className="title">SHOP SATELLITE TV</h2>
-          <h2 className="subTitle">Need Fast & Secure Broadband?</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            consequat tortor lorem, quis tempor felis commodo vel.
-          </p>
+          <h2 className="title">{pageData?.Home?.hero_section?.title}</h2>
+          <h2 className="subTitle">{pageData?.Home?.hero_section?.heading}</h2>
+          <p>{pageData?.Home?.hero_section?.description}</p>
           <div className="searchBar">
             <input
               className="searchBar"

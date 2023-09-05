@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FooterLogo from "../assests/footer-logo.png";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailIcon from "@mui/icons-material/Mail";
@@ -8,7 +8,17 @@ import TwitterIcon from "../assests/twitter.png";
 import YoutubeIcon from "../assests/youtube.png";
 import { Link } from "react-router-dom";
 import "../styles/Footer.css";
+import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
+import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 const Footer = () => {
+  const pageData = useSelector((state) => state.pages.pageData);
+  // Access dispatch function to dispatch actions
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Fetch page data when the component mounts
+    dispatch(fetchPageData());
+  }, [dispatch]);
   return (
     <div className="Footer">
       <div className="app-container">
@@ -19,11 +29,7 @@ const Footer = () => {
                 <img src={FooterLogo} alt="" />
               </div>
               <div className="footer-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                  elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                  leo.
-                </p>
+                <p>{pageData?.Home?.Footer?.footer_text}</p>
               </div>
             </div>
           </div>

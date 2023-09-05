@@ -6,6 +6,9 @@
   margin-left: 650px;
   margin-right: 20px;
 }
+.SatelliteBG {
+  width: 1899px;
+}
 .LeftSide {
   margin-left: 668px;
   margin-right: 20px;
@@ -14,9 +17,7 @@
   display: flex;
   padding-top: 30px;
 }
-.figures-1 {
-  margin-right: 40px;
-}
+
 .figures p:first-child {
   color: #df0303;
   font-family: "Montserrat", Sans-serif;
@@ -24,6 +25,7 @@
   font-weight: 700;
   letter-spacing: 1px;
 }
+
 .figures p:last-child {
   color: #222121;
   font-family: "Montserrat", Sans-serif;

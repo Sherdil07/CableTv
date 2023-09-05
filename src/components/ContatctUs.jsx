@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContactForm from "../pages/ContactForm";
 import HeroCommon from "../pages/HeroCommon";
 import FacebookIcon from "../assests/facebook-app-symbol.png";
@@ -9,39 +9,46 @@ import MailIcon from "@mui/icons-material/Mail";
 import CallIcon from "@mui/icons-material/Call";
 import "../styles/ContactUs.css";
 import { Helmet } from "react-helmet";
-
+import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
+import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
 const ContatctUs = () => {
+  const pageData = useSelector((state) => state.pages.pageData);
+  // Access dispatch function to dispatch actions
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Fetch page data when the component mounts
+    dispatch(fetchPageData());
+  }, [dispatch]);
+
   return (
     <div className="ContatctUs">
       {/* START POINT FOR SEO PURPOSE */}
       <Helmet>
-        <title>About Us - Your Website</title>
+        <title>About our company | ShopSatelliteTV</title>
         <meta
           name="description"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+          content=" Connect with us easily. Reach our dedicated team for inquiries, assistance, and information. Your reliable partner – Contact us today."
         />
-        <meta name="slug" content="about-us" />
+        <meta name="slug" content="contact-us" />
       </Helmet>
       {/* END POINT FOR SEO PURPOSE */}
 
       <HeroCommon
-        heading="Contact Us"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+        heading={pageData?.ContactUs?.HeroCommon?.heading}
+        description={pageData?.ContactUs?.HeroCommon?.description}
       />
       <div className="Contact-Content">
         <div className="row">
           <div className="col-6">
             <div className="leftSide">
-              <h2 className="title">Contact Us</h2>
-              <h2 className="heading">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              <h2 className="title">
+                {pageData?.ContactUs?.Contact_Content?.title}
               </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                consequat tortor lorem, quis tempor felis commodo vel. Mauris eu
-                vulputate augue. Fusce nisi risus, ornare vitae egestas sit
-                amet, luctus at tortor.
-              </p>
+              <h2 className="heading">
+                {pageData?.ContactUs?.Contact_Content?.heading}
+              </h2>
+              <p>{pageData?.ContactUs?.Contact_Content?.description}</p>
               <div className="contact-info">
                 <ul className="list-items">
                   <li className="list-item">
