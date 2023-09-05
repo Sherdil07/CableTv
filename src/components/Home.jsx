@@ -15,6 +15,9 @@ function Home() {
   const [zipCode, setzipCode] = useState("");
 
   const pageData = useSelector((state) => state.pages.pageData);
+  const backgroundImageObject = pageData?.Home?.main_section?.MainBG;
+  const backgroundImageURL = backgroundImageObject|| "Loading..."; 
+
   console.log("pageData", pageData);
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();
@@ -53,21 +56,22 @@ function Home() {
       <div
         className="mainSection"
         style={{
-          background: `url(${MainSection})`,
+          background: `url(${backgroundImageURL})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
+          // backgroundSize: "cover",
         }}
       >
         <div className="mainContent">
-          <h2 className="title"> {pageData.Home.main_section.title}</h2>
-          <h2 className="subTitle">{pageData.Home.main_section.subtitle}</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            consequat tortor lorem, quis tempor felis commodo vel. Mauris eu
-            vulputate augue. Fusce nisi risus, ornare vitae egestas sit amet,
-            luctus at tortor.
-          </p>
+          <h2 className="title">
+            {" "}
+            {pageData?.Home?.main_section?.title || "Loading..."}
+          </h2>
+          <h2 className="subTitle">
+            {" "}
+            {pageData?.Home?.main_section?.subtitle || "Loading..."}
+          </h2>
+          <p>{pageData?.Home?.main_section?.main_content || "Loading..."}</p>
           <div className="searchBar">
             <input
               className="searchBar"
