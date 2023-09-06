@@ -12,7 +12,7 @@ const HeroSection = () => {
   const dispatch = useDispatch();
   const [zipCode, setzipCode] = useState("");
   const pageData = useSelector((state) => state.pages.pageData);
-  const backgroundImageObject = pageData?.Home?.hero_section?.hero_sectionBG;
+  const backgroundImageObject = pageData?.Home?.hero_section?.image;
   const backgroundImageURL = backgroundImageObject || "Loading...";
 
   useEffect(() => {

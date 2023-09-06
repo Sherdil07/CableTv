@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import ServiceImage from "../assests/why-choose-sect.jpg";
 import "../styles/ServiceProvider.css";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
@@ -8,7 +7,7 @@ import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPage
 const ServiceProvider = () => {
   const pageData = useSelector((state) => state.pages.pageData);
   const backgroundImageObject =
-    pageData?.Home?.checkservicesproviders?.CheckServicesProvidersBG;
+    pageData?.Home?.checkservicesproviders?.image;
   const backgroundImageURL = backgroundImageObject || "Loading...";
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();

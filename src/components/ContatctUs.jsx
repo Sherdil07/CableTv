@@ -25,7 +25,7 @@ const ContatctUs = () => {
     <div className="ContatctUs">
       {/* START POINT FOR SEO PURPOSE */}
       <Helmet>
-        <title>About our company | ShopSatelliteTV</title>
+        <title>Contact Us | ShopSatelliteTV</title>
         <meta
           name="description"
           content=" Connect with us easily. Reach our dedicated team for inquiries, assistance, and information. Your reliable partner – Contact us today."

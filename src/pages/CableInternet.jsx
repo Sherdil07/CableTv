@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from "react-redux"; // Import useSelector an
 const CableInternet = () => {
   const pageData = useSelector((state) => state.pages.pageData);
   const backgroundImageObject =
-    pageData?.CableInternet_Section?.CableInternet?.imageSrc;
+    pageData?.CableInternet_Section?.CableInternet?.image;
   const backgroundImageURL = backgroundImageObject || "Loading...";
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();

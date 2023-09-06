@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from "react-redux"; // Import useSelector an
 const SatelliteInternet = () => {
   const pageData = useSelector((state) => state.pages.pageData);
   const backgroundImageObject =
-    pageData?.SatelliteInternet_Section?.SatelliteInternet?.imageSrc;
+    pageData?.SatelliteInternet_Section?.SatelliteInternet?.image;
   const backgroundImageURL = backgroundImageObject || "Loading...";
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();

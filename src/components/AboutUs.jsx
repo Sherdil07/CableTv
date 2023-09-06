@@ -31,8 +31,8 @@ const AboutUs = () => {
 
       {/* END POINT FOR SEO PURPOSE */}
       <HeroCommon
-        heading={pageData?.PrivacyPolicy?.HeroCommon?.heading}
-        description={pageData?.PrivacyPolicy?.HeroCommon?.description}
+        heading={pageData?.AboutUs?.HeroCommon?.heading}
+        description={pageData?.AboutUs?.HeroCommon?.description}
       />
       <AboutSatteliteTv />
       <ServiceProvider />

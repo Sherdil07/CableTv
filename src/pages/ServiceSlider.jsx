@@ -9,6 +9,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
+import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
 
 const Slide = ({ image, title, description, linkTo }) => {
   return (
@@ -57,7 +59,30 @@ const ServiceSlider = () => {
     slidesToShow: isMobile ? 1 : 3, // Show only 1 slide if isMobile is true, else show 3 slides
     slidesToScroll: 1,
   };
+  const pageData = useSelector((state) => state.pages.pageData);
+  const backgroundImageObject = pageData?.Home?.service_cabletv_slider?.image;
+  const backgroundImageURL = backgroundImageObject || "Loading...";
 
+  const CableInternetImgObject =
+    pageData?.Home?.service_cableinternet_slider?.image;
+  const CableInternetImgURL = CableInternetImgObject || "Loading...";
+
+  const SatelliteTVImgObject =
+    pageData?.Home?.service_satellitetv_slider?.image;
+  const SatelliteTVImgURL = SatelliteTVImgObject || "Loading...";
+
+  const SatelliteInternetImgObject =
+    pageData?.Home?.service_satelliteinternet_slider?.image;
+  const SatelliteInternetImgURL = SatelliteInternetImgObject || "Loading...";
+
+  console.log("pageData", pageData);
+  // Access dispatch function to dispatch actions
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Fetch page data when the component mounts
+    dispatch(fetchPageData());
+  }, [dispatch]);
   return (
     <div className="Services">
       <div
@@ -71,33 +96,38 @@ const ServiceSlider = () => {
       >
         <div className="app-container">
           <div className="heroContent">
-            <h2 className="heading">SERVICES</h2>
-            <h2 className="title">Find Perfect Network Solutions</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-              consequat tortor lorem, quis tempor felis commodo vel.
-            </p>
+            <h2 className="heading">
+              {" "}
+              {pageData?.Home?.services?.heading || "Loading..."}
+            </h2>
+            <h2 className="title">
+              {pageData?.Home?.services?.title || "Loading..."}
+            </h2>
+            <p>{pageData?.Home?.services?.description || "Loading..."}</p>
           </div>
           <div className="slider-app-container">
             <Slider {...sliderSettings} ref={sliderRef}>
               <Link to="services/cable-tv">
                 <Slide
-                  image={CableTv}
-                  title="Cable Tv"
-                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                  image={backgroundImageURL}
+                  title={pageData?.Home?.service_cabletv_slider?.title}
+                  description={pageData?.Home?.service_cabletv_slider?.description}
+                  linkTo="services/cable-tv"
                 />
               </Link>
               <Link to="services/cable-internet">
                 <Slide
-                  image={Cable}
-                  title="Cable Internet"
-                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                  image={CableInternetImgURL}
+                  title={pageData?.Home?.service_cableinternet_slider?.title}
+                  description={
+                    pageData?.Home?.service_cableinternet_slider?.description
+                  }
                   linkTo="services/cable-internet"
                 />
               </Link>
               <Link to="services/satellite-tv">
                 <Slide
-                  image={Satellite}
+                  image={SatelliteTVImgURL}
                   title="Satellite Tv"
                   description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
                   linkTo="services/satellite-tv"
@@ -105,9 +135,14 @@ const ServiceSlider = () => {
               </Link>
               <Link to="services/satellite-internet">
                 <Slide
-                  image={SatelliteTv}
-                  title="Satellite Internet"
-                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                  image={SatelliteInternetImgURL}
+                  title={
+                    pageData?.Home?.service_satelliteinternet_slider?.title
+                  }
+                  description={
+                    pageData?.Home?.service_satelliteinternet_slider
+                      ?.description
+                  }
                   linkTo="services/satellite-internet"
                 />
               </Link>

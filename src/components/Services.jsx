@@ -28,8 +28,8 @@ const Services = () => {
       {/* END POINT FOR SEO PURPOSE */}
 
       <HeroCommon
-        heading="Services"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat tortor lorem, quis tempor felis commodo vel."
+        heading={pageData?.Services?.HeroCommon?.heading}
+        description={pageData?.Services?.HeroCommon?.description}
       />
       <ServiceSlider />
       <HeroSection />
