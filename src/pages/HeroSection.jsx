@@ -21,7 +21,6 @@ const HeroSection = () => {
   }, [dispatch]);
 
   // Log the pageData to verify if it's updating
-  console.log("Page Data in Home Component:", pageData);
   const handleClick = async () => {
     if (!zipCode) return;
 

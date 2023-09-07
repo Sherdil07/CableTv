@@ -17,9 +17,6 @@ const AboutSatteliteTv = () => {
     dispatch(fetchPageData());
   }, [dispatch]);
 
-  // Log the pageData to verify if it's updating
-  console.log("Page Data in Home Component:", pageData);
-
   return (
     <div className="SatelliteSection">
       <div

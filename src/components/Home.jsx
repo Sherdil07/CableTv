@@ -18,7 +18,6 @@ function Home() {
   const backgroundImageObject = pageData?.Home?.main_section?.MainBG;
   const backgroundImageURL = backgroundImageObject || "Loading...";
 
-  console.log("pageData", pageData);
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();
 
@@ -26,9 +25,6 @@ function Home() {
     // Fetch page data when the component mounts
     dispatch(fetchPageData());
   }, [dispatch]);
-
-  // Log the pageData to verify if it's updating
-  console.log("Page Data in Home Component:", pageData);
 
   const handleClick = async () => {
     if (!zipCode) return;

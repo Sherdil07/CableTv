@@ -75,7 +75,6 @@ const ServiceSlider = () => {
     pageData?.Home?.service_satelliteinternet_slider?.image;
   const SatelliteInternetImgURL = SatelliteInternetImgObject || "Loading...";
 
-  console.log("pageData", pageData);
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();
 
@@ -111,7 +110,9 @@ const ServiceSlider = () => {
                 <Slide
                   image={backgroundImageURL}
                   title={pageData?.Home?.service_cabletv_slider?.title}
-                  description={pageData?.Home?.service_cabletv_slider?.description}
+                  description={
+                    pageData?.Home?.service_cabletv_slider?.description
+                  }
                   linkTo="services/cable-tv"
                 />
               </Link>

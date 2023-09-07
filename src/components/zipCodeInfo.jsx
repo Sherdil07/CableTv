@@ -45,6 +45,7 @@ function ZipCodeInfo() {
   }, []);
 
   const getList = (obj) => {
+    // if (!(obj && obj.Features.length > 0)) return null;
     let arr = [];
     obj.Features.forEach((e) => {
       arr.push(

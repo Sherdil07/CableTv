@@ -6,8 +6,7 @@ import { useSelector, useDispatch } from "react-redux"; // Import useSelector an
 import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 const ServiceProvider = () => {
   const pageData = useSelector((state) => state.pages.pageData);
-  const backgroundImageObject =
-    pageData?.Home?.checkservicesproviders?.image;
+  const backgroundImageObject = pageData?.Home?.checkservicesproviders?.image;
   const backgroundImageURL = backgroundImageObject || "Loading...";
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();
@@ -17,8 +16,6 @@ const ServiceProvider = () => {
     dispatch(fetchPageData());
   }, [dispatch]);
 
-  // Log the pageData to verify if it's updating
-  console.log("Page Data in Home Component:", pageData);
   return (
     <div className="ServiceProviderSection">
       {/* START POINT FOR SEO PURPOSE */}

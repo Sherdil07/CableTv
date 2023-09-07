@@ -15,21 +15,29 @@ import SatelliteTv from "./pages/SatelliteTv";
 import CableTv from "./pages/CableTv";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ZipCodeInfo from "./components/zipCodeInfo";
-
+import Blog_1 from "./pages/Blog_1";
+import Blog_2 from "./pages/Blog_2";
+import PopupCard from "./pages/PopUpCard";
+import Modal from "react-modal"; // Import react-modal
+Modal.setAppElement("#root");
 function App() {
   return (
     <div className="App">
+      <PopupCard />
       <Navbar />
-
       <Routes>
         <Route path="/" exact Component={Home} />
-        <Route path="/about" exact Component={AboutUs} />
+        <Route path="/aboutus" exact Component={AboutUs} />
         <Route path="/services" exact Component={Services} />
         <Route path="/serviceproviders" exact Component={ProvidersTab} />
         <Route path="/contactus" exact Component={ContatctUs} />
         <Route path="/privacy-policy" exact Component={PrivacyPolicy} />
         <Route path="services/cable-internet" exact Component={CableInternet} />
         <Route path="services/cable-tv" exact Component={CableTv} />
+        <Route path="blog/cabletv" exact Component={Blog_1} />
+        <Route path="blog/satellitetv" exact Component={Blog_2} />
+        {/* <Route path="blog/satellite-tv" exact Component={Blog_2} />
+        <Route path="blog/cable-tv" exact Component={Blog_3} /> */}
         <Route
           path="services/satellite-internet"
           exact

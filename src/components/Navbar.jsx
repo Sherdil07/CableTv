@@ -55,7 +55,7 @@ function Navbar() {
         </div>
         <div className="rightSide">
           <Link to="/"> Home </Link>
-          <Link to="/about"> About Us</Link>
+          <Link to="/aboutus"> About Us</Link>
           <div className="dropdown">
             <button className="dropbtn">
               <Link to="/services"> Services</Link>
