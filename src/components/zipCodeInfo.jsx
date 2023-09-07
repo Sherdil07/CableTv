@@ -32,6 +32,7 @@ function ZipCodeInfo() {
       const res = await axios.post("http://localhost:5000", {
         zipCode: zipCode,
       });
+      console.log("response : ", res);
       dispatch(setZipCodeData(res.data));
     } catch (error) {}
   };
@@ -45,41 +46,14 @@ function ZipCodeInfo() {
 
   const getList = (obj) => {
     let arr = [];
-
-    for (const key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        const value = obj[key];
-
-        if (key === "Column7" && obj[key])
-          arr.push(
-            <li>
-              <DoneIcon />
-              {value}
-            </li>
-          );
-        if (key === "Column8" && obj[key])
-          arr.push(
-            <li>
-              <DoneIcon />
-              {value}
-            </li>
-          );
-        if (key === "Column9" && obj[key])
-          arr.push(
-            <li>
-              <DoneIcon />
-              {value}
-            </li>
-          );
-        if (key === "Features" && obj[key])
-          arr.push(
-            <li>
-              <DoneIcon />
-              {value}
-            </li>
-          );
-      }
-    }
+    obj.Features.forEach((e) => {
+      arr.push(
+        <li>
+          <DoneIcon />
+          {e}
+        </li>
+      );
+    });
 
     return arr;
   };
@@ -208,17 +182,19 @@ function ZipCodeInfo() {
                         <tr>
                           <th className="img-col" scope="row">
                             <img
-                              src={`/companies/${i["Column2"]}.png`}
+                              src={`/companies/${i.CompanyName}.png`}
                               alt="image"
                             />
                           </th>
-                          <td className="table-data">${i["Price"]}/mo.</td>
-                          <td className="table-data">{i["Column5"]}</td>
+                          <td className="table-data">${i.Price}/mo.</td>
+                          <td className="table-data">
+                            {i.MaxDownloadSpeedsUpTo}
+                          </td>
                           <td className="table-data">
                             <ul>{getList(i)}</ul>
                           </td>
                           <td className="table-data">
-                            {renderRatingStars(i["Column4"])}
+                            {renderRatingStars(i.rating)}
                           </td>{" "}
                           {/* Render stars here */}{" "}
                           <td className="table-data">
@@ -271,17 +247,17 @@ function ZipCodeInfo() {
                         <tr>
                           <th className="img-col" scope="row">
                             <img
-                              src={`/companies/${i["Column2"]}.png`}
+                              src={`/companies/${i.CompanyName}.png`}
                               alt="image"
                             />
                           </th>
                           <td className="table-data">${i["Price"]}/mo.</td>
-                          <td className="table-data">{i["Column5"]}</td>
+                          <td className="table-data">{i.Channels}</td>
                           <td className="table-data">
                             <ul>{getList(i)}</ul>
                           </td>
                           <td className="table-data">
-                            {renderRatingStars(i["Column4"])}
+                            {renderRatingStars(i.rating)}
                           </td>
                           <td className="table-data">
                             <button
@@ -326,17 +302,19 @@ function ZipCodeInfo() {
                         <tr>
                           <th scope="row">
                             <img
-                              src={`/companies/${i["Column2"]}.png`}
+                              src={`/companies/${i.CompanyName}.png`}
                               alt="image"
                             />
                           </th>
                           <td className="table-data">${i["Price"]}/mo.</td>
-                          <td className="table-data">{i["Column5"]}</td>
+                          <td className="table-data">
+                            {i.MaxDownloadSpeedsUpTo}
+                          </td>
                           <td className="table-data">
                             <ul>{getList(i)}</ul>
                           </td>
                           <td className="table-data">
-                            {renderRatingStars(i["Column4"])}
+                            {renderRatingStars(i.rating)}
                           </td>
                           <td className="table-data">
                             <button
