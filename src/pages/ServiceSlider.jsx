@@ -96,7 +96,6 @@ const ServiceSlider = () => {
         <div className="app-container">
           <div className="heroContent">
             <h2 className="heading">
-              {" "}
               {pageData?.Home?.services?.heading || "Loading..."}
             </h2>
             <h2 className="title">

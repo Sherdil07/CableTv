@@ -91,7 +91,6 @@ const PopupCard = () => {
           Discover Top TV and Internet Providers Near You
         </h2>
         <h5 className="popup-title">
-          {" "}
           <LocationOnIcon />
           Enter your zip to see providers in your area.
         </h5>

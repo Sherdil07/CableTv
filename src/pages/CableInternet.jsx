@@ -22,10 +22,7 @@ const CableInternet = () => {
     <div className="CableInternet">
       {/* START POINT FOR SEO PURPOSE */}
       <Helmet>
-        <title>
-          {" "}
-          Cable Internet Providers Near Your Area | ShopSatelliteTV
-        </title>
+        <title>Cable Internet Providers Near Your Area | ShopSatelliteTV</title>
         <meta
           name="description"
           content="Experience seamless online connectivity with premier cable internet providers. Enjoy fast and reliable speeds for all your browsing and streaming needs."

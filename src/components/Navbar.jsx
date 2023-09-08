@@ -50,9 +50,11 @@ function Navbar() {
   return (
     <div className="app-container">
       <div className="Navbar">
-        <div className="leftSide">
-          <img className="ImgLogo" src={logo} alt="logo" />
-        </div>
+        <Link to="/">
+          <div className="leftSide">
+            <img className="ImgLogo" src={logo} alt="logo" />
+          </div>
+        </Link>
         <div className="rightSide">
           <Link to="/"> Home </Link>
           <Link to="/aboutus"> About Us</Link>
@@ -86,8 +88,7 @@ function Navbar() {
             {/* </div> */}
             {/* <div className="btn"> */}
             {/* <button className="btn-findnow" onClick={handleClick}>
-              {" "}
-              Find Now
+                            Find Now
             </button> */}
           </>
         </div>

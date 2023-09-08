@@ -24,11 +24,12 @@
 }
 
 .slide-image {
-  width: 100%;
+  width: 93%;
   height: 450px;
   background-size: cover;
   background-position: center;
   border-radius: 20px;
+
 }
 
 .slide-content {
@@ -36,6 +37,7 @@
   bottom: 20px;
   left: 20px;
   color: black;
+  padding: 30px;
 }
 
 .slide-content h3 {
@@ -108,7 +110,7 @@
     padding-top: 20px;
     padding-bottom: 0px;
   }
-  .heroContent{
+  .heroContent {
     padding: 0;
   }
 }

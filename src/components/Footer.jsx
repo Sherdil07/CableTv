@@ -66,8 +66,7 @@ const Footer = () => {
                   <Link to="/services/cable-tv">Cable Tv</Link>
                 </li>
                 <li className="list-item">
-                  <Link to="/services/cable-internet">Cable Internet</Link>{" "}
-                </li>
+                  <Link to="/services/cable-internet">Cable Internet</Link>                </li>
                 <li className="list-item">
                   <Link to="/services/satellite-tv">Satellite Tv</Link>
                 </li>

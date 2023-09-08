@@ -168,8 +168,7 @@ function ZipCodeInfo() {
                       Max download speeds up to
                     </th>
                     <th className="table-head" scope="col">
-                      Features{" "}
-                    </th>
+                      Features                    </th>
                     <th className="table-head" scope="col">
                       Customer Rating
                     </th>
@@ -196,17 +195,13 @@ function ZipCodeInfo() {
                           </td>
                           <td className="table-data">
                             {renderRatingStars(i.rating)}
-                          </td>{" "}
-                          {/* Render stars here */}{" "}
-                          <td className="table-data">
-                            {" "}
-                            <button
+                          </td>                          {/* Render stars here */}                          <td className="table-data">
+                                                        <button
                               className="Call-Now"
                               onClick={() => makeCall("1112223333")}
                             >
                               <CallIcon /> (111) 222-3333
-                            </button>{" "}
-                          </td>
+                            </button>                          </td>
                         </tr>
                       );
                     })}

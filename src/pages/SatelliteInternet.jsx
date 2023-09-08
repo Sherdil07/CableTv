@@ -23,8 +23,7 @@ const SatelliteInternet = () => {
       {/* START POINT FOR SEO PURPOSE */}
       <Helmet>
         <title>
-          {" "}
-          Satellite Internet Providers Near Your Area | ShopSatelliteTV
+                    Satellite Internet Providers Near Your Area | ShopSatelliteTV
         </title>
         <meta
           name="description"
