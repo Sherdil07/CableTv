@@ -83,7 +83,7 @@ const Footer = () => {
               <h2>Contact Us</h2>
               <ul className="list-items">
                 <li className="list-item">
-                  <CallIcon /> (111) 222-3333
+                  <CallIcon />  (866) 236-3017
                 </li>
                 <li className="list-item">
                   <MailIcon /> support@shopsatellitetv.com
