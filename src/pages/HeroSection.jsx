@@ -14,6 +14,7 @@ const HeroSection = () => {
   const pageData = useSelector((state) => state.pages.pageData);
   const backgroundImageObject = pageData?.Home?.hero_section?.image;
   const backgroundImageURL = backgroundImageObject || "Loading...";
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     // Fetch page data when the component mounts
@@ -25,7 +26,7 @@ const HeroSection = () => {
     if (!zipCode) return;
 
     try {
-      const res = await axios.post("http://localhost:5000", {
+      const res = await axios.post(`${apiUrl}`, {
         zipCode: zipCode,
       });
       console.log(res.data);

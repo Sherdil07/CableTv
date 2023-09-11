@@ -22,6 +22,8 @@ function Tab(props) {
 }
 
 function ZipCodeInfo() {
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const zipCodeInfo = useSelector((state) => state.zipCodeReducer.zipCodeData);
   console.log(zipCodeInfo);
   const dispatch = useDispatch();
@@ -29,7 +31,7 @@ function ZipCodeInfo() {
 
   const fetchZipCodeInfo = async () => {
     try {
-      const res = await axios.post("http://localhost:5000", {
+      const res = await axios.post(`${apiUrl}`, {
         zipCode: zipCode,
       });
       console.log("response : ", res);
@@ -45,7 +47,6 @@ function ZipCodeInfo() {
   }, []);
 
   const getList = (obj) => {
-    // if (!(obj && obj.Features.length > 0)) return null;
     let arr = [];
     obj.Features.forEach((e) => {
       arr.push(
@@ -168,7 +169,8 @@ function ZipCodeInfo() {
                       Max download speeds up to
                     </th>
                     <th className="table-head" scope="col">
-                      Features                    </th>
+                      Features
+                    </th>
                     <th className="table-head" scope="col">
                       Customer Rating
                     </th>
@@ -195,13 +197,16 @@ function ZipCodeInfo() {
                           </td>
                           <td className="table-data">
                             {renderRatingStars(i.rating)}
-                          </td>                          {/* Render stars here */}                          <td className="table-data">
-                                                        <button
+                          </td>
+                          {/* Render stars here */}
+                          <td className="table-data">
+                            <button
                               className="Call-Now"
                               onClick={() => makeCall("1112223333")}
                             >
-                              <CallIcon />  (866) 236-3017
-                            </button>                          </td>
+                              <CallIcon /> (866) 236-3017
+                            </button>
+                          </td>
                         </tr>
                       );
                     })}
@@ -260,7 +265,7 @@ function ZipCodeInfo() {
                               className="Call-Now"
                               onClick={() => makeCall("1112223333")}
                             >
-                              <CallIcon />  (866) 236-3017
+                              <CallIcon /> (866) 236-3017
                             </button>
                           </td>
                         </tr>
@@ -317,7 +322,7 @@ function ZipCodeInfo() {
                               className="Call-Now"
                               onClick={() => makeCall("1112223333")}
                             >
-                              <CallIcon />  (866) 236-3017
+                              <CallIcon /> (866) 236-3017
                             </button>
                           </td>
                         </tr>

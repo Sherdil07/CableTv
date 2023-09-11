@@ -10,6 +10,7 @@ const ProvidersTab = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [zipCode, setzipCode] = useState("");
+  const apiUrl = process.env.REACT_APP_API_URL;
   const pageData = useSelector((state) => state.pages.pageData);
   // Access dispatch function to dispatch actions
 
@@ -21,7 +22,7 @@ const ProvidersTab = () => {
     if (!zipCode) return;
 
     try {
-      const res = await axios.post("http://localhost:5000", {
+      const res = await axios.post(`${apiUrl}`, {
         zipCode: zipCode,
       });
       console.log(res.data);

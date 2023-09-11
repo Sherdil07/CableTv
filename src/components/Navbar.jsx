@@ -19,6 +19,7 @@ function Navbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [zipCode, setzipCode] = useState("");
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -27,7 +28,7 @@ function Navbar() {
     if (!zipCode) return;
 
     try {
-      const res = await axios.post("http://localhost:5000", {
+      const res = await axios.post(`${apiUrl}`, {
         zipCode: zipCode,
       });
       console.log(res.data);
