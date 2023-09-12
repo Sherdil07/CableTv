@@ -19,6 +19,9 @@ import Blog_1 from "./pages/Blog_1";
 import Blog_2 from "./pages/Blog_2";
 import PopupCard from "./pages/PopUpCard";
 import Modal from "react-modal"; // Import react-modal
+import ReadBlog_1 from "./pages/ReadBlog_1";
+import ReadBlog_2 from "./pages/ReadBlog_2";
+import ReadBlog_3 from "./pages/ReadBlog_3";
 Modal.setAppElement("#root");
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" exact Component={Home} />
+        <Route path="/blog_1" exact Component={ReadBlog_1} />
+        <Route path="/blog_2" exact Component={ReadBlog_2} />
+        <Route path="/blog_3" exact Component={ReadBlog_3} />
         <Route path="/aboutus" exact Component={AboutUs} />
         <Route path="/services" exact Component={Services} />
         <Route path="/serviceproviders" exact Component={ProvidersTab} />
@@ -36,8 +42,6 @@ function App() {
         <Route path="services/cable-tv" exact Component={CableTv} />
         <Route path="blog/cabletv" exact Component={Blog_1} />
         <Route path="blog/satellitetv" exact Component={Blog_2} />
-        {/* <Route path="blog/satellite-tv" exact Component={Blog_2} />
-        <Route path="blog/cable-tv" exact Component={Blog_3} /> */}
         <Route
           path="services/satellite-internet"
           exact

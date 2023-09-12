@@ -66,7 +66,8 @@ const Footer = () => {
                   <Link to="/services/cable-tv">Cable Tv</Link>
                 </li>
                 <li className="list-item">
-                  <Link to="/services/cable-internet">Cable Internet</Link>                </li>
+                  <Link to="/services/cable-internet">Cable Internet</Link>{" "}
+                </li>
                 <li className="list-item">
                   <Link to="/services/satellite-tv">Satellite Tv</Link>
                 </li>
@@ -83,7 +84,7 @@ const Footer = () => {
               <h2>Contact Us</h2>
               <ul className="list-items">
                 <li className="list-item">
-                  <CallIcon />  (866) 236-3017
+                  <CallIcon /> (866) 236-3017
                 </li>
                 <li className="list-item">
                   <MailIcon /> support@shopsatellitetv.com
@@ -94,7 +95,12 @@ const Footer = () => {
                 </li>
               </ul>
               <div className="SocialIcons">
-                <img src={FacebookIcon} alt="" />
+                <Link
+                  to="https://www.facebook.com/shopsatellitetv/"
+                  target="_blank"
+                >
+                  <img src={FacebookIcon} alt="" />
+                </Link>
                 <img src={TwitterIcon} alt="" />
                 <img src={YoutubeIcon} alt="" />
               </div>

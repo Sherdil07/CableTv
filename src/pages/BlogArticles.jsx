@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import "../styles/BlogArticles.css";
-import Card1 from "..//assests/card-1.png";
-import Card2 from "..//assests/card-2.png";
-import Card3 from "..//assests/card-3.png";
 import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
+import { Link } from "react-router-dom";
 
 const BlogArticles = () => {
   const pageData = useSelector((state) => state.pages.pageData);
@@ -42,9 +40,11 @@ const BlogArticles = () => {
               {pageData?.Home?.blog_card_1?.heading}
             </h2>
             <p>{pageData?.Home?.blog_card_1?.description} </p>
-            <div className="readmore">
-              <button className="btn-blog">Read More » </button>
-            </div>
+            <Link to="blog_1">
+              <div className="readmore">
+                <button className="btn-blog">Read More » </button>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="card-2">
@@ -59,10 +59,11 @@ const BlogArticles = () => {
             </h2>
 
             <p>{pageData?.Home?.blog_card_2?.description} </p>
-
-            <div className="readmore">
-              <button className="btn-blog">Read More » </button>
-            </div>
+            <Link to="blog_2">
+              <div className="readmore">
+                <button className="btn-blog">Read More » </button>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="card-3">
@@ -76,10 +77,11 @@ const BlogArticles = () => {
               {pageData?.Home?.blog_card_3?.heading}
             </h2>
             <p>{pageData?.Home?.blog_card_3?.description} </p>
-
-            <div className="readmore">
-              <button className="btn-blog">Read More » </button>
-            </div>
+            <Link to="blog_3">
+              <div className="readmore">
+                <button className="btn-blog">Read More » </button>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
