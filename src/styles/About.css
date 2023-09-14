@@ -19,6 +19,7 @@ h2.heading {
   text-align: left;
   margin-top: -10px;
   text-transform: capitalize;
+  width: 70%;
 }
 @media only screen and (max-width: 991px) {
   .HeroCommon .description {

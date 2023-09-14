@@ -17,6 +17,9 @@
   display: flex;
   padding-top: 30px;
 }
+.figures-1 {
+  margin-right: 20px;
+}
 
 .figures p:first-child {
   color: #df0303;

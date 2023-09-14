@@ -4,3 +4,7 @@
   margin-left: 60px;
   margin-right: 60px;
 }
+.fullBlog {
+  text-transform: initial;
+  font-size: 16px;
+}

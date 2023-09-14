@@ -5,7 +5,11 @@
   margin-left: 0px;
   margin-right: 0px;
 }
-
+.LeftSide img {
+  width: 800px;
+  margin-left: 450px;
+  height: 600px;
+}
 .col-6 .LeftSide img {
   width: 540px;
   height: 588px;
@@ -19,6 +23,8 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-top: 20px;
+
 }
 .col-6 .RightSide h2.heading {
   color: #171616;
@@ -38,7 +44,7 @@
   letter-spacing: 1px;
   line-height: 30px;
   text-align: left;
-  text-transform: capitalize;
+  text-transform: initial;
 }
 @media only screen and (max-width: 1024px) {
   .row {

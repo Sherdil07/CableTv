@@ -6,7 +6,7 @@ import "../styles/CableTv.css";
 import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
 
-const Blog_3 = () => {
+const ReadBlog_3 = () => {
   const pageData = useSelector((state) => state.pages.pageData);
   const backgroundImageObject = pageData?.Home?.blog_card_3?.image;
   const backgroundImageURL = backgroundImageObject || "Loading...";
@@ -18,18 +18,28 @@ const Blog_3 = () => {
     dispatch(fetchPageData());
   }, [dispatch]);
 
+  const blogContentStyle = {
+    whiteSpace: "pre-line",
+  };
   return (
     <div className="CableTv">
-      <HeroCommon heading="Card 1" description="Description" />
+      <HeroCommon
+        heading={pageData?.Home?.blog_card_3?.heading}
+        description={pageData?.Home?.blog_card_3?.description}
+      />
       <ProvidersCommon
         imageSrc={backgroundImageURL}
         image={pageData?.Home?.blog_card_3?.image}
         heading={pageData?.Home?.blog_card_3?.heading}
-        description={pageData?.Home?.blog_card_3?.description}
+        description={
+          <div className="fullBlog" style={blogContentStyle}>
+            {pageData?.FullBlog_3?.description}
+          </div>
+        }
       />
       <HeroSection />
     </div>
   );
 };
 
-export default Blog_3;
+export default ReadBlog_3;

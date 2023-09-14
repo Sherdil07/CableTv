@@ -18,14 +18,25 @@ const ReadBlog_1 = () => {
     dispatch(fetchPageData());
   }, [dispatch]);
 
+  const blogContentStyle = {
+    whiteSpace: "pre-line",
+  };
+
   return (
     <div className="CableTv">
-      <HeroCommon heading="Card 1" description="Description" />
+      <HeroCommon
+        heading={pageData?.Home?.blog_card_1?.heading}
+        description={pageData?.Home?.blog_card_1?.description}
+      />
       <ProvidersCommon
         imageSrc={backgroundImageURL}
         image={pageData?.Home?.blog_card_1?.image}
         heading={pageData?.Home?.blog_card_1?.heading}
-        description={pageData?.fullblog_1?.description}
+        description={
+          <div style={blogContentStyle}>
+            {pageData?.FullBlog_1?.description}
+          </div>
+        }
       />
       <HeroSection />
     </div>
