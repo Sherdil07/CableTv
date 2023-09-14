@@ -14,6 +14,9 @@ const PrivacyPolicy = () => {
     dispatch(fetchPageData());
   }, [dispatch]);
 
+  const blogContentStyle = {
+    whiteSpace: "pre-line",
+  };
   return (
     <div className="PrivacyPolicy">
       {/* START POINT FOR SEO PURPOSE */}
@@ -38,7 +41,9 @@ const PrivacyPolicy = () => {
         <h2 className="heading">
           {pageData?.PrivacyPolicy?.Content_PrivacyPolicy?.heading}
         </h2>
-        <p>{pageData?.PrivacyPolicy?.Content_PrivacyPolicy?.description}</p>
+        <div style={blogContentStyle}>
+          <p>{pageData?.PrivacyPolicy?.Content_PrivacyPolicy?.description}</p>
+        </div>
       </div>
     </div>
   );

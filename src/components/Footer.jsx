@@ -99,10 +99,17 @@ const Footer = () => {
                   to="https://www.facebook.com/shopsatellitetv/"
                   target="_blank"
                 >
-                  <img src={FacebookIcon} alt="" />
+                  <img src={FacebookIcon} alt="FacebookIcon" />
                 </Link>
-                <img src={TwitterIcon} alt="" />
-                <img src={YoutubeIcon} alt="" />
+                <Link to="https://twitter.com/shopsatellite2v" target="_blank">
+                  <img src={TwitterIcon} alt="TwitterIcon" />
+                </Link>
+                <Link
+                  to="https://www.youtube.com/channel/UCVNIBxwfJH8HeiOR8-uP66g"
+                  target="_blank"
+                >
+                  <img src={YoutubeIcon} alt="YoutubeIcon" />
+                </Link>
               </div>
             </div>
           </div>

@@ -30,7 +30,6 @@ const ReadBlog_1 = () => {
       />
       <ProvidersCommon
         imageSrc={backgroundImageURL}
-        image={pageData?.Home?.blog_card_1?.image}
         heading={pageData?.Home?.blog_card_1?.heading}
         description={
           <div style={blogContentStyle}>
