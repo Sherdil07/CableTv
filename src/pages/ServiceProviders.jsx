@@ -19,14 +19,14 @@ const ServiceProvider = () => {
   return (
     <div className="ServiceProviderSection">
       {/* START POINT FOR SEO PURPOSE */}
-      <Helmet>
+      {/* <Helmet>
         <title> Service Providers | ShopSatelliteTV</title>
         <meta
           name="description"
           content=" Explore the list of best internet, satellite TV, cable TV, and phone service providers with Shop Satellite TV. Elevate your entertainment and connectivity experience."
         />
         <meta name="slug" content="service-providers" />
-      </Helmet>
+      </Helmet> */}
       {/* END POINT FOR SEO PURPOSE */}
       <div className="AboutContent">
         <div className="leftSide">

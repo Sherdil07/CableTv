@@ -29,27 +29,27 @@ function App() {
       <PopupCard />
       <Navbar />
       <Routes>
-        <Route path="/" exact Component={Home} />
-        <Route path="/blog_1" exact Component={ReadBlog_1} />
-        <Route path="/blog_2" exact Component={ReadBlog_2} />
-        <Route path="/blog_3" exact Component={ReadBlog_3} />
-        <Route path="/aboutus" exact Component={AboutUs} />
-        <Route path="/services" exact Component={Services} />
-        <Route path="/serviceproviders" exact Component={ProvidersTab} />
-        <Route path="/contactus" exact Component={ContatctUs} />
-        <Route path="/privacy-policy" exact Component={PrivacyPolicy} />
-        <Route path="services/cable-internet" exact Component={CableInternet} />
-        <Route path="services/cable-tv" exact Component={CableTv} />
-        <Route path="blog/cabletv" exact Component={Blog_1} />
-        <Route path="blog/satellitetv" exact Component={Blog_2} />
+        <Route path="/" element={<Home />} />
+        <Route path="/blog_1" element={<ReadBlog_1 />} />
+        <Route path="/blog_2" element={<ReadBlog_2 />} />
+        <Route path="/blog_3" element={<ReadBlog_3 />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/serviceproviders" element={<ProvidersTab />} />
+        <Route path="/aboutus/serviceproviders" element={<ProvidersTab />} />
+        <Route path="/contactus" element={<ContatctUs />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="blog/cabletv" element={<Blog_1 />} />
+        <Route path="blog/satellitetv" element={<Blog_2 />} />
         <Route
           path="services/satellite-internet"
-          exact
-          Component={SatelliteInternet}
+          element={<SatelliteInternet />}
         />
-        <Route path="services/satellite-tv" exact Component={SatelliteTv} />
-        <Route path="/privacypolicy" exact Component={PrivacyPolicy} />
-        <Route path="/zipCode/:zipCode" exact Component={ZipCodeInfo} />
+        <Route path="services/cable-internet" element={<CableInternet />} />
+        <Route path="services/cable-tv" element={<CableTv />} />
+        <Route path="services/satellite-tv" element={<SatelliteTv />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/zipCode/:zipCode" element={<ZipCodeInfo />} />
       </Routes>
       <Footer />
     </div>

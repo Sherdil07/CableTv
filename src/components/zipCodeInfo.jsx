@@ -25,7 +25,6 @@ function ZipCodeInfo() {
   const apiUrl = process.env.REACT_APP_API_URL;
 
   const zipCodeInfo = useSelector((state) => state.zipCodeReducer.zipCodeData);
-  console.log(zipCodeInfo);
   const dispatch = useDispatch();
   const { zipCode } = useParams();
 
@@ -34,7 +33,6 @@ function ZipCodeInfo() {
       const res = await axios.post(`${apiUrl}`, {
         zipCode: zipCode,
       });
-      console.log("response : ", res);
       dispatch(setZipCodeData(res.data));
     } catch (error) {}
   };

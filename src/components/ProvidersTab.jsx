@@ -25,7 +25,6 @@ const ProvidersTab = () => {
       const res = await axios.post(`${apiUrl}`, {
         zipCode: zipCode,
       });
-      console.log(res.data);
 
       dispatch(setZipCodeData(res.data));
 
