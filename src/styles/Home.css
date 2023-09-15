@@ -1,16 +1,15 @@
 .mainSection {
   padding-bottom: 100px;
+  height: 600px;
+  width: 100%;
 }
 .app-container {
   max-width: 100%;
   margin: auto;
   padding: 0;
 }
-.mainSection {
-  height: 700px;
-}
 .mainContent {
-  padding-top: 113px;
+  padding-top: 80px;
   padding-left: 86px;
   width: 45%;
 }
@@ -27,7 +26,7 @@
 .mainContent .subTitle {
   color: #222121;
   font-family: "Montserrat", Sans-serif;
-  font-size: 40px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 75px;
   letter-spacing: 1px;

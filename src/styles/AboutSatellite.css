@@ -7,7 +7,7 @@
   margin-right: 20px;
 }
 .SatelliteBG {
-  width: 1899px;
+  width: 100%;
 }
 .LeftSide {
   margin-left: 668px;
@@ -49,7 +49,7 @@
 .AboutContent .heading {
   color: #222121;
   font-family: "Montserrat", Sans-serif;
-  font-size: 36px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 50px;
   letter-spacing: 1px;

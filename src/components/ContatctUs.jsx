@@ -8,6 +8,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailIcon from "@mui/icons-material/Mail";
 import CallIcon from "@mui/icons-material/Call";
 import "../styles/ContactUs.css";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
@@ -21,6 +22,9 @@ const ContatctUs = () => {
     dispatch(fetchPageData());
   }, [dispatch]);
 
+  const makeCall = (phoneNumber) => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
   return (
     <div className="ContatctUs">
       {/* START POINT FOR SEO PURPOSE */}
@@ -51,8 +55,11 @@ const ContatctUs = () => {
               <p>{pageData?.ContactUs?.Contact_Content?.description}</p>
               <div className="contact-info">
                 <ul className="list-items">
-                  <li className="list-item">
-                    <CallIcon /> (866) 236-3017
+                  <li
+                    className="list-item"
+                    onClick={() => makeCall("(866)236-3017")}
+                  >
+                    <CallIcon /> (866)236-3017
                   </li>
                   <li className="list-item">
                     <MailIcon /> support@shopsatellitetv.com
@@ -64,9 +71,21 @@ const ContatctUs = () => {
                 </ul>
               </div>
               <div className="Contact-SocialIcons">
-                <img src={FacebookIcon} alt="" />
-                <img src={TwitterIcon} alt="" />
-                <img src={YoutubeIcon} alt="" />
+                <Link
+                  to="https://www.facebook.com/shopsatellitetv/"
+                  target="_blank"
+                >
+                  <img src={FacebookIcon} alt="FacebookIcon" />
+                </Link>
+                <Link to="https://twitter.com/shopsatellite2v" target="_blank">
+                  <img src={TwitterIcon} alt="TwitterIcon" />
+                </Link>
+                <Link
+                  to="https://www.youtube.com/channel/UCVNIBxwfJH8HeiOR8-uP66g"
+                  target="_blank"
+                >
+                  <img src={YoutubeIcon} alt="YoutubeIcon" />
+                </Link>
               </div>
             </div>
           </div>

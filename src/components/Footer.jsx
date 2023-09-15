@@ -19,6 +19,10 @@ const Footer = () => {
     // Fetch page data when the component mounts
     dispatch(fetchPageData());
   }, [dispatch]);
+
+  const makeCall = (phoneNumber) => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
   return (
     <div className="Footer">
       <div className="app-container">
@@ -83,8 +87,11 @@ const Footer = () => {
             <div className="FooterContent">
               <h2>Contact Us</h2>
               <ul className="list-items">
-                <li className="list-item">
-                  <CallIcon /> (866) 236-3017
+                <li
+                  className="list-item"
+                  onClick={() => makeCall("(866)236-3017")}
+                >
+                  <CallIcon /> (866)236-3017
                 </li>
                 <li className="list-item">
                   <MailIcon /> support@shopsatellitetv.com

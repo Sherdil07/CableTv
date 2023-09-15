@@ -129,7 +129,9 @@ const ServiceSlider = () => {
                 <Slide
                   image={SatelliteTVImgURL}
                   title="Satellite Tv"
-                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+                  description={
+                    pageData?.Home?.service_satellitetv_slider?.description
+                  }
                   linkTo="services/satellite-tv"
                 />
               </Link>

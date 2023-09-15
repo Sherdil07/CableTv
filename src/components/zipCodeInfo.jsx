@@ -114,9 +114,8 @@ function ZipCodeInfo() {
   return (
     <>
       <HeroCommon
-        heading="Internet And Cable Providers"
-        description="  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat
-          tortor lorem, quis tempor felis commodo vel."
+        heading="Internet And Cable Providers In Your Area"
+        description="Discover Available Cable TV, Internet, And Satellite Options Tailored To Your Area's Unique Needs."
       />
       <div className="custom-container">
         <div className="jump-to-links">
@@ -200,9 +199,9 @@ function ZipCodeInfo() {
                           <td className="table-data">
                             <button
                               className="Call-Now"
-                              onClick={() => makeCall("1112223333")}
+                              onClick={() => makeCall("(866)236-3017")}
                             >
-                              <CallIcon /> (866) 236-3017
+                              <CallIcon /> (866)236-3017
                             </button>
                           </td>
                         </tr>
@@ -261,9 +260,9 @@ function ZipCodeInfo() {
                           <td className="table-data">
                             <button
                               className="Call-Now"
-                              onClick={() => makeCall("1112223333")}
+                              onClick={() => makeCall("(866)236-3017")}
                             >
-                              <CallIcon /> (866) 236-3017
+                              <CallIcon /> (866)236-3017
                             </button>
                           </td>
                         </tr>
@@ -318,9 +317,9 @@ function ZipCodeInfo() {
                           <td className="table-data">
                             <button
                               className="Call-Now"
-                              onClick={() => makeCall("1112223333")}
+                              onClick={() => makeCall("(866)236-3017")}
                             >
-                              <CallIcon /> (866) 236-3017
+                              <CallIcon /> (866)236-3017
                             </button>
                           </td>
                         </tr>

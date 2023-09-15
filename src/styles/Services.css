@@ -29,7 +29,6 @@
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-
 }
 
 .slide-content {
@@ -58,6 +57,7 @@
   letter-spacing: 1px;
   line-height: 20px;
   text-align: left;
+  text-transform: initial;
 }
 .slide-content button {
   background: none;
@@ -83,7 +83,7 @@
 .heroContent .title {
   color: #222121;
   font-family: "Montserrat", Sans-serif;
-  font-size: 36px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 50px;
   letter-spacing: 1px;
