@@ -1,6 +1,6 @@
 form {
-  padding: 30px;
-  margin-top: -42px;
+  /* padding: 30px;
+  margin-top: -42px; */
 }
 
 label {
@@ -8,9 +8,9 @@ label {
   margin-bottom: 8px;
   font-weight: bold;
   margin-top: 20px;
+  padding-top: 20px;
   margin-bottom: 10px;
 }
-
 input,
 textarea,
 select {
@@ -28,7 +28,7 @@ button[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 100%;
+  width: 20%;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
 }
 button[type="submit"]:hover {
@@ -46,8 +46,8 @@ button[type="submit"]:hover {
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 1024px) {
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
