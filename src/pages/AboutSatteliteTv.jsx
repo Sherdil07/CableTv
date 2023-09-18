@@ -37,7 +37,7 @@ const AboutSatteliteTv = () => {
             <h2 className="heading">
               {pageData?.Home?.aboutshopsatellitetv?.heading}
             </h2>
-            <p>{pageData?.Home?.aboutshopsatellitetv?.description}</p>
+            <p className="SatelliteSectionDesc">{pageData?.Home?.aboutshopsatellitetv?.description}</p>
             <div className="figures">
               <div className="figures-1">
                 <p>{pageData?.Home?.aboutshopsatellitetv?.fig_1}</p>

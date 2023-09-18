@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "../styles/ServiceProvider.css";
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
 import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
@@ -36,7 +35,9 @@ const ServiceProvider = () => {
           <h2 className="heading">
             {pageData?.Home?.checkservicesproviders?.heading}
           </h2>
-          <p>{pageData?.Home?.checkservicesproviders?.description}</p>
+          <p className="SatelliteSectionDesc">
+            {pageData?.Home?.checkservicesproviders?.description}
+          </p>
           <div className="figures">
             <div className="figures-1">
               <p>{pageData?.Home?.checkservicesproviders?.fig_1}</p>

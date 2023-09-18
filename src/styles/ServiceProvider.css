@@ -2,6 +2,10 @@
   height: 700px;
 }
 
+p.SatelliteSectionDesc {
+  width: 75%;
+}
+
 .AboutContent {
   display: flex;
   justify-content: center;

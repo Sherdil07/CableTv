@@ -27,6 +27,7 @@
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .figures p:last-child {
@@ -56,6 +57,11 @@
   text-transform: capitalize;
   text-align: left;
 }
+
+p.SatelliteSectionDesc {
+  width: 75%;
+}
+
 .AboutContent p {
   font-family: "Roboto", sans-serif;
   width: 100%;
