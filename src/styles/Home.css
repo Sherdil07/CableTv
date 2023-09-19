@@ -14,14 +14,13 @@
   width: 45%;
 }
 .mainContent .title {
-  color: #df0303;
-  font-family: "Montserrat", Sans-serif;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: left;
+  color: #222121;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 40px;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 .mainContent .subTitle {
   color: #222121;
