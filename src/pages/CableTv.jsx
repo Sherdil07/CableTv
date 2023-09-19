@@ -20,6 +20,10 @@ const CableTv = () => {
     dispatch(fetchPageData());
   }, [dispatch]);
 
+  const blogContentStyle = {
+    whiteSpace: "pre-line",
+  };
+
   return (
     <div className="CableTv?">
       {/* START POINT FOR SEO PURPOSE */}
@@ -41,7 +45,11 @@ const CableTv = () => {
         imageSrc={backgroundImageURL}
         title={pageData?.CableTv_Section?.CableTv?.title}
         heading={pageData?.CableTv_Section?.CableTv?.heading}
-        description={pageData?.CableTv_Section?.CableTv?.description}
+        description={
+          <div className="describe" style={blogContentStyle}>
+            {pageData?.CableTv_Section?.CableTv?.description}
+          </div>
+        }
       />
       <HeroSection />
     </div>

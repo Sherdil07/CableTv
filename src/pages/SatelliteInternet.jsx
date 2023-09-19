@@ -18,12 +18,16 @@ const SatelliteInternet = () => {
     // Fetch page data when the component mounts
     dispatch(fetchPageData());
   }, [dispatch]);
+
+  const blogContentStyle = {
+    whiteSpace: "pre-line",
+  };
   return (
     <div className="SatelliteInternet">
       {/* START POINT FOR SEO PURPOSE */}
       <Helmet>
         <title>
-                    Satellite Internet Providers Near Your Area | ShopSatelliteTV
+          Satellite Internet Providers Near Your Area | ShopSatelliteTV
         </title>
         <meta
           name="description"
@@ -45,7 +49,12 @@ const SatelliteInternet = () => {
           pageData?.SatelliteInternet_Section?.SatelliteInternet?.heading
         }
         description={
-          pageData?.SatelliteInternet_Section?.SatelliteInternet?.description
+          <div className="describe" style={blogContentStyle}>
+            {
+              pageData?.SatelliteInternet_Section?.SatelliteInternet
+                ?.description
+            }
+          </div>
         }
       />
       <HeroSection />

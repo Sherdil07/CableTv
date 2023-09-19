@@ -32,7 +32,7 @@ const ReadBlog_1 = () => {
         imageSrc={backgroundImageURL}
         heading={pageData?.Home?.blog_card_1?.heading}
         description={
-          <div style={blogContentStyle}>
+          <div className="describe" style={blogContentStyle}>
             {pageData?.FullBlog_1?.description}
           </div>
         }

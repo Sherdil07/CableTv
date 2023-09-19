@@ -23,6 +23,11 @@ const Footer = () => {
   const makeCall = (phoneNumber) => {
     window.location.href = `tel:${phoneNumber}`;
   };
+
+  const handleLinkClick = () => {
+    // Scroll to the top of the page when a link is clicked
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="Footer">
       <div className="app-container">
@@ -42,19 +47,29 @@ const Footer = () => {
               <h2>Important Links</h2>
               <ul className="list-items">
                 <li className="list-item">
-                  <Link to="/">Home</Link>
+                  <Link to="/" onClick={handleLinkClick}>
+                    Home
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <Link to="/aboutus">About</Link>
+                  <Link to="/aboutus" onClick={handleLinkClick}>
+                    About
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <Link to="/services">Services</Link>
+                  <Link to="/services" onClick={handleLinkClick}>
+                    Services
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <Link to="/blogs">Blogs</Link>
+                  <Link to="/blogs" onClick={handleLinkClick}>
+                    Blogs
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <Link to="/contactus">Contact Us</Link>
+                  <Link to="/contactus" onClick={handleLinkClick}>
+                    Contact Us
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -64,19 +79,30 @@ const Footer = () => {
               <h2>Services</h2>
               <ul className="list-items">
                 <li className="list-item">
-                  <Link to="serviceproviders">Service Provider</Link>
+                  <Link to="serviceproviders" onClick={handleLinkClick}>
+                    Service Provider
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <Link to="/services/cable-tv">Cable Tv</Link>
+                  <Link to="/services/cable-tv" onClick={handleLinkClick}>
+                    Cable Tv
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <Link to="/services/cable-internet">Cable Internet</Link>{" "}
+                  <Link to="/services/cable-internet" onClick={handleLinkClick}>
+                    Cable Internet
+                  </Link>{" "}
                 </li>
                 <li className="list-item">
-                  <Link to="/services/satellite-tv">Satellite Tv</Link>
+                  <Link to="/services/satellite-tv" onClick={handleLinkClick}>
+                    Satellite Tv
+                  </Link>
                 </li>
                 <li className="list-item">
-                  <Link to="/services/satellite-internet">
+                  <Link
+                    to="/services/satellite-internet"
+                    onClick={handleLinkClick}
+                  >
                     Satellite Internet
                   </Link>
                 </li>

@@ -18,6 +18,10 @@ const SatelliteTv = () => {
     // Fetch page data when the component mounts
     dispatch(fetchPageData());
   }, [dispatch]);
+
+  const blogContentStyle = {
+    whiteSpace: "pre-line",
+  };
   return (
     <div className="SatelliteTv">
       {/* START POINT FOR SEO PURPOSE */}
@@ -38,7 +42,11 @@ const SatelliteTv = () => {
         imageSrc={backgroundImageURL}
         title={pageData?.SatelliteTv_Section?.SatelliteTv?.title}
         heading={pageData?.SatelliteTv_Section?.SatelliteTv?.heading}
-        description={pageData?.SatelliteTv_Section?.SatelliteTv?.description}
+        description={
+          <div className="describe" style={blogContentStyle}>
+            {pageData?.SatelliteTv_Section?.SatelliteTv?.description}
+          </div>
+        }
       />
       <HeroSection />
     </div>

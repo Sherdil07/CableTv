@@ -5,6 +5,13 @@
   margin-left: 0px;
   margin-right: 0px;
 }
+
+.describe {
+  text-transform: initial;
+  font-size: 16px;
+  line-height: 2.5;
+}
+
 .LeftSide img {
   width: 50%;
   display: flex;
@@ -20,7 +27,7 @@
   color: #df0303;
   font-family: "Montserrat", Sans-serif;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 70px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -32,6 +39,7 @@
   text-align: left;
   font-family: "Montserrat", Sans-serif;
   font-size: 32px;
+
   line-height: 50px;
   font-weight: 600;
   letter-spacing: 1px;

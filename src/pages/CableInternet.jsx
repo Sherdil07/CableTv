@@ -18,6 +18,10 @@ const CableInternet = () => {
     // Fetch page data when the component mounts
     dispatch(fetchPageData());
   }, [dispatch]);
+
+  const blogContentStyle = {
+    whiteSpace: "pre-line",
+  };
   return (
     <div className="CableInternet">
       {/* START POINT FOR SEO PURPOSE */}
@@ -39,7 +43,9 @@ const CableInternet = () => {
         title={pageData?.CableInternet_Section?.CableInternet?.title}
         heading={pageData?.CableInternet_Section?.CableInternet?.heading}
         description={
-          pageData?.CableInternet_Section?.CableInternet?.description
+          <div className="describe" style={blogContentStyle}>
+            {pageData?.CableInternet_Section?.CableInternet?.description}
+          </div>
         }
       />
       <HeroSection />

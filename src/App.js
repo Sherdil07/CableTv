@@ -22,6 +22,7 @@ import Modal from "react-modal"; // Import react-modal
 import ReadBlog_1 from "./pages/ReadBlog_1";
 import ReadBlog_2 from "./pages/ReadBlog_2";
 import ReadBlog_3 from "./pages/ReadBlog_3";
+import AllBlogs from "./pages/AllBlogs";
 Modal.setAppElement("#root");
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="blog/cabletv" element={<Blog_1 />} />
         <Route path="blog/satellitetv" element={<Blog_2 />} />
+        <Route path="/blogs" element={<AllBlogs />} />
         <Route
           path="services/satellite-internet"
           element={<SatelliteInternet />}
