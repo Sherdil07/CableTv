@@ -117,7 +117,7 @@ const Footer = () => {
                   className="list-item"
                   onClick={() => makeCall("(866)236-3017")}
                 >
-                  <CallIcon /> (866)236-3017
+                  <CallIcon /> (877)401-1845
                 </li>
                 <li className="list-item">
                   <MailIcon /> support@shopsatellitetv.com
