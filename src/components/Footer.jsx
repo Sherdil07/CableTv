@@ -123,7 +123,7 @@ const Footer = () => {
                   <MailIcon /> support@shopsatellitetv.com
                 </li>
                 <li className="list-item">
-                  <LocationOnIcon /> 5075 memorial dr suite, 343-B stone
+                  <LocationOnIcon /> 5075 memorial Dr Suite, 343-B stone
                   mountain GA 30083
                 </li>
               </ul>
