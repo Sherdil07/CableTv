@@ -11,12 +11,12 @@ const ProvidersCommon = ({ title, heading, description, imageSrc }) => {
             <img src={imageSrc} alt="" />
           </div>
           {/* </div> */}
-          <div className="col-6">
-            <div className="RightSide">
-              <h2 className="title">{title}</h2>
-              <h2 className="heading">{heading}</h2>
-              <p className="description">{description}</p>
-            </div>
+          {/* <div className="col-6"> */}
+          <div className="RightSide">
+            <h2 className="title">{title}</h2>
+            <h2 className="heading">{heading}</h2>
+            <p className="description">{description}</p>
+            {/* </div> */}
           </div>
         </div>
       </div>

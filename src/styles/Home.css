@@ -74,6 +74,22 @@
   margin-top: 20px;
   text-align: left;
 }
+@media screen and (max-width: 1280px) {
+  .mainSection {
+    height: 100%;
+  }
+  .mainContent {
+    padding-left: 86px;
+    width: 100%;
+  }
+  .AboutContent {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  .AboutContent p {
+    text-shadow: 0 0 black;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   .mainContent .subTitle {
@@ -93,6 +109,10 @@
 @media screen and (max-width: 768px) {
   .mainContent input.searchBar {
     width: 120%;
+  }
+
+  .mainSection {
+    height: 380px;
   }
   .mainContent .searchBar {
     text-align: left;

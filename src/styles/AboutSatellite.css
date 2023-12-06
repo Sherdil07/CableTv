@@ -108,4 +108,7 @@ p.SatelliteSectionDesc {
   .figures-1 {
     margin-right: 10px;
   }
+  .AboutContent p {
+    text-shadow: 0 0 black;
+  }
 }

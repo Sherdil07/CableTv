@@ -25,3 +25,8 @@ h2.heading {
     width: 100%;
   }
 }
+@media screen and (max-width: 1280px) {
+  .HeroCommon .description {
+    width: 100%;
+  }
+}

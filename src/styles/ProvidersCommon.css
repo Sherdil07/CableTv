@@ -22,7 +22,7 @@
   width: 540px;
   height: 588px;
 }
-.col-6 .RightSide .title {
+/* .col-6 .RightSide .title {
   text-align: left;
   color: #df0303;
   font-family: "Montserrat", Sans-serif;
@@ -32,8 +32,19 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 20px;
+} */
+.RightSide .title {
+  text-align: left;
+  color: #df0303;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 26px;
+  line-height: 70px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
 }
-.col-6 .RightSide h2.heading {
+.RightSide h2.heading {
   color: #171616;
   /* text-align: center; */
   text-align: left;
@@ -44,8 +55,9 @@
   font-weight: 600;
   letter-spacing: 1px;
 }
-.col-6 .RightSide .description {
+.RightSide .description {
   font-size: 16px;
+  width: 100%;
   color: #171616;
   font-family: "Roboto", Sans-serif;
   font-weight: 400;
