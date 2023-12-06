@@ -91,7 +91,7 @@ const Footer = () => {
                 <li className="list-item">
                   <Link to="/services/cable-internet" onClick={handleLinkClick}>
                     Cable Internet
-                  </Link>{" "}
+                  </Link>
                 </li>
                 <li className="list-item">
                   <Link to="/services/satellite-tv" onClick={handleLinkClick}>

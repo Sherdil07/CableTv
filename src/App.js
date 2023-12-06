@@ -43,6 +43,9 @@ function App() {
         <Route path="blog/cabletv" element={<Blog_1 />} />
         <Route path="blog/satellitetv" element={<Blog_2 />} />
         <Route path="/blogs" element={<AllBlogs />} />
+        <Route path="/blogs/blog_1" element={<ReadBlog_1 />} />
+        <Route path="/blogs/blog_2" element={<ReadBlog_2 />} />
+        <Route path="/blogs/blog_3" element={<ReadBlog_3 />} />
         <Route
           path="services/satellite-internet"
           element={<SatelliteInternet />}

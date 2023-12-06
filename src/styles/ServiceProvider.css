@@ -58,10 +58,17 @@ p.SatelliteSectionDesc {
   p.SatelliteSectionDesc {
     width: 100%;
   }
+  .AboutContent {
+    margin-left: 1%;
+  }
+  .AboutContent {
+  }
 }
 @media only screen and (max-width: 1024px) {
   .AboutContent {
     flex-wrap: wrap;
+    padding-bottom: 5% !important;
+    flex-direction: column-reverse;
   }
   .AboutContent .RightSide {
     margin: 0px;
@@ -75,9 +82,6 @@ p.SatelliteSectionDesc {
     left: -47px;
   } */
   .AboutContent {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     flex-direction: column-reverse;
     padding-top: 20px;
     padding-bottom: 20px;
