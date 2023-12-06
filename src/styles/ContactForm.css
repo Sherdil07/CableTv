@@ -51,3 +51,12 @@ button[type="submit"]:hover {
     flex-wrap: wrap;
   }
 }
+@media only screen and (max-width: 540px) {
+  input,
+  textarea,
+  select,
+  #services,
+  #message {
+    width: 85%;
+  }
+}

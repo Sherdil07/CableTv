@@ -104,10 +104,23 @@
   .service-bg-img {
     padding-top: 10px;
   }
+  .slider-app-container {
+    width: 100%;
+  }
+  .heroContent {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @media only screen and (max-width: 991px) {
   .slider-app-container {
-    width: 93%;
+    width: 100%;
+  }
+  .heroContent {
+    padding: 0;
+  }
+  .heroContent .title {
+    font-size: 17px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -117,5 +130,16 @@
   }
   .heroContent {
     padding: 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .heroContent .title {
+    font-size: 14px;
+  }
+  .heroContent p {
+    font-size: 12px;
+  }
+  .slide-image {
+    width: 100%;
   }
 }

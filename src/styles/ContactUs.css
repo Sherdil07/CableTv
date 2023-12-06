@@ -73,3 +73,15 @@ li.list-item {
     width: 100%;
   }
 }
+@media only screen and (max-width: 991px) {
+  .leftSide h2.heading {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .Contact-Content {
+    padding: 0;
+    padding-bottom: 100px;
+    margin: 0;
+  }
+}

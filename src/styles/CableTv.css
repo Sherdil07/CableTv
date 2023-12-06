@@ -8,3 +8,19 @@
   text-transform: initial;
   font-size: 16px;
 }
+
+@media only screen and (max-width: 540px) {
+  .ProvidersCommon {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .postFooter .privacy-policy a {
+    font-size: 10px;
+  }
+  .postFooter h2 {
+    font-size: 4px;
+  }
+  .postFooter {
+    align-items: center;
+  }
+}

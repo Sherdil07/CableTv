@@ -25,3 +25,8 @@
     padding-top: 0;
   }
 }
+@media only screen and (max-width: 540px) {
+  .HeroBackground {
+    padding-right: 0px;
+  }
+}

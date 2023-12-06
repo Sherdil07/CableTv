@@ -80,3 +80,21 @@
     width: 100%;
   }
 }
+@media only screen and (max-width: 991px) {
+  .RightSide h2.heading {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .RightSide h2.heading {
+    font-size: 18px;
+  }
+  .LeftSide img {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .RightSide .title {
+    font-size: 18px;
+  }
+}
