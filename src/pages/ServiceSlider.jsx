@@ -1,17 +1,13 @@
 import React, { useEffect, useRef } from "react";
-import ServiceBG from "../assests/service-sec-bg.png";
-import CableTv from "../assests/cable-tv.png";
-import Cable from "../assests/cable-int.png";
-import Satellite from "../assests/satellite-int.png";
-import SatelliteTv from "../assests/satellite-tv.png";
 import "../styles/Services.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
-import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
-
+import { fetchPageData } from "../actions/pagesActions";
+import { useSelector, useDispatch } from "react-redux";
+import Slider from "react-slick";
+// import ServiceBG from "../assests/service-sec-bg.png";
+import ServiceBG from "../assests/service-sec-bg.png";
 const Slide = ({ image, title, description, linkTo }) => {
   return (
     <div className="slide">
@@ -84,27 +80,19 @@ const ServiceSlider = () => {
   }, [dispatch]);
   return (
     <div className="Services">
-      <div
-        className="service-bg-img"
-        style={{
-          background: `url(${ServiceBG})`,
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="app-container">
-          <div className="heroContent">
-            <h2 className="heading">
-              {pageData?.Home?.services?.heading || "Loading..."}
-            </h2>
-            <h2 className="title">
-              {pageData?.Home?.services?.title || "Loading..."}
-            </h2>
-            <p>{pageData?.Home?.services?.description || "Loading..."}</p>
-          </div>
-          <div className="slider-app-container">
-            <Slider {...sliderSettings} ref={sliderRef}>
+      {isMobile ? (
+        <div>
+          <div className="app-container">
+            <div className="heroContent">
+              <h2 className="heading">
+                {pageData?.Home?.services?.heading || "Loading..."}
+              </h2>
+              <h2 className="title">
+                {pageData?.Home?.services?.title || "Loading..."}
+              </h2>
+              <p>{pageData?.Home?.services?.description || "Loading..."}</p>
+            </div>
+            <div className="slide-container">
               <Link to="services/cable-tv">
                 <Slide
                   image={backgroundImageURL}
@@ -148,10 +136,84 @@ const ServiceSlider = () => {
                   linkTo="services/satellite-internet"
                 />
               </Link>
-            </Slider>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="Services">
+          <div
+            className="service-bg-img"
+            style={{
+              background: `url(${ServiceBG})`,
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          >
+            <div className="app-container">
+              <div className="heroContent">
+                <h2 className="heading">
+                  {pageData?.Home?.services?.heading || "Loading..."}
+                </h2>
+                <h2 className="title">
+                  {pageData?.Home?.services?.title || "Loading..."}
+                </h2>
+                <p>{pageData?.Home?.services?.description || "Loading..."}</p>
+              </div>
+              <div className="slider-app-container">
+                <Slider {...sliderSettings} ref={sliderRef}>
+                  <Link to="services/cable-tv">
+                    <Slide
+                      image={backgroundImageURL}
+                      title={pageData?.Home?.service_cabletv_slider?.title}
+                      description={
+                        pageData?.Home?.service_cabletv_slider?.description
+                      }
+                      linkTo="services/cable-tv"
+                    />
+                  </Link>
+                  <Link to="services/cable-internet">
+                    <Slide
+                      image={CableInternetImgURL}
+                      title={
+                        pageData?.Home?.service_cableinternet_slider?.title
+                      }
+                      description={
+                        pageData?.Home?.service_cableinternet_slider
+                          ?.description
+                      }
+                      linkTo="services/cable-internet"
+                    />
+                  </Link>
+                  <Link to="services/satellite-tv">
+                    <Slide
+                      image={SatelliteTVImgURL}
+                      title="Satellite Tv"
+                      description={
+                        pageData?.Home?.service_satellitetv_slider?.description
+                      }
+                      linkTo="services/satellite-tv"
+                    />
+                  </Link>
+                  <Link to="services/satellite-internet">
+                    <Slide
+                      image={SatelliteInternetImgURL}
+                      title={
+                        pageData?.Home?.service_satelliteinternet_slider?.title
+                      }
+                      description={
+                        pageData?.Home?.service_satelliteinternet_slider
+                          ?.description
+                      }
+                      linkTo="services/satellite-internet"
+                    />
+                  </Link>
+                </Slider>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
