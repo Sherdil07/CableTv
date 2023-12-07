@@ -21,33 +21,47 @@ const PopupCard = () => {
   };
 
   useEffect(() => {
-    // Function to automatically show the pop-up after 5 seconds on page load or refresh
     const showPopupOnLoad = () => {
-      togglePopup();
-      localStorage.setItem("lastPopupTime", Date.now());
+      // Check if screen size is greater than 991px
+      if (window.innerWidth > 991) {
+        togglePopup();
+        localStorage.setItem("lastPopupTime", Date.now());
 
-      // Set a timer to close the pop-up after 5 seconds
-      setTimeout(() => {
-        closePopup();
-      }, 5000);
+        // Set a timer to close the pop-up after 5 seconds
+        setTimeout(() => {
+          closePopup();
+        }, 5000);
+      }
     };
 
-    // Show the pop-up on page load or refresh
     showPopupOnLoad();
+
+    const handleResize = () => {
+      // Check if screen size is greater than 991px
+      if (window.innerWidth > 991) {
+        togglePopup();
+        localStorage.setItem("lastPopupTime", Date.now());
+
+        // Set a timer to close the pop-up after 5 seconds
+        setTimeout(() => {
+          closePopup();
+        }, 5000);
+      }
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
 
     // Set up a timer to show the pop-up every 10 minutes
     const timer = setInterval(() => {
-      togglePopup();
-      localStorage.setItem("lastPopupTime", Date.now());
-
-      // Set a timer to close the pop-up after 5 seconds
-      setTimeout(() => {
-        closePopup();
-      }, 5000);
+      handleResize(); // Check screen size immediately when the timer fires
     }, 600000); // 600,000 milliseconds = 10 minutes
 
-    // Clean up the timer when the component unmounts
-    return () => clearInterval(timer);
+    // Clean up: Remove event listener and clear the interval timer
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearInterval(timer);
+    };
   }, []);
 
   const handleClick = async () => {
