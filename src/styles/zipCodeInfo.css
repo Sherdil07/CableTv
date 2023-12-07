@@ -98,12 +98,26 @@ h2.ref {
 .img-col {
   text-align: center;
 }
+
+.table > tbody {
+  vertical-align: middle !important;
+}
 @media only screen and (max-width: 768px) {
   .tab {
     width: 15%;
   }
   .custom-container {
     padding: 0px;
+  }
+  .table > :not(caption) > * > * {
+    padding: 0;
+  }
+  .table-head {
+    line-height: normal;
+  }
+  .table-scroll-container {
+    overflow-x: auto;
+    margin-bottom: 100px; /* Adjust margin as needed */
   }
 }
 @media only screen and (max-width: 991px) {
@@ -112,5 +126,17 @@ h2.ref {
   }
   .custom-container {
     padding: 0px;
+  }
+  .table-scroll-container {
+    overflow-x: auto;
+    margin-bottom: 100px; /* Adjust margin as needed */
+  }
+}
+@media only screen and (max-width: 991px) {
+  .jump-to-links {
+    display: block;
+  }
+  .tab {
+    width: 20%;
   }
 }

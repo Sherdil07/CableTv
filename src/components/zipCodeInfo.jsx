@@ -137,199 +137,208 @@ function ZipCodeInfo() {
           />
         </div>
 
-        <hr className="rule--is-medium medium-12 small-10"></hr>
+        {/* <hr className="rule--is-medium medium-12 small-10"></hr>
+         */}
+        {/* <hr className="rule--is-medium" /> */}
+
         <div>
-          {/* <div className="table-container"> */}
-          {activeTab === "Internet" && (
-            <div>
-              <h2
-                className="ref"
-                ref={internetRef}
-                style={{ textAlign: "center" }}
-              >
-                Internet Providers
-              </h2>
+          <div className="table-container">
+            <div className="table-scroll-container">
+              {activeTab === "Internet" && (
+                <div>
+                  <h2
+                    className="ref"
+                    ref={internetRef}
+                    style={{ textAlign: "center" }}
+                  >
+                    Internet Providers
+                  </h2>
 
-              <table
-                className="table table-striped w-auto table table-bordered"
-                ref={internetRef}
-              >
-                <thead className="head">
-                  <tr>
-                    <th className="table-head" scope="col">
-                      Provider
-                    </th>
-                    <th className="table-head" scope="col">
-                      Prices starting at*
-                    </th>
-                    <th className="table-head" scope="col">
-                      Max download speeds up to
-                    </th>
-                    <th className="table-head" scope="col">
-                      Features
-                    </th>
-                    <th className="table-head" scope="col">
-                      Customer Rating
-                    </th>
-                    <th className="table-head" scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {zipCodeInfo &&
-                    zipCodeInfo?.internetProviders.map((i) => {
-                      return (
-                        <tr>
-                          <th className="img-col" scope="row">
-                            <img
-                              src={`/companies/${i.CompanyName}.png`}
-                              alt="image"
-                            />
-                          </th>
-                          <td className="table-data">${i.Price}/mo.</td>
-                          <td className="table-data">
-                            {i.MaxDownloadSpeedsUpTo}
-                          </td>
-                          <td className="table-data">
-                            <ul>{getList(i)}</ul>
-                          </td>
-                          <td className="table-data">
-                            {renderRatingStars(i.rating)}
-                          </td>
-                          {/* Render stars here */}
-                          <td className="table-data">
-                            <button
-                              className="Call-Now"
-                              onClick={() => makeCall("(866)236-3017")}
-                            >
-                              <CallIcon /> (866)236-3017
-                            </button>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                </tbody>
-              </table>
-            </div>
-          )}
-          {activeTab === "TV" && (
-            <div>
-              <h2 className="ref" ref={tvRef} style={{ textAlign: "center" }}>
-                Tv Providers
-              </h2>
+                  <table
+                    className="table table-striped w-auto table table-bordered"
+                    ref={internetRef}
+                  >
+                    <thead className="head">
+                      <tr>
+                        <th className="table-head" scope="col">
+                          Provider
+                        </th>
+                        <th className="table-head" scope="col">
+                          Prices starting at*
+                        </th>
+                        <th className="table-head" scope="col">
+                          Max download speeds up to
+                        </th>
+                        <th className="table-head" scope="col">
+                          Features
+                        </th>
+                        <th className="table-head" scope="col">
+                          Customer Rating
+                        </th>
+                        <th className="table-head" scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {zipCodeInfo &&
+                        zipCodeInfo?.internetProviders.map((i) => {
+                          return (
+                            <tr>
+                              <th className="img-col" scope="row">
+                                <img
+                                  src={`/companies/${i.CompanyName}.png`}
+                                  alt="image"
+                                />
+                              </th>
+                              <td className="table-data">${i.Price}/mo.</td>
+                              <td className="table-data">
+                                {i.MaxDownloadSpeedsUpTo}
+                              </td>
+                              <td className="table-data">
+                                <ul>{getList(i)}</ul>
+                              </td>
+                              <td className="table-data">
+                                {renderRatingStars(i.rating)}
+                              </td>
+                              {/* Render stars here */}
+                              <td className="table-data">
+                                <button
+                                  className="Call-Now"
+                                  onClick={() => makeCall("(866)236-3017")}
+                                >
+                                  <CallIcon /> (866)236-3017
+                                </button>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+              {activeTab === "TV" && (
+                <div>
+                  <h2
+                    className="ref"
+                    ref={tvRef}
+                    style={{ textAlign: "center" }}
+                  >
+                    Tv Providers
+                  </h2>
 
-              <table className="table table-striped w-auto table table-bordered">
-                <thead>
-                  <tr>
-                    <th className="table-head" scope="col">
-                      Provider
-                    </th>
-                    <th className="table-head" scope="col">
-                      Prices starting at*
-                    </th>
-                    <th className="table-head" scope="col">
-                      Max download speeds up to
-                    </th>
-                    <th className="table-head" scope="col">
-                      Features
-                    </th>
-                    <th className="table-head" scope="col">
-                      Customer Rating
-                    </th>
-                    <th className="table-head" scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {zipCodeInfo &&
-                    zipCodeInfo?.tvProviders.map((i) => {
-                      return (
-                        <tr>
-                          <th className="img-col" scope="row">
-                            <img
-                              src={`/companies/${i.CompanyName}.png`}
-                              alt="image"
-                            />
-                          </th>
-                          <td className="table-data">${i["Price"]}/mo.</td>
-                          <td className="table-data">{i.Channels}</td>
-                          <td className="table-data">
-                            <ul>{getList(i)}</ul>
-                          </td>
-                          <td className="table-data">
-                            {renderRatingStars(i.rating)}
-                          </td>
-                          <td className="table-data">
-                            <button
-                              className="Call-Now"
-                              onClick={() => makeCall("(866)236-3017")}
-                            >
-                              <CallIcon /> (866)236-3017
-                            </button>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                </tbody>
-              </table>
-            </div>
-          )}
-          {activeTab === "Bundles" && (
-            <div>
-              <h2
-                className="ref"
-                ref={bundlesRef}
-                style={{ textAlign: "center" }}
-              >
-                Bundles
-              </h2>
+                  <table className="table table-striped w-auto table table-bordered">
+                    <thead>
+                      <tr>
+                        <th className="table-head" scope="col">
+                          Provider
+                        </th>
+                        <th className="table-head" scope="col">
+                          Prices starting at*
+                        </th>
+                        <th className="table-head" scope="col">
+                          Max download speeds up to
+                        </th>
+                        <th className="table-head" scope="col">
+                          Features
+                        </th>
+                        <th className="table-head" scope="col">
+                          Customer Rating
+                        </th>
+                        <th className="table-head" scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {zipCodeInfo &&
+                        zipCodeInfo?.tvProviders.map((i) => {
+                          return (
+                            <tr>
+                              <th className="img-col" scope="row">
+                                <img
+                                  src={`/companies/${i.CompanyName}.png`}
+                                  alt="image"
+                                />
+                              </th>
+                              <td className="table-data">${i["Price"]}/mo.</td>
+                              <td className="table-data">{i.Channels}</td>
+                              <td className="table-data">
+                                <ul>{getList(i)}</ul>
+                              </td>
+                              <td className="table-data">
+                                {renderRatingStars(i.rating)}
+                              </td>
+                              <td className="table-data">
+                                <button
+                                  className="Call-Now"
+                                  onClick={() => makeCall("(866)236-3017")}
+                                >
+                                  <CallIcon /> (866)236-3017
+                                </button>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+              {activeTab === "Bundles" && (
+                <div>
+                  <h2
+                    className="ref"
+                    ref={bundlesRef}
+                    style={{ textAlign: "center" }}
+                  >
+                    Bundles
+                  </h2>
 
-              <table className="table table-striped w-auto table table-bordered">
-                <thead>
-                  <tr>
-                    <th scope="col">Provider</th>
-                    <th scope="col">Prices starting at*</th>
-                    <th scope="col">Max download speeds up to</th>
-                    <th scope="col">Features </th>
-                    <th scope="col">Customer Rating</th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {zipCodeInfo &&
-                    zipCodeInfo?.bundles.map((i) => {
-                      return (
-                        <tr>
-                          <th scope="row">
-                            <img
-                              src={`/companies/${i.CompanyName}.png`}
-                              alt="image"
-                            />
-                          </th>
-                          <td className="table-data">${i["Price"]}/mo.</td>
-                          <td className="table-data">
-                            {i.MaxDownloadSpeedsUpTo}
-                          </td>
-                          <td className="table-data">
-                            <ul>{getList(i)}</ul>
-                          </td>
-                          <td className="table-data">
-                            {renderRatingStars(i.rating)}
-                          </td>
-                          <td className="table-data">
-                            <button
-                              className="Call-Now"
-                              onClick={() => makeCall("(866)236-3017")}
-                            >
-                              <CallIcon /> (866)236-3017
-                            </button>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                </tbody>
-              </table>
+                  <table className="table table-striped w-auto table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Provider</th>
+                        <th scope="col">Prices starting at*</th>
+                        <th scope="col">Max download speeds up to</th>
+                        <th scope="col">Features </th>
+                        <th scope="col">Customer Rating</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {zipCodeInfo &&
+                        zipCodeInfo?.bundles.map((i) => {
+                          return (
+                            <tr>
+                              <th scope="row">
+                                <img
+                                  src={`/companies/${i.CompanyName}.png`}
+                                  alt="image"
+                                />
+                              </th>
+                              <td className="table-data">${i["Price"]}/mo.</td>
+                              <td className="table-data">
+                                {i.MaxDownloadSpeedsUpTo}
+                              </td>
+                              <td className="table-data">
+                                <ul>{getList(i)}</ul>
+                              </td>
+                              <td className="table-data">
+                                {renderRatingStars(i.rating)}
+                              </td>
+                              <td className="table-data">
+                                <button
+                                  className="Call-Now"
+                                  onClick={() => makeCall("(866)236-3017")}
+                                >
+                                  <CallIcon /> (866)236-3017
+                                </button>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </div>
-          )}
-          {/* </div> */}
+          </div>
         </div>
       </div>
     </>
