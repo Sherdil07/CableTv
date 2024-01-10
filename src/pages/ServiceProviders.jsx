@@ -59,11 +59,11 @@ const ServiceProvider = () => {
           </div>
         </div>
         <div className="rightSide">
-          <div className="Counter">
+          {/* <div className="Counter">
             <p>UP TO </p>
             <h1>40 MB</h1>
             <h2>PER Second</h2>
-          </div>
+          </div> */}
           <div className="serviceimg">
             <img src={backgroundImageURL} alt="" />
           </div>
