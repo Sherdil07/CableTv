@@ -123,8 +123,10 @@ const Footer = () => {
                   <MailIcon /> support@shopsatellitetv.com
                 </li>
                 <li className="list-item">
-                  <LocationOnIcon /> 5075 memorial Dr Suite, 343-B stone
-                  mountain GA 30083
+                  <LocationOnIcon />
+                  <hr />
+                  Jamal Prime Inc 2759 Delk Road , SUITE 1620, Marietta, GA,
+                  30067, USA.
                 </li>
               </ul>
               <div className="SocialIcons">
@@ -148,7 +150,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="postFooter">
-          <h2>© 2023 Shop Satellite Tv. All rights reserved.</h2>
+          <h2>
+            © 2023 Shop Satellite Tv. All rights reserved By Jamal Prime Inc.
+          </h2>
           <p className="privacy-policy">
             <Link to="/privacy-policy">PRIVACY POLICY</Link>
           </p>
