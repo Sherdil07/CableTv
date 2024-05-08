@@ -12,7 +12,7 @@
   padding-right: 100px;
 }
 .slider-app-container {
-  width: 80%;
+  width: 61%;
   margin: 0 auto;
 }
 
@@ -26,7 +26,7 @@
 .slide-image {
   width: 93%;
   height: 450px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   border-radius: 20px;
 }
@@ -52,39 +52,45 @@
 .slide-content p {
   font-size: 16px;
   color: rgb(255, 255, 255);
-  font-family: "Roboto", Sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
   letter-spacing: 1px;
   line-height: 20px;
   text-align: left;
   text-transform: initial;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Stronger text shadow */
 }
+
+
 .slide-content button {
-  background: none;
+  background-color: transparent;
   border: none;
-  color: white;
+  color: #df0303;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
   cursor: pointer;
+  font-weight: 800;
 }
 .slide-content button:hover {
   color: white;
   transform: translateY(-5px);
+  background-color: rgba(255, 0, 0, 0.87);
 }
 .heroContent .heading {
   color: #df0303;
   font-family: "Montserrat", Sans-serif;
-  font-size: 16px;
+  font-size: 35px;
   line-height: 16px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
+  line-height: 1.2;
 }
 .heroContent .title {
   color: #222121;
   font-family: "Montserrat", Sans-serif;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 50px;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -94,9 +100,9 @@
   width: 100%;
   color: #222121;
   word-spacing: 1px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: capitalize;
 }

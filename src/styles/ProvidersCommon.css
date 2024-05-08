@@ -1,3 +1,8 @@
+
+
+
+
+
 .col-6 {
   width: 50%;
 }
@@ -34,7 +39,7 @@
   margin-top: 20px;
 } */
 .RightSide .title {
-  text-align: left;
+  
   color: #df0303;
   font-family: "Montserrat", Sans-serif;
   font-size: 26px;
@@ -43,17 +48,34 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 20px;
+  margin-left: 324px;
+  
+}
+
+.title-provider-common{
+  color: #df0303;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 26px;
+  line-height: 70px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  text-align: center;
+
 }
 .RightSide h2.heading {
-  color: #171616;
-  /* text-align: center; */
+  color: #ffffff; /* Keep white color for better contrast */
+  /* Add background color to improve readability */
+  
   text-align: left;
   font-family: "Montserrat", Sans-serif;
   font-size: 32px;
-
   line-height: 50px;
-  font-weight: 600;
+  font-weight: bold;
   letter-spacing: 1px;
+  width: 62%;
+  margin-left: 25%;
 }
 .RightSide .description {
   font-size: 16px;

@@ -20,7 +20,7 @@ const CableInternet = () => {
   }, [dispatch]);
 
   const blogContentStyle = {
-    whiteSpace: "pre-line",
+    // whiteSpace: "pre-line",
   };
   return (
     <div className="CableInternet">

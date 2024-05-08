@@ -5,18 +5,60 @@ import { useSelector, useDispatch } from "react-redux"; // Import useSelector an
 import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 const ServiceProvider = () => {
   const pageData = useSelector((state) => state.pages.pageData);
+ 
   const backgroundImageObject = pageData?.Home?.checkservicesproviders?.image;
   const backgroundImageURL = backgroundImageObject || "Loading...";
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Fetch page data when the component mounts
     dispatch(fetchPageData());
   }, [dispatch]);
 
+ // Reference for the component
+
+
+
+  
+
+ 
+
+
+// code addded by ahsan for circular responsive bar 
+useEffect(() => {
+  const number = document.getElementById("number");
+  let counter = 0;
+  const interval = setInterval(() => {
+    if (counter === 90) {
+      clearInterval(interval);
+    } else {
+      counter += 1;
+      number.innerHTML = counter + "+";
+    }
+  }, 20);
+
+  return () => clearInterval(interval);
+}, []);
+
+useEffect(() => {
+  const number = document.getElementById("number-350");
+  let counter = 0;
+  const interval = setInterval(() => {
+    if (counter === 350) {
+      clearInterval(interval);
+    } else {
+      counter += 1;
+      number.innerHTML = counter +'+';
+    }
+  }, 5);
+
+  return () => clearInterval(interval);
+}, []);
+
+
   return (
     <div className="ServiceProviderSection">
+    
       {/* START POINT FOR SEO PURPOSE */}
       {/* <Helmet>
         <title> Service Providers | ShopSatelliteTV</title>
@@ -27,32 +69,79 @@ const ServiceProvider = () => {
         <meta name="slug" content="service-providers" />
       </Helmet> */}
       {/* END POINT FOR SEO PURPOSE */}
-      <div className="AboutContent">
-        <div className="leftSide">
-          <h2 className="title">
+      <div className="AboutContent-provider">
+        <div className="leftSide-provider">
+          <h2 className="title-service-provider">
             {pageData?.Home?.checkservicesproviders?.title}
           </h2>
-          <h2 className="heading">
+          <h2 className="heading-service-provider">
             {pageData?.Home?.checkservicesproviders?.heading}
           </h2>
-          <p className="SatelliteSectionDesc">
+          <p className="SatelliteSectionDesc-provider">
             {pageData?.Home?.checkservicesproviders?.description}
           </p>
-          <div className="figures">
-            <div className="figures-1">
-              <p>{pageData?.Home?.checkservicesproviders?.fig_1}</p>
-              <p>Ultra HD Quality</p>
+          <div className="figures-provider">
+          <div className="skill">
+                <div className="outer">
+                  <div className="inner">
+                    <div id="number-4k">4k</div>
+                  </div>
+                </div>
+              <p className="figures1-provider-p2">Ultra HD Quality</p>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+         <defs>
+            <linearGradient id="GradientColor">
+            <stop offset="0%" stopColor="#e91e63" />
+  <stop offset="100%" stopColor="#2196f3" />
+            </linearGradient>
+         </defs>
+         <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+ </svg>
             </div>
-            <div className="figures-1">
-              <p>{pageData?.Home?.checkservicesproviders?.fig_2}</p>
-              <p>Online Channels</p>
-            </div>
-            <div className="figures-1">
-              <p>{pageData?.Home?.checkservicesproviders?.fig_3}</p>
-              <p>Internet Speed</p>
-            </div>
+            <div className="skill" >
+                <div className="outer">
+                  <div className="inner">
+                    <div id="number">0</div>
+                  </div>
+                </div>
+                <p className="figures1-provider-p2">Online Channels</p>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+         <defs>
+            <linearGradient id="GradientColor">
+            <stop offset="0%" stopColor="#e91e63" />
+  <stop offset="100%" stopColor="#2196f3" />
+            </linearGradient>
+         </defs>
+         <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+ </svg>
+ </div>
+
+
+
+
+
+              
+           
+ <div className="skill" >
+                <div className="outer">
+                  <div className="inner">
+                    <div id="number-350">0</div>
+                  </div>
+                </div>
+                <p className="figures1-provider-p2">Internet Speed</p>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+         <defs>
+            <linearGradient id="GradientColor">
+            <stop offset="0%" stopColor="#e91e63" />
+  <stop offset="100%" stopColor="#2196f3" />
+            </linearGradient>
+         </defs>
+         <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+ </svg>
+ </div>
           </div>
-          <div className="btn">
+          <div className="btn btn-provider">
             <Link to="serviceproviders">
               <button className="CheckNow">Check Now</button>
             </Link>
@@ -70,6 +159,7 @@ const ServiceProvider = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

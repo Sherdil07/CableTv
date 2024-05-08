@@ -11,6 +11,13 @@
 .card-3 {
   cursor: pointer;
 }
+
+.card-1:hover,
+.card-2:hover,
+.card-3:hover {
+  box-shadow: 0 10px 25px rgba(223, 3, 3, 0.7); /* Red box shadow with increased size and opacity on hover */
+}
+
 .card-content {
   padding: 30px;
 }
@@ -22,7 +29,7 @@
 
 .card-content p {
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   color: #222121;
   font-family: "Roboto", Sans-serif;
   font-weight: 400;
@@ -55,9 +62,9 @@
   text-align: center;
   color: #df0303;
   font-family: "Montserrat", Sans-serif;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 16px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -73,7 +80,7 @@
 }
 .blogContent p {
   width: 100%;
-  font-size: 16px;
+  font-size: 19px;
   color: #222121;
   font-family: "Roboto", Sans-serif;
   font-weight: 400;
@@ -95,7 +102,10 @@
   margin-right: 20px;
   box-shadow: 0 6px 12px rgba(6, 6, 6, 0.12);
   border-radius: 15px 5px 5px 5px;
+ 
 }
+
+
 .card-2 {
   width: 100%;
   margin-left: 20px;
@@ -128,7 +138,9 @@
 .btn-blog:hover {
   color: #df0303;
   transform: translateY(-5px);
+ 
 }
+
 @media only screen and (max-width: 1024px) {
   .card-1,
   .card-2,

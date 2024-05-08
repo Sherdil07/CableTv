@@ -44,6 +44,7 @@ const CableTv = () => {
       <ProvidersCommon
         imageSrc={backgroundImageURL}
         title={pageData?.CableTv_Section?.CableTv?.title}
+        
         heading={pageData?.CableTv_Section?.CableTv?.heading}
         description={
           <div className="describe" style={blogContentStyle}>

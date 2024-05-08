@@ -5,7 +5,7 @@ const ProvidersCommon = ({ title, heading, description, imageSrc }) => {
   return (
     <div className="ProvidersCommon">
       <div className="content">
-        <div className="row">
+        <div className="row" >
           {/* <div className="col-6"> */}
           <div className="LeftSide">
             <img src={imageSrc} alt="" />
@@ -13,7 +13,7 @@ const ProvidersCommon = ({ title, heading, description, imageSrc }) => {
           {/* </div> */}
           {/* <div className="col-6"> */}
           <div className="RightSide">
-            <h2 className="title">{title}</h2>
+            <h2 className="title-provider-common">{title}</h2>
             <h2 className="heading">{heading}</h2>
             <p className="description">{description}</p>
             {/* </div> */}

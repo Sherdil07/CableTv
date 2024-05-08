@@ -12,6 +12,13 @@
   cursor: pointer;
   width: 20%;
 }
+.btn-provider{
+  margin-top: 6%;
+  margin-left: 0px;
+  --bs-btn-padding-x: 0rem !important;
+    --bs-btn-padding-y: 0rem !important;
+
+}
 .searchBar {
   margin-top: 20px;
   text-align: center;
@@ -29,9 +36,9 @@ input.searchBar {
   text-align: center;
   color: #df0303;
   font-family: "Montserrat", Sans-serif;
-  font-size: 16px;
+  font-size: 26px;
   line-height: 50px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -47,7 +54,7 @@ input.searchBar {
 }
 p {
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   font-family: "Roboto", Sans-serif;
   font-weight: 400;

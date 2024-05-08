@@ -11,6 +11,10 @@ label {
   padding-top: 20px;
   margin-bottom: 10px;
 }
+label:hover {
+  color: red; /* Change the color to red on hover */
+  cursor: pointer;
+}
 input,
 textarea,
 select {
@@ -19,6 +23,13 @@ select {
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  background-color: #ece2e2;/* Change background color to red on hover */
+  color: black; /* Change font color to white on hover */
 }
 
 button[type="submit"] {
