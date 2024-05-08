@@ -18,14 +18,37 @@
   text-decoration: none;
   padding: 12px;
   color: black;
+  font-size: 16px; /* Initial font size */
+  transition: color 0.3s ease, transform 0.3s ease, font-size 0.5s ease; /* Adding transitions for color, transform, and font size */
 }
+
+.rightSide a:hover {
+  color: #DF0909; /* Change color to red on hover */
+  transform: scale(0.95); /* Zoom out slightly on hover */
+  font-size: 17px; /* Decrease font size on hover */
+  font-weight: 800;
+}
+
+
 .header-searchBar {
   width: 20%;
   padding: 10px;
   border: 0;
   margin-bottom: 0px;
   background: #9697adad;
+  transition: background-color 0.3s ease; 
 }
+.header-searchBar:hover {
+  background-color: #DF0909;
+  cursor: pointer; /* Change background color to red on hover */
+ 
+  
+}
+
+.header-searchBar:hover::placeholder {
+  color: white; /* Change placeholder text color to white on hover */
+}
+
 
 .dropdown {
   position: relative;

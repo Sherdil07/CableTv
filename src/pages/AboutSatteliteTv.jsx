@@ -4,11 +4,12 @@ import "../styles/AboutSatellite.css";
 import { Link } from "react-router-dom";
 import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
+import sateliiteBG from "../assests/satellitebg.png"
 const AboutSatteliteTv = () => {
   const pageData = useSelector((state) => state.pages.pageData);
-  const backgroundImageObject =
-    pageData?.Home?.aboutshopsatellitetv?.aboutshopsatelliteBG;
-  const backgroundImageURL = backgroundImageObject || "Loading...";
+  // const backgroundImageObject =
+  //   pageData?.Home?.aboutshopsatellitetv?.aboutshopsatelliteBG;
+  // const backgroundImageURL = backgroundImageObject || "Loading...";
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();
 
@@ -22,7 +23,7 @@ const AboutSatteliteTv = () => {
       <div
         className="SatelliteBG"
         style={{
-          background: `url(${backgroundImageURL})`,
+          background: `url(${sateliiteBG})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -40,15 +41,15 @@ const AboutSatteliteTv = () => {
             <p className="SatelliteSectionDesc">{pageData?.Home?.aboutshopsatellitetv?.description}</p>
             <div className="figures">
               <div className="figures-1">
-                <p>{pageData?.Home?.aboutshopsatellitetv?.fig_1}</p>
-                <p>Ultra HD Quality</p>
+                <p>4K</p>
+                <p>UltraHD Quality</p>
               </div>
               <div className="figures-1">
-                <p>{pageData?.Home?.aboutshopsatellitetv?.fig_2}</p>
+                <p>90+</p>
                 <p>Online Channels</p>
               </div>
               <div className="figures-1">
-                <p>{pageData?.Home?.aboutshopsatellitetv?.fig_3}</p>
+                <p>350+</p>
                 <p>Internet Speed</p>
               </div>
             </div>

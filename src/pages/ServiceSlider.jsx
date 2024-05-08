@@ -8,6 +8,11 @@ import { useSelector, useDispatch } from "react-redux";
 import Slider from "react-slick";
 // import ServiceBG from "../assests/service-sec-bg.png";
 import ServiceBG from "../assests/service-sec-bg.png";
+import CableTv from '../assests/cable-tv.png'
+import SatelliteInt from '../assests/satellite-int.png'
+import CableInt from '../assests/cable-int.png'
+import SatelliteTv from '../assests/satellite-tv.png'
+
 const Slide = ({ image, title, description, linkTo }) => {
   return (
     <div className="slide">
@@ -56,20 +61,20 @@ const ServiceSlider = () => {
     slidesToScroll: 1,
   };
   const pageData = useSelector((state) => state.pages.pageData);
-  const backgroundImageObject = pageData?.Home?.service_cabletv_slider?.image;
-  const backgroundImageURL = backgroundImageObject || "Loading...";
+  // const backgroundImageObject = pageData?.Home?.service_cabletv_slider?.image;
+  // const backgroundImageURL = backgroundImageObject || "Loading...";
 
-  const CableInternetImgObject =
-    pageData?.Home?.service_cableinternet_slider?.image;
-  const CableInternetImgURL = CableInternetImgObject || "Loading...";
+  // const CableInternetImgObject =
+  //   pageData?.Home?.service_cableinternet_slider?.image;
+  // const CableInternetImgURL = CableInternetImgObject || "Loading...";
 
-  const SatelliteTVImgObject =
-    pageData?.Home?.service_satellitetv_slider?.image;
-  const SatelliteTVImgURL = SatelliteTVImgObject || "Loading...";
+  // const SatelliteTVImgObject =
+  //   pageData?.Home?.service_satellitetv_slider?.image;
+  // const SatelliteTVImgURL = SatelliteTVImgObject || "Loading...";
 
-  const SatelliteInternetImgObject =
-    pageData?.Home?.service_satelliteinternet_slider?.image;
-  const SatelliteInternetImgURL = SatelliteInternetImgObject || "Loading...";
+  // const SatelliteInternetImgObject =
+  //   pageData?.Home?.service_satelliteinternet_slider?.image;
+  // const SatelliteInternetImgURL = SatelliteInternetImgObject || "Loading...";
 
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();
@@ -95,7 +100,7 @@ const ServiceSlider = () => {
             <div className="slide-container">
               <Link to="services/cable-tv">
                 <Slide
-                  image={backgroundImageURL}
+                  image={CableTv}
                   title={pageData?.Home?.service_cabletv_slider?.title}
                   description={
                     pageData?.Home?.service_cabletv_slider?.description
@@ -105,7 +110,7 @@ const ServiceSlider = () => {
               </Link>
               <Link to="services/cable-internet">
                 <Slide
-                  image={CableInternetImgURL}
+                  image={CableInt}
                   title={pageData?.Home?.service_cableinternet_slider?.title}
                   description={
                     pageData?.Home?.service_cableinternet_slider?.description
@@ -115,7 +120,7 @@ const ServiceSlider = () => {
               </Link>
               <Link to="services/satellite-tv">
                 <Slide
-                  image={SatelliteTVImgURL}
+                  image={SatelliteTv}
                   title="Satellite Tv"
                   description={
                     pageData?.Home?.service_satellitetv_slider?.description
@@ -125,7 +130,7 @@ const ServiceSlider = () => {
               </Link>
               <Link to="services/satellite-internet">
                 <Slide
-                  image={SatelliteInternetImgURL}
+                  image={SatelliteInt}
                   title={
                     pageData?.Home?.service_satelliteinternet_slider?.title
                   }
@@ -164,7 +169,7 @@ const ServiceSlider = () => {
                 <Slider {...sliderSettings} ref={sliderRef}>
                   <Link to="services/cable-tv">
                     <Slide
-                      image={backgroundImageURL}
+                      image={CableTv}
                       title={pageData?.Home?.service_cabletv_slider?.title}
                       description={
                         pageData?.Home?.service_cabletv_slider?.description
@@ -174,7 +179,7 @@ const ServiceSlider = () => {
                   </Link>
                   <Link to="services/cable-internet">
                     <Slide
-                      image={CableInternetImgURL}
+                      image={CableInt}
                       title={
                         pageData?.Home?.service_cableinternet_slider?.title
                       }
@@ -187,7 +192,7 @@ const ServiceSlider = () => {
                   </Link>
                   <Link to="services/satellite-tv">
                     <Slide
-                      image={SatelliteTVImgURL}
+                      image={SatelliteTv}
                       title="Satellite Tv"
                       description={
                         pageData?.Home?.service_satellitetv_slider?.description
@@ -197,7 +202,7 @@ const ServiceSlider = () => {
                   </Link>
                   <Link to="services/satellite-internet">
                     <Slide
-                      image={SatelliteInternetImgURL}
+                      image={SatelliteInt}
                       title={
                         pageData?.Home?.service_satelliteinternet_slider?.title
                       }
