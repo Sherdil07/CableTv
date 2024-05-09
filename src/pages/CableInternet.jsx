@@ -6,6 +6,7 @@ import HeroSection from "./HeroSection";
 import { Helmet } from "react-helmet";
 import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
+import Internet_blog from '../assests/cable-internet-blog.png'
 const CableInternet = () => {
   const pageData = useSelector((state) => state.pages.pageData);
   const backgroundImageObject =
@@ -39,7 +40,7 @@ const CableInternet = () => {
         description={pageData?.CableInternet_Section?.HeroCommon?.description}
       />
       <ProvidersCommon
-        imageSrc={backgroundImageURL}
+        imageSrc={Internet_blog}
         title={pageData?.CableInternet_Section?.CableInternet?.title}
         heading={pageData?.CableInternet_Section?.CableInternet?.heading}
         description={

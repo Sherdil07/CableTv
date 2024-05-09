@@ -2,7 +2,9 @@
   height: 700px;
 }
 
-
+.btn-provider{
+margin-top: 10%;
+}
 
 .title-service-provider{text-align: left;
   line-height: 80px;
@@ -159,14 +161,14 @@ svg{
 
 
 p.SatelliteSectionDesc {
-  width: 58%;
+  width: 80%;
 }
 
 .AboutContent {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 28px;
   padding-bottom: 100px;
   margin-left: 65px;
 }

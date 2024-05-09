@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
+import Home_Background from '../assests/website-background.jpg'
 function Home() {
   const navigate = useNavigate();
   const [zipCode, setzipCode] = useState("");
@@ -54,7 +55,7 @@ function Home() {
       <div
         className="mainSection"
         style={{
-          background: `url(${backgroundImageURL})`,
+          background: `url(${Home_Background})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

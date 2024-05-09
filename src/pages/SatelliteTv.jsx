@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import HeroSection from "./HeroSection";
 import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
+import Satellite_Blog from '../assests/satellite-tv-blog.png'
 const SatelliteTv = () => {
   const pageData = useSelector((state) => state.pages.pageData);
   const backgroundImageObject =
@@ -39,7 +40,7 @@ const SatelliteTv = () => {
         description={pageData?.SatelliteTv_Section?.HeroCommon?.description}
       />
       <ProvidersCommon
-        imageSrc={backgroundImageURL}
+        imageSrc={Satellite_Blog}
         title={pageData?.SatelliteTv_Section?.SatelliteTv?.title}
         heading={pageData?.SatelliteTv_Section?.SatelliteTv?.heading}
         description={

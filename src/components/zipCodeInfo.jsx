@@ -151,14 +151,14 @@ function ZipCodeInfo() {
                     ref={internetRef}
                     style={{ textAlign: "center" }}
                   >
-                    Internet Providers
+                    Internet Provider
                   </h2>
 
                   <table
                     className="table table-striped w-auto table table-bordered"
                     ref={internetRef}
                   >
-                    <thead className="head">
+                    <thead className="head head-info">
                       <tr>
                         <th className="table-head" scope="col">
                           Provider

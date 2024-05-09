@@ -7,6 +7,7 @@ import "../styles/CableTv.css";
 import { Helmet } from "react-helmet";
 import { fetchPageData } from "../actions/pagesActions"; // Import the fetchPageData action
 import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
+import Cable_Blog from '../assests/cable-blog.png'
 
 const CableTv = () => {
   const pageData = useSelector((state) => state.pages.pageData);
@@ -42,7 +43,7 @@ const CableTv = () => {
         description={pageData?.CableTv_Section?.HeroCommon?.description}
       />
       <ProvidersCommon
-        imageSrc={backgroundImageURL}
+        imageSrc={Cable_Blog}
         title={pageData?.CableTv_Section?.CableTv?.title}
         
         heading={pageData?.CableTv_Section?.CableTv?.heading}

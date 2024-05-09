@@ -1,20 +1,48 @@
+.description-provider{
+  color: #171616;
+  text-align: left;
+  
+  text-transform: initial;
+  font-size: 18px;
+  line-height: 2.5;
+}
+.provider-leftSide-img{
+  height: 57%;
+    padding-top: 6%;
+}
+.provider-RightSide {
+  padding-right: 6%;
+}
+.provider-LeftSide{
+  width: 50%;
+}
+h2.heading-provider {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
 
+.row-provider{
+display: flex;
+justify-content: center;
+width: 100%;
+}
 
-
-
-
+.RightSide{
+  width: 100%;
+}
 .col-6 {
   width: 50%;
 }
 .LeftSide {
+  width: 50%;
   margin-left: 0px;
   margin-right: 0px;
 }
 
 .describe {
   text-transform: initial;
-  font-size: 16px;
-  line-height: 2.5;
+  font-size: 11px;
+
 }
 
 .LeftSide img {
@@ -48,7 +76,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 20px;
-  margin-left: 324px;
+  margin-left: 209px;
   
 }
 
@@ -57,7 +85,7 @@
   font-family: "Montserrat", Sans-serif;
   font-size: 26px;
   line-height: 70px;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 20px;
@@ -74,7 +102,7 @@
   line-height: 50px;
   font-weight: bold;
   letter-spacing: 1px;
-  width: 62%;
+  width: 80%;
   margin-left: 25%;
 }
 .RightSide .description {

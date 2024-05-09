@@ -29,7 +29,7 @@ input:hover,
 textarea:hover,
 select:hover {
   background-color: #ece2e2;/* Change background color to red on hover */
-  color: black; /* Change font color to white on hover */
+  color: rgb(255, 251, 251); /* Change font color to white on hover */
 }
 
 button[type="submit"] {

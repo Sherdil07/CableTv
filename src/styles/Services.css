@@ -24,8 +24,8 @@
 }
 
 .slide-image {
-  width: 93%;
-  height: 450px;
+  width: 95%;
+  height: 298px;
   background-size: contain;
   background-position: center;
   border-radius: 20px;
@@ -33,14 +33,15 @@
 
 .slide-content {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+ bottom: 38%;
   color: black;
-  padding: 30px;
+  padding: 10%;
+  
+  
 }
 
 .slide-content h3 {
-  color: white;
+  color:rgb(255, 255, 255);
   font-family: "Montserrat", Sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -50,12 +51,12 @@
 }
 
 .slide-content p {
-  font-size: 16px;
-  color: rgb(255, 255, 255);
+  font-size: 12px;
+  color: rgb(243, 237, 237);
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 1px;
-  line-height: 20px;
+ 
   text-align: left;
   text-transform: initial;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Stronger text shadow */
@@ -100,7 +101,7 @@
   width: 100%;
   color: #222121;
   word-spacing: 1px;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 19px;
   font-weight: 700;
   letter-spacing: 1px;

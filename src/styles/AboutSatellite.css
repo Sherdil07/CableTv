@@ -3,12 +3,13 @@
   justify-content: center;
 }
 .AboutContent .RightSide {
-  margin-left: 650px;
-  margin-right: 20px;
+
+  margin-right: 38px;
 }
 .SatelliteBG {
   width: 100%;
   background-repeat: no-repeat;
+  height: 116vh;
 }
 .LeftSide {
   margin-left: 668px;
@@ -18,7 +19,7 @@
   display: flex;
   padding-top: 30px;
   text-align: center;
-  margin-left: 23%;
+  margin-left: 21%;
 }
 .figures-1 {
   margin-right: 20px;

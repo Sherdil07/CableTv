@@ -5,6 +5,9 @@
 span {
   cursor: pointer;
 }
+.head-info{
+  vertical-align: middle !important;
+}
 .jump-to-links {
   display: flex;
   align-items: center;
@@ -49,10 +52,14 @@ hr.rule--is-medium,
   font-family: "Montserrat", Sans-serif;
   font-size: 16px;
   font-weight: 600;
-  line-height: 50px;
+  line-height: 27px;
   letter-spacing: 1px;
   text-transform: capitalize;
   margin-bottom: 20px;
+ 
+}
+th.table-head{
+  background: cadetblue;
 }
 .table > :not(caption) > * > * {
   padding: 0;
