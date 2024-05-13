@@ -31,6 +31,9 @@ input.searchBar {
   width: 35%;
   text-align: left;
 }
+input.searchBar:hover {
+  background-color: #df0303; /* Change to your preferred hover color */
+}
 
 .title {
   text-align: center;

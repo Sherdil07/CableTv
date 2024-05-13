@@ -13,7 +13,11 @@ import SatelliteInt from '../assests/satellite-int.png'
 import CableInt from '../assests/cable-int.png'
 import SatelliteTv from '../assests/satellite-tv.png'
 
+
+
+
 const Slide = ({ image, title, description, linkTo }) => {
+  
   return (
     <div className="slide">
       <div

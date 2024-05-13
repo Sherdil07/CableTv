@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import "../styles/ServiceProvider.css";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux"; // Import useSelector and useDispatch
@@ -11,9 +11,46 @@ const ServiceProvider = () => {
   // Access dispatch function to dispatch actions
   const dispatch = useDispatch();
 
+
   useEffect(() => {
     dispatch(fetchPageData());
   }, [dispatch]);
+
+
+
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    // Function to check if an element is in the viewport
+    const isInViewport = (elem) => {
+      const bounding = elem.getBoundingClientRect();
+      return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+
+    // Handler function to check if the component is in view
+    const handleScroll = () => {
+      const element = document.getElementById('serviceProviderSection');
+      if (isInViewport(element)) {
+        setInView(true);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
 
  // Reference for the component
 
@@ -57,7 +94,7 @@ useEffect(() => {
 
 
   return (
-    <div className="ServiceProviderSection">
+    <div className="ServiceProviderSection" id="serviceProviderSection">
     
       {/* START POINT FOR SEO PURPOSE */}
       {/* <Helmet>

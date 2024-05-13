@@ -28,7 +28,7 @@ const ReadBlog_3 = () => {
         description={pageData?.Home?.blog_card_3?.description}
       />
       <ProvidersCommon
-        imageSrc={backgroundImageURL}
+        // imageSrc={backgroundImageURL}
         image={pageData?.Home?.blog_card_3?.image}
         heading={pageData?.Home?.blog_card_3?.heading}
         description={
